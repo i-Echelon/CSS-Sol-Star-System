@@ -1,0 +1,36 @@
+{	
+	"graphics": {
+		"planets": {
+			"mercury": "graphics/planets/mercury.jpg",
+			"venus": "graphics/planets/venus.jpg",
+			"gaia": "graphics/planets/gaia.jpg",
+			"mars": "graphics/planets/mars.jpg",
+			"ceres": "graphics/planets/ceres.jpg",
+			"jupiter": "graphics/planets/jupiter.jpg",
+			"saturn": "graphics/planets/saturn.jpg",
+			"uranus": "graphics/planets/uranus.jpg",
+			"neptune": "graphics/planets/neptune.jpg",
+			"pluto": "graphics/planets/pluto.jpg",
+			"luna": "graphics/planets/luna.jpg",
+			"io": "graphics/planets/io.jpg",
+			"europa": "graphics/planets/europa.jpg",
+			"ganymede": "graphics/planets/ganymede.jpg",
+			"callisto": "graphics/planets/callisto.jpg",
+			"enceladus": "graphics/planets/enceladus.jpg",
+			"titan": "graphics/planets/titan.jpg",
+			"oberon": "graphics/planets/oberon.jpg",
+			"triton": "graphics/planets/triton.jpg",
+			"charon": "graphics/planets/charon.jpg",
+		},
+		"backgrounds":{
+			"galaxy0":"graphics/backgrounds/galaxy0.png",
+			"galaxy1":"graphics/backgrounds/galaxy1.png",
+			"galaxy2":"graphics/backgrounds/galaxy2.png",
+			"galaxy3":"graphics/backgrounds/galaxy3.png",
+			"galaxy4":"graphics/backgrounds/galaxy4.jpg",
+		},
+		"misc": {
+			"saturn_belt": "graphics/planets/saturn_belt.png"
+		},
+	}
+}
