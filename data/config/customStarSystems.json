@@ -1,8 +1,8 @@
-	# Sol Star Sysyem by Bugatti Echelon ###
-	# all "orbitDays" for planets and moons were increased to be more inline with starsectors time/speed pass.
+	# Sol Star Sysyem by Bugatti Echelon #Discord #bugatti_echelon
+	# All "orbitDays" for planets and moons were increased to be more inline with starsectors time/speed pass.
 	# Using realistic values (Earth 365/y, Luna 28/m) you would have to use emergency burn to even catch some of the moons who orbits at high speed, but that would be realistic i guess.
-	# Left realistic speeds as comments incase you want to re-enable.
-	# Recently change "conditions" of most planets and moons to use some from US/RAT/Indev-Evo. Left the original realish ones as comments.
+	# Left original speeds as comments incase you want to re-enable. You can also comment/remove the custom graphics to let procgen override. Same for conditions.
+	# Recently change "conditions" of most planets and moons to use some from US/RAT/IE. Left the original realish ones as comments.
 {
 	"css_Sol":{
 		"isEnabled":true,
@@ -11,10 +11,10 @@
 		"hasSystemwideNebula":false,
 		"addDomainCryosleeper":true,
 		"addCoronalHypershunt":false,
-		"memoryKeys":{"$US_skipSystem":true}, # Memory key to prevent Unknown Skies scripts from modifying this system
+		"memoryKeys":{"$US_skipSystem":true}, # Memory key to prevent Unknown Skies scripts from modifying this system (false to allow)
 		"setLocation":[0,-45000], #originally used "setLocation":2,
 		"systemBackground":"galaxy0.png",
-		"systemMusic":"music_sol_system",
+		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge": "average",
 		"systemTags":["theme_misc","theme_derelict_survey_ship","theme_derelict_cryosleeper"],
@@ -31,7 +31,7 @@
 				"coronaRadius":500,
 				"flareChance":1.0,
 				"orbitClockwise":false,
-				"memoryKeys":{"$US_starVariant":3},
+				"memoryKeys":{"$US_starVariant":3}, #unique
 				"tags":["neutrino"],
 				"specChanges":{"tilt":-7.25,"rotation":0.44,"useReverseLightForGlow":false,"glowColor":[238,235,106,255],"planetColor":[238,235,206,255],"iconColor":[250,250,250,250],"texture":"US_star_textureCustomWhite_2.jpg","typeOverride":["star_yellow","Yellow Dwarf Star"]}
 },
