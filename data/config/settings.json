@@ -30,14 +30,10 @@
 		},
 		"backgrounds":{
 			"galaxy0":"graphics/backgrounds/galaxy0.png",
-			"galaxy1":"graphics/backgrounds/galaxy1.png",
-			"galaxy2":"graphics/backgrounds/galaxy2.png",
-			"galaxy3":"graphics/backgrounds/galaxy3.png",
-			"galaxy4":"graphics/backgrounds/galaxy4.png",
-			"galaxy5":"graphics/backgrounds/galaxy5.png",
 		},
 		"misc": {
 			"saturn_belt": "graphics/planets/saturn_belt.png",
 		},
 	}
+
 }
