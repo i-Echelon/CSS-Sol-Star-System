@@ -1,9 +1,0 @@
-1.0.2
-- Added 2 new tracks to main menu
-
-1.0.1
-- Added LunaLib version checker and icons. 
-- Clean folder structure and workspace.
-
-1.0.0 
-- Initial Release
