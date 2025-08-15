@@ -1,19 +1,24 @@
 {
 	"id": "customizablestarsystems-sol",
 	"name": "Customizable Star Systems-SOL",
-	"author": "Echelon",
+	"author": "Bugatti Echelon",
 	"version": {
 		"major": 3,
-		"minor": 0,
-		"patch": 2
+		"minor": 2,
+		"patch": 5
 	},
 	"description": "Adds Sol, via Customizable Star Systems Mod.",
 	"gameVersion": "0.98a-RC8",
-	 "dependencies": [
+	 "dependencies": [# bare minimum versions required
         {
             "id": "customizablestarsystems",
             "name": "Customizable Star Systems",
 			"version": "3.0.2",
+        },
+        {
+            "id": "assortment_of_things",
+            "name": "Random Assortment of Things",
+			"version": "3.1.9"
         },
         {
             "id": "US",
@@ -25,7 +30,6 @@
             "name": "Industrial Evolution",
             "version": "4.0.i"
         }
-		
 	],
-	"suppressVCUnsupported": true
+	#"suppressVCUnsupported": true
 }
