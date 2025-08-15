@@ -1,0 +1,13 @@
+{
+    "masterVersionFile":"https://raw.githubusercontent.com/i-Echelon/CSS-Sol-Star-System/refs/heads/main/css-sol.version",
+    "modName":"Star-Tracks",
+    "modThreadId":0,
+    "directDownloadURL":"https://github.com/i-Echelon/CSS-Sol-Star-System/archive/refs/heads/main.zip",
+    "changelogURL":"https://raw.githubusercontent.com/i-Echelon/CSS-Sol-Star-System/refs/heads/main/changelog.txt",
+    "modVersion":
+    {
+        "major":3,
+        "minor":2,
+        "patch":5
+    },
+}
