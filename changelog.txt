@@ -1,10 +1,12 @@
 3.2.5
 - Several Adjustments.
+3.1.0
+- Added 2 moons to Uranus.
 3.0.0
 - Decreased Orbital Speeds to be more in line with Starsector's game speed.
 2.0.0
 - Added modded entities, conditions, industries, and memory keys.
 1.5.0
 - Added System Music.
-1.0.0 
+1.0.0
 - First iteration.
