@@ -16,19 +16,24 @@
 			"version": "3.0.2",
         },
         {
+            "id": "aotd_vok",
+            "name": "Ashes of the Domain - Vaults of Knowledge",
+			"version": "3.4.2"
+        },
+        {
             "id": "assortment_of_things",
             "name": "Random Assortment of Things",
 			"version": "3.1.9"
         },
         {
-            "id": "US",
-            "name": "Unknown Skies",
-			"version": "3.0.2"
-        },
-        {
             "id": "IndEvo",
             "name": "Industrial Evolution",
             "version": "4.0.i"
+        },
+        {
+            "id": "US",
+            "name": "Unknown Skies",
+			"version": "3.0.2"
         }
 	],
 	#"suppressVCUnsupported": true
