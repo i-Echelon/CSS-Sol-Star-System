@@ -520,10 +520,10 @@
 				"orbitAngle":180,
 				"radius":300,
 				"orbitRadius":33333,
-				"orbitDays":7777, 
+				"orbitDays":66, 
 				"orbitClockwise":false,
 				"conditions":["US_sakura","US_hybrid","US_crystals","US_bedrock","US_unique_filter","US_cryosanctum","rat_engineered_utopia","habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast"],
-				"specChanges":{"tilt":-1.618,"rotation":1.618,"texture":"US_planet_textureSakura.jpg"}
+				"specChanges":{"tilt":1.618,"rotation":1.618,"texture":"US_planet_textureSakura.jpg"}
 },
 { #57 Pithos, orbiting Pandora - Hazard 25%
 				"entity":"planet",
@@ -532,7 +532,7 @@
 				"radius":100,
 				"focus":56, # set to the 56th entity to be declared a moon
 				"orbitRadius":777,
-				"orbitDays":333, 
+				"orbitDays":133, 
 				"orbitClockwise":false,
 				"conditions":["US_fluorescent","US_hybrid","US_crystals","US_bedrock","US_crash","US_unique_filter","rat_ancient_megacities","rat_bionic_plantlife","rat_kinetic_launchsystem","water_surface","rare_ore_ultrarich","volatiles_abundant","ruins_vast"],
 				"specChanges":{"tilt":-1.618,"rotation":1.618,"texture":"US_planet_textureHycean.jpg"}
