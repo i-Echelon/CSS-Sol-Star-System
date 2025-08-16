@@ -122,7 +122,7 @@
 { #7 Uranus - Hazard 325%
 				"entity":"planet",
 				"name":"Uranus",
-				"type":"ice_giant",
+				"type":"US_iceA",
 				"orbitAngle":0,
 				"radius":350,
 				"orbitRadius":18000,
@@ -134,7 +134,7 @@
 { #8 Neptune - Hazard 250%
 				"entity":"planet",
 				"name":"Neptune",
-				"type":"ice_giant",
+				"type":"US_iceB",
 				"orbitAngle":60,
 				"radius":340,
 				"orbitRadius":21000,
@@ -583,4 +583,5 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
