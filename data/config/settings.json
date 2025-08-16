@@ -1,6 +1,7 @@
 {	
 	"graphics": {
 		"planets": {
+			"sol": "graphics/planets/sol.jpg",
 			"mercury": "graphics/planets/mercury.jpg",
 			"venus": "graphics/planets/venus.jpg",
 			"earth": "graphics/planets/earth.jpg",
@@ -37,3 +38,4 @@
 	}
 
 }
+
