@@ -7,7 +7,7 @@
 {
 	"css_Sol":{
 		"isEnabled":true,
-		"teleportUponGeneration":true, # will for sure teleport self upon generation regardless of any start.
+		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any start.
 		"numberOfSystems":1,
 		"hasSystemwideNebula":false,
 		"addDomainCryosleeper":true,
@@ -77,9 +77,9 @@
 					"typeOverride":["US_magnetic","Origin"]},
 				#"conditions":["habitable","mild_climate","farmland_bountiful","ore_sparse","ruins_vast","organics_plentiful","high_gravity"], #DEFAULT REALISTIC
 				"conditions":["habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast","pre_collapse_facility","US_elevator","US_religious","US_magnetic","rat_ancient_megacities","rat_bionic_plantlife","rat_engineered_utopia"],
-				"factionId":"player", #do we colonize?
-				"marketSize":3,
-				"industries":["population", "spaceport", "lightindustry", "heavyindustry"]
+				#"factionId":"player", #do we colonize?
+				#"marketSize":3,
+				#"industries":["population", "spaceport", "lightindustry", "heavyindustry"]
 },
 { #4 Mars - Hazard 125%
 				"entity":"planet",
@@ -583,5 +583,6 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
