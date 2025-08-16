@@ -546,13 +546,13 @@
 			},
 
 ## Space Stations - Currently Will break if the only/starting colony owned
-			#{"entity":"station", #58
-			#	"type":"station_hightech3",
-			#	"focus":0,
-			#	"orbitRadius":5555,
-			#	"orbitAngle":90,
-			#	"orbitDays":0,
-			#	"orbitClockwise":false,
+			{"entity":"station", #58
+				"type":"station_hightech3",
+				"focus":0,
+				"orbitRadius":5555,
+				"orbitAngle":90,
+				"orbitDays":0,
+				"orbitClockwise":false,
 			#	"name":"Elysium II",
 				#"customDescriptionId":"station_chupi_orco",
 			#	"conditions":"IndEvo_ArtilleryStationCondition",
@@ -576,13 +576,14 @@
 			#		["IndEvo_Artillery_railgun",,,true],
 			#		"IndEvo_Academy",
 			#	]
-			#},
+			},
 		], #Celestial Bodies END
 	}, #Sol System END
 	
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
 
