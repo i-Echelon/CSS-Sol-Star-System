@@ -3,6 +3,7 @@
 	# Using realistic values (Earth 365/y, Luna 28/m) you would have to use emergency burn to even catch some of the moons who orbits at high speed, but that would be realistic i guess.
 	# Left original speeds as comments incase you want to re-enable. You can also comment/remove the custom graphics to let procgen override. Same for conditions.
 	# Recently change "conditions" of most planets and moons to use some from US/RAT/IE. Left the original realish ones as comments.
+	# Rotation speeds were also halved in speed for disorientation purposes
 {
 	"css_Sol":{
 		"isEnabled":true,
@@ -17,7 +18,7 @@
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge": "average",
-		"systemTags":["theme_misc","theme_derelict_survey_ship","theme_derelict_cryosleeper"],
+		"systemTags":["theme_misc","theme_derelict_survey_ship","theme_derelict_cryosleeper", "theme_remnant_suppressed"],
 
 
 		"entities":[ #Celestial Bodies START
@@ -33,7 +34,8 @@
 				"orbitClockwise":false,
 				"memoryKeys":{"$US_starVariant":3}, #unique
 				"tags":["neutrino"],
-				"specChanges":{"tilt":-7.25,"rotation":0.44,"useReverseLightForGlow":false,"glowColor":[238,235,106,255],"planetColor":[238,235,206,255],"iconColor":[250,250,250,250],"texture":"US_star_textureCustomWhite_2.jpg","typeOverride":["star_yellow","Yellow Dwarf Star"]}
+				"specChanges":{"tilt":-7.25,"rotation":0.44,"useReverseLightForGlow":false,"glowColor":[238,235,106,255],"planetColor":[238,235,206,255],"iconColor":[250,250,250,250],"texture":"US_star_textureCustomWhite_2.jpg",
+					"typeOverride":["star_yellow","Yellow Dwarf Star"]}
 },
 
 ## PLANETS
@@ -42,7 +44,7 @@
 				"entity":"planet",
 				"name":"Mercury",
 				"type":"barren-bombarded",
-				"orbitAngle":0,
+				"orbitAngle":270,
 				"radius":60,
 				"orbitRadius":2500,
 				"orbitDays":120, #realistic 59,
@@ -54,44 +56,44 @@
 				"entity":"planet",
 				"name":"Venus",
 				"type":"toxic",
-				"orbitAngle":60,
+				"orbitAngle":180,
 				"radius":140,
 				"orbitRadius":3200,
 				"orbitDays":450, #realistic 225,
 				"orbitClockwise":false,
 				"conditions":["very_hot","irradiated","tectonic_activity","dense_atmosphere","ore_ultrarich","rare_ore_ultrarich","pre_collapse_facility"],
-				"specChanges":{"tilt":177.4,"rotation":0.0495, "texture":"venus.jpg"}
+				"specChanges":{"tilt":177.4,"rotation":0.0495,"cloudRotation":0.02475,"texture":"venus.jpg"}
 },
 { #3 Earth - Hazard 50%
 				"entity":"planet",
 				"name":"Earth",
 				"type":"US_continent",
-				"orbitAngle":120,
+				"orbitAngle":90,
 				"radius":180,
 				"orbitRadius":4400,
 				"orbitDays":730, #realistic 365,
 				"orbitClockwise":false,
-				"specChanges":{"cloudColor":[235,240,250,225],"cloudRotation":30.0,"atmosphereThickness":0,"cloudTexture":"US_clouds_textureMedium.png","tilt":-23.4,"rotation":12.0,"texture":"earth.jpg",
+				"specChanges":{"cloudColor":[235,240,250,225],"cloudRotation":9.0,"atmosphereThickness":0,"cloudTexture":"US_clouds_textureMedium.png","tilt":-23.4,"rotation":12.0,"texture":"earth.jpg",
 					"typeOverride":["US_magnetic","Origin"]},
 				#"conditions":["habitable","mild_climate","farmland_bountiful","ore_sparse","ruins_vast","organics_plentiful","high_gravity"], #DEFAULT REALISTIC
 				"conditions":["habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast","pre_collapse_facility","US_elevator","US_religious","US_magnetic","rat_ancient_megacities","rat_bionic_plantlife","rat_engineered_utopia"],
+				"factionId":"player", #do we colonize?
 				"marketSize":3,
-				"factionId":"player", #do we start owning this?
 				"industries":["population", "spaceport", "lightindustry", "heavyindustry"]
 },
 { #4 Mars - Hazard 125%
 				"entity":"planet",
 				"name":"Mars",
 				"type":"desert",
-				"orbitAngle":180,
+				"orbitAngle":360,
 				"radius":80,
 				"orbitRadius":6000,
 				"orbitDays":1374, #realistic 687,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":-25.2,"rotation":23.30,"texture":"mars.jpg"},
+				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloud_rotation":23.30,"texture":"mars.jpg"},
 				"conditions":["ruins_widespread","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common","pre_collapse_facility","rat_ancient_military_hub","US_elevator","US_shrooms","rat_ancient_megacities","rat_kinetic_launchsystem","rat_warscape","rat_ancient_industries","rat_rampant_military_core","rat_defensive_drones"],
 },
-{ #5 Jupiter - Hazard 175%
+{ #5 Jupiter - Hazard 100%
 				"entity":"planet",
 				"name":"Jupiter",
 				"type":"US_gas_giant",
@@ -104,7 +106,7 @@
 				#"conditions":["volatiles_diffuse","toxic_atmosphere","high_gravity","solar_array"], #DEFAULT REALISTIC
 				"conditions":["high_gravity","volatiles_plentiful","ruins_vast","pre_collapse_facility","US_floating","rat_ancient_fuel_hub","IndEvo_mineFieldCondition"],
 },
-{ #6 Saturn - Hazard 175%
+{ #6 Saturn - Hazard 125%
 				"entity":"planet",
 				"name":"Saturn",
 				"type":"US_gas_giantB",
@@ -144,11 +146,11 @@
 
 ## DWARFS
 
-{ #9 Ceres - Hazard 200%
+{ #9 Ceres - Hazard 175%
 				"entity":"planet",
 				"name":"Ceres",
 				"type":"barren",
-				"orbitAngle":120,
+				"orbitAngle":270,
 				"radius":10,
 				"orbitRadius":7000,
 				"orbitDays":3364, #realistic 1682,
@@ -156,23 +158,23 @@
 				"conditions":["ruins_scattered","no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant","US_crystals"],
 				"specChanges":{"tilt":-4.0,"rotation":31.58,"texture":"ceres.jpg"}
 			},
-{ #10 Pluto - Hazard 375%
+{ #10 Pluto - Hazard 225%
 				"entity":"planet",
 				"name":"Pluto",
 				"type":"barren",
-				"orbitAngle":180,
+				"orbitAngle":240,
 				"radius":28,
 				"orbitRadius":23000,
 				"orbitDays":181120, #realistic 90560,
 				"orbitClockwise":false,
 				#"conditions":["dark","very_cold"],
-				"conditions":["dark","very_cold","ruins_scattered","low_gravity","ore_rich","rare_ore_moderate"],
+				"conditions":["dark","very_cold","ruins_scattered","low_gravity","ore_rich","rare_ore_moderate","US_shrooms"],
 				"specChanges":{"tilt":-122.5,"rotation":1.875,"texture":"pluto.jpg"}
 },
 
 ## MOONS
 
-{ #11 Luna, orbiting Earth - Hazard 175%
+{ #11 Luna, orbiting Earth - Hazard 100%
 				"entity":"planet",
 				"name":"Luna",
 				"focus":3,
@@ -183,7 +185,7 @@
 				"orbitDays":56, #realistic 28,
 				"orbitClockwise":false,
 				#"conditions":["no_atmosphere","low_gravity","rare_ore_sparse"],
-				"conditions":["ruins_vast","no_atmosphere","low_gravity","ore_sparse","rare_ore_rich","pre_collapse_facility","US_tunnels","US_crystals","rat_ancient_industries"],
+				"conditions":["ruins_vast","no_atmosphere","low_gravity","ore_sparse","rare_ore_rich","pre_collapse_facility","US_base","US_tunnels","US_crystals","rat_ancient_industries"],
 				"specChanges":{"tilt":-5.14,"rotation":0.44,"texture":"luna.jpg"}
 },
 { #12 Io, orbiting Jupiter - Hazard 225%
@@ -199,7 +201,7 @@
 				"conditions":["tectonic_activity","poor_light","hot","thin_atmosphere","low_gravity","ore_abundant","rare_ore_abundant"],
 				"specChanges":{"tilt":-1.0,"rotation":6.78,"glowColor":[250,250,250,225],"useReverseLightForGlow":true,"texture":"io.jpg"}
 },
-{ #13 Europa, orbiting Jupiter - Hazard 200%
+{ #13 Europa, orbiting Jupiter - Hazard 225%
 				"entity":"planet",
 				"name":"Europa",
 				"focus":5,
@@ -211,9 +213,9 @@
 				"orbitClockwise":false,
 				#"conditions":["volatiles_plentiful","organics_abundant","thin_atmosphere","cold","poor_light","low_gravity"],
 				 "conditions":["ruins_widespread","cold","low_gravity","thin_atmosphere","water_surface","poor_light","volatiles_plentiful","organics_abundant","rat_bionic_plantlife"],
-				"specChanges":{"tilt":1.79,"rotation":3.38,"texture":"europa.jpg"}
+				"specChanges":{"tilt":1.79,"rotation":3.38,"cloud_rotation":3.0,"texture":"europa.jpg"}
 },
-{ #14 Ganymede, orbiting Jupiter - Hazard 200%
+{ #14 Ganymede, orbiting Jupiter - Hazard 150%
 				"entity":"planet",
 				"name":"Ganymede",
 				"focus":5,
@@ -227,7 +229,7 @@
 				"conditions":["ruins_extensive","cold","thin_atmosphere","low_gravity","poor_light","ore_moderate","rare_ore_moderate","volatiles_abundant","pre_collapse_facility","rat_ancient_military_hub","rat_rampant_military_core","US_bedrock"],
 				"specChanges":{"tilt":-23.5,"rotation":1.68,"texture":"ganymede.jpg"}
 			},
-{ #15 Callisto, orbiting Jupiter - Hazard 225%
+{ #15 Callisto, orbiting Jupiter - Hazard 100%
 				"entity":"planet",
 				"name":"Callisto",
 				"focus":5,
@@ -241,7 +243,7 @@
 				"conditions":["ruins_extensive","cold","no_atmosphere","low_gravity","poor_light","ore_abundant","rare_ore_abundant","volatiles_abundant","pre_collapse_facility","US_tunnels","US_crystals"],
 				"specChanges":{"tilt":-23.5,"rotation":0.72,"texture":"callisto.jpg"}
 },
-{ #16 Enceladus, orbiting Saturn - Hazard 225%
+{ #16 Enceladus, orbiting Saturn - Hazard 175%
 				"entity":"planet",
 				"name":"Enceladus",
 				"focus":6,
@@ -253,9 +255,9 @@
 				"orbitClockwise":false,
 				#"conditions":["low_gravity","very_cold","tectonic_activity","poor_light","ore_abundant","volatiles_diffuse"],
 				 "conditions":["very_cold","ruins_scattered","tectonic_activity","low_gravity","poor_light","ore_moderate","rare_ore_rich","volatiles_diffuse","pre_collapse_facility","US_crash"],
-				"specChanges":{"tilt":-23.5,"rotation":8.76,"texture":"enceladus.jpg"}
+				"specChanges":{"tilt":-23.5,"rotation":8.76,"cloud_rotation":8.0,"texture":"enceladus.jpg"}
 },
-{ #17 Titan, orbiting Saturn - Hazard 175%
+{ #17 Titan, orbiting Saturn - Hazard 75%
 				"entity":"planet",
 				"name":"Titan",
 				"focus":6,
@@ -274,36 +276,36 @@
 				"name":"Oberon",
 				"focus":7,
 				"type":"rocky_ice",
-				"orbitAngle":0,
-				"radius":40,
-				"orbitRadius":900,
+				"orbitAngle":30,
+				"radius":60,
+				"orbitRadius":1800,
 				"orbitDays":26,  #realistic 13,
 				"orbitClockwise":false,
 				"conditions":["ore_sparse","poor_light","no_atmosphere","very_cold","low_gravity"],
 				"specChanges":{"tilt":-97.8,"rotation":0.89,"texture":"oberonB.jpg"} # OR oberonA.jpg OR oberonC.jpg
 },
-{ #19 Titania, orbiting Uranus - Hazard 250%
+{ #19 Titania, orbiting Uranus - Hazard 100%
 				"entity":"planet",
 				"name":"Titania",
 				"focus":7,
 				"type":"tundra",
-				"orbitAngle":0,
-				"radius":80,
-				"orbitRadius":900,
+				"orbitAngle":120,
+				"radius":90,
+				"orbitRadius":1200,
 				"orbitDays":39,
 				"orbitClockwise":false,
 				#"conditions":["ruins_extensive","thin_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace"],
 				"conditions":["ruins_extensive","thin_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace","pre_collapse_facility","US_tunnels","US_cryosanctum","US_shrooms"],
-				"specChanges":{"tilt":-78.9,"rotation":1.87,"texture":"titania.jpg"}
+				"specChanges":{"tilt":-78.9,"rotation":1.87,"cloud_rotation":1.80,"texture":"titania.jpg"}
 },
-{ #20 Miranda, orbiting Uranus - Hazard 250%
+{ #20 Miranda, orbiting Uranus - Hazard 100%
 				"entity":"planet",
 				"name":"Miranda",
 				"focus":7,
 				"type":"rocky_ice",
-				"orbitAngle":0,
-				"radius":120,
-				"orbitRadius":900,
+				"orbitAngle":210,
+				"radius":30,
+				"orbitRadius":600,
 				"orbitDays":52,
 				"orbitClockwise":false,
 				#"conditions":["ruins_widespread","cold","no_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace"],
@@ -322,9 +324,9 @@
 				"orbitClockwise":false,
 				#"conditions":["rare_ore_sparse","ore_moderate","volatiles_abundant","dark","tectonic_activity","very_cold","low_gravity"],
 				"conditions":["ruins_scattered","very_cold","tectonic_activity","low_gravity","dark","rare_ore_sparse","ore_moderate","volatiles_abundant","pre_collapse_facility"],
-				"specChanges":{"tilt":-23.5,"rotation":2.04,"texture":"tritonB.jpg"} # OR tritonA.jpg" OR tritonC.jpg
+				"specChanges":{"tilt":-23.5,"rotation":2.04,"cloud_rotation":2.0,"texture":"tritonB.jpg"} # OR tritonA.jpg" OR tritonC.jpg
 },
-{ #22 Charon, orbiting Pluto- Hazard 275%
+{ #22 Charon, orbiting Pluto- Hazard 100%
 				"entity":"planet",
 				"name":"Charon",
 				"focus":10,
@@ -334,7 +336,7 @@
 				"orbitRadius":100,
 				"orbitDays":12.8, #realistic 6.4,
 				"orbitClockwise":false,
-				"conditions":["ore_ultrarich","rare_ore_ultrarich",],
+				"conditions":["ore_ultrarich","rare_ore_ultrarich"],
 				"specChanges":{"tilt":-23.5,"rotation":1.88,"texture":"charon.jpg"}
 },
 
@@ -493,58 +495,91 @@
 				"tags":[],
 				"size":1000,
 },
-				{"entity":"jump_point","orbitRadius":3333,"orbitAngle":90,"orbitDays":0,"name":"Prime-Point","orbitClockwise":false}, #40
+				{"entity":"jump_point","orbitRadius":4444,"orbitAngle":210,"orbitDays":0,"name":"Prime-Point","orbitClockwise":false}, #40
 				{"entity":"jump_point","orbitRadius":11111,"orbitAngle":30,"orbitDays":0,"name":"Kuiper-Point","orbitClockwise":false}, #41
 				{"entity":"jump_point","orbitRadius":17777,"orbitAngle":270,"orbitDays":0,"name":"Orion-Point","orbitClockwise":false}, #42
-				{"entity":"inactive_gate","orbitRadius":18765,"orbitAngle":90,"orbitDays":0,"name":"Milky Way Gate","orbitClockwise":false}, #43
-				{"entity":"empty_location","orbitRadius":15000,"orbitDays":0,"orbitClockwise":false}, #44
-				{"entity":"stable_location","orbitRadius":6666,"orbitDays":0,"orbitClockwise":false}, #45
-				{"entity":"stable_location","orbitRadius":7777,"orbitDays":0,"orbitClockwise":false}, #46
-				{"entity":"comm_relay","orbitRadius":6060,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #47
-				{"entity":"sensor_array","orbitRadius":5050,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #48
-				{"entity":"nav_buoy","orbitRadius":12222,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #49
-				{"entity":"station_research","orbitRadius":1666}, #50
-				{"entity":"orbital_habitat","orbitRadius":18888}, #51
+				{"entity":"inactive_gate","orbitRadius":18765,"orbitAngle":135,"orbitDays":0,"name":"Milky Way Gate","orbitClockwise":false}, #43
+				{"entity":"empty_location","orbitRadius":15000,"orbitAngle":45,"orbitDays":0,"orbitClockwise":false}, #44
+				{"entity":"stable_location","orbitRadius":8765,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false}, #45
+				{"entity":"stable_location","orbitRadius":12345,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false}, #46
+				{"entity":"comm_relay","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #47
+				{"entity":"sensor_array","orbitRadius":5050,"orbitAngle":75,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #48
+				{"entity":"nav_buoy","orbitRadius":7000,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #49
+				{"entity":"orbital_habitat","orbitRadius":18888}, #50
+				{"entity":"station_research","orbitRadius":1666}, #51
 				{"entity":"station_mining_remnant","orbitRadius":20000}, #52
 				{"entity":"derelict_probe","orbitRadius": 8888}, #53
 				{"entity":"derelict_cryosleeper","orbitRadius":12000}, #54
 				{"entity":"wreck","focus":0,"orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #55
+				
+{ #56 Easter Egg Sakura - Hazard 0%
+				"entity":"planet",
+				"name":"Pandora",
+				"type":"US_sakura",
+				"orbitAngle":180,
+				"radius":300,
+				"orbitRadius":33333,
+				"orbitDays":7777, 
+				"orbitClockwise":false,
+				"conditions":["US_sakura","US_hybrid","US_crystals","US_bedrock","US_unique_filter","US_cryosanctum","rat_engineered_utopia","habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast"],
+				"specChanges":{"tilt":-1.618,"rotation":1.618,"texture":"US_planet_textureSakura.jpg"}
+},
+{ #57 Easter Egg Water Hycean - Hazard 25%
+				"entity":"planet",
+				"name":"Pithos",
+				"type":"US_waterHycean",
+				"radius":100,
+				"focus":56,
+				"orbitRadius":777,
+				"orbitDays":333, 
+				"orbitClockwise":false,
+				"conditions":["US_fluorescent","US_hybrid","US_crystals","US_bedrock","US_crash","US_unique_filter","rat_ancient_megacities","rat_bionic_plantlife","rat_kinetic_launchsystem","water_surface","rare_ore_ultrarich","volatiles_abundant","ruins_vast"],
+				"specChanges":{"tilt":-1.618,"rotation":1.618,"texture":"US_planet_textureHycean.jpg"}
+				
+},
+			{ # Remnant battlestation
+				"entity":"remnant_station",
+				"focus":[57,2],
+				"orbitAngle":-1,
+				"orbitDays":666,
+				"isDamaged":true,
+			},
 
-## Space Stations
-#			{"entity":"station", #55
-#				"type":"station_hightech3",
-#				"focus":0,
-#				"orbitRadius":5555,
-#				"orbitAngle":90,
-#				"orbitDays":0,
-#				"orbitClockwise":false,
-#				"name":"Elysium II",
-#				#"customDescriptionId":"station_chupi_orco",
-#				"conditions":["habitable","mild_climate","farmland_bountiful","IndEvo_ArtilleryStationCondition"],
-#				"memoryKeys":{},
-#				"marketMemoryKeys":{},
-#				"tags":[],
-#				"factionId":"player",
-#				"marketSize":6,
-#				"freePort":false,
-#				"aiCoreAdmin":false,
-#				"industries":[
-#					"population",
-#					["megaport",,"fullerene_spool",true],
-#					["waystation",,,true],
-#					["heavybatteries",,"drone_replicator",true],
-#					["starfortress_high",,,true], # Only story-point improvement
-#					["highcommand",,,true],
-#					["farming",,"soil_nanites",true],
-#					["lightindustry",,"biofactory_embryo",true],
-#					["IndEvo_IntArray",,"IndEvo_transmitter"],
-#					["IndEvo_Artillery_railgun",,,true],
-#					"IndEvo_Academy",
-#				]
-#			},
-		],
-	}, #SOL Celestial Bodies END
+## Space Stations - Currently Will break if the only/starting colony owned
+			#{"entity":"station", #58
+			#	"type":"station_hightech3",
+			#	"focus":0,
+			#	"orbitRadius":5555,
+			#	"orbitAngle":90,
+			#	"orbitDays":0,
+			#	"orbitClockwise":false,
+			#	"name":"Elysium II",
+				#"customDescriptionId":"station_chupi_orco",
+			#	"conditions":"IndEvo_ArtilleryStationCondition",
+			#	"memoryKeys":{},
+			#	"marketMemoryKeys":{},
+			#	"tags":[],
+			#	"factionId":"player",
+			#	"marketSize":6,
+			#	"freePort":false,
+			#	"aiCoreAdmin":false,
+			#	"industries":[
+			#		"population",
+			#		["megaport",,"fullerene_spool",true],
+			#		["waystation",,,true],
+			#		["heavybatteries",,"drone_replicator",true],
+			#		["starfortress_high",,,true], # Only story-point improvement
+			#		["highcommand",,,true],
+			#		["farming",,"soil_nanites",true],
+			#		["lightindustry",,"biofactory_embryo",true],
+			#		["IndEvo_IntArray",,"IndEvo_transmitter"],
+			#		["IndEvo_Artillery_railgun",,,true],
+			#		"IndEvo_Academy",
+			#	]
+			#},
+		], #Celestial Bodies END
+	}, #Sol System END
 	
-	#"css_Sol-II":{}
+	#"css_newSystem":{},
 
 } # CLOSING
