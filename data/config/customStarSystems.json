@@ -551,7 +551,7 @@
 				"type":"station_hightech3",
 				"focus":0,
 				"orbitRadius":5555,
-				"orbitAngle":90,
+				"orbitAngle":120,
 				"orbitDays":0,
 				"orbitClockwise":false,
 			#	"name":"Elysium II",
@@ -584,3 +584,4 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
