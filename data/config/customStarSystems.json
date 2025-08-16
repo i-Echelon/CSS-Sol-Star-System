@@ -34,7 +34,7 @@
 				"orbitClockwise":false,
 				"memoryKeys":{"$US_starVariant":3}, #unique
 				"tags":["neutrino"],
-				"specChanges":{"tilt":-7.25,"rotation":0.44,"useReverseLightForGlow":false,"glowColor":[238,235,106,255],"planetColor":[238,235,206,255],"iconColor":[250,250,250,250],"texture":"US_star_textureCustomWhite_2.jpg",
+				"specChanges":{"tilt":-7.25,"rotation":0.44,"useReverseLightForGlow":false,"glowColor":[238,235,106,255],"planetColor":[238,235,206,255],"iconColor":[250,250,250,250],"texture":"sol.jpg",
 					"typeOverride":["star_yellow","Yellow Dwarf Star"]}
 },
 
@@ -583,3 +583,4 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
