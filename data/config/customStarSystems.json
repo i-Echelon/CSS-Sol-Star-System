@@ -2,18 +2,18 @@
 	# All "orbitDays" for planets and moons were increased to be more inline with starsectors time/speed pass.
 	# Using realistic values (Earth 365/y, Luna 28/m) you would have to use emergency burn to even catch some of the moons who orbits at high speed, but that would be realistic i guess.
 	# Left original speeds as comments incase you want to re-enable. You can also comment/remove the custom graphics to let procgen override. Same for conditions.
-	# Recently change "conditions" of most planets and moons to use some from US/RAT/IE. Left the original realish ones as comments.
+	# Recently change "conditions" of most planets and moons to use some from US/RAT/IE/AotD-VoK. Left the original realish ones as comments.
 	# Rotation speeds were also halved in speed for disorientation purposes
 {
 	"css_Sol":{
 		"isEnabled":true,
-		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any start.
+		"teleportUponGeneration":true, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
 		"hasSystemwideNebula":false,
 		"addDomainCryosleeper":true,
 		"addCoronalHypershunt":false,
 		"memoryKeys":{"$US_skipSystem":true}, # Memory key to prevent Unknown Skies scripts from modifying this system (false to allow)
-		"setLocation":[0,-45000], #originally used "setLocation":2,
+		"setLocation":[0,-45000], #originally used "setLocation":2, (2 constellations away from Core Worlds( 0 for random))
 		"systemBackground":"galaxy0.png",
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
@@ -177,7 +177,7 @@
 { #11 Luna, orbiting Earth - Hazard 100%
 				"entity":"planet",
 				"name":"Luna",
-				"focus":3,
+				"focus":3, # set to the 3rd entity to be declared a moon
 				"type":"barren-bombarded",
 				"orbitAngle":0,
 				"radius":40,
@@ -511,8 +511,9 @@
 				{"entity":"derelict_probe","orbitRadius": 8888}, #53
 				{"entity":"derelict_cryosleeper","orbitRadius":12000}, #54
 				{"entity":"wreck","focus":0,"orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #55
-				
-{ #56 Easter Egg Sakura - Hazard 0%
+#EASTER EGGS
+
+{ #56 Pandora - Hazard 0%
 				"entity":"planet",
 				"name":"Pandora",
 				"type":"US_sakura",
@@ -524,12 +525,12 @@
 				"conditions":["US_sakura","US_hybrid","US_crystals","US_bedrock","US_unique_filter","US_cryosanctum","rat_engineered_utopia","habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast"],
 				"specChanges":{"tilt":-1.618,"rotation":1.618,"texture":"US_planet_textureSakura.jpg"}
 },
-{ #57 Easter Egg Water Hycean - Hazard 25%
+{ #57 Pithos, orbiting Pandora - Hazard 25%
 				"entity":"planet",
 				"name":"Pithos",
 				"type":"US_waterHycean",
 				"radius":100,
-				"focus":56,
+				"focus":56, # set to the 56th entity to be declared a moon
 				"orbitRadius":777,
 				"orbitDays":333, 
 				"orbitClockwise":false,
@@ -583,7 +584,3 @@
 	#"css_newSystem":{},
 
 } # CLOSING
-
-
-
-
