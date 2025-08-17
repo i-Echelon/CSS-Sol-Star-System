@@ -340,7 +340,7 @@
 				"orbitRadius":100,
 				"orbitDays":12.8, #realistic 6.4,
 				"orbitClockwise":false,
-				"conditions":["ore_ultrarich","rare_ore_ultrarich"],
+				"conditions":["ore_ultrarich","rare_ore_ultrarich","IndEvo_RuinsCondition"],
 				"specChanges":{"tilt":-23.5,"rotation":1.88,"texture":"charon.jpg"}
 },
 
@@ -605,3 +605,4 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
