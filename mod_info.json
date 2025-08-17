@@ -9,6 +9,7 @@
 	},
 	"description": "Adds Sol, via Customizable Star Systems Mod.",
 	"gameVersion": "0.98a-RC8",
+	"utility": "true",
 	 "dependencies": [# bare minimum versions required
         {
             "id": "customizablestarsystems",
@@ -38,4 +39,5 @@
 	],
 	#"suppressVCUnsupported": true
 }
+
 
