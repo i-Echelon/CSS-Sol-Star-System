@@ -1,3 +1,7 @@
+3.2.6
+-Added array for aurora colors
+-Added a Station for Storage
+-Increased orbit speed of [REDACTED]
 3.2.5
 - Several Adjustments.
 3.1.0
@@ -10,3 +14,4 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
