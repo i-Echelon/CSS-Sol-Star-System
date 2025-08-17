@@ -17,12 +17,13 @@
 		"systemBackground":"galaxy0.png",
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
-		"systemAge": "average",
+		"systemAge":"average",
 		"systemTags":["theme_misc","theme_derelict_survey_ship","theme_derelict_cryosleeper", "theme_remnant_suppressed"],
 
 
 		"entities":[ #Celestial Bodies START
 ## STARS
+
 
 { #0 Sol - Yellow Dwarf, (but white sun) Magnetic?, Neutronic
 				"entity":"star",
@@ -34,7 +35,7 @@
 				"orbitClockwise":false,
 				"memoryKeys":{"$US_starVariant":3}, #unique
 				"tags":["neutrino"],
-				"specChanges":{"tilt":-7.25,"rotation":0.44,"useReverseLightForGlow":false,"glowColor":[238,235,106,255],"planetColor":[238,235,206,255],"iconColor":[250,250,250,250],"texture":"sol.jpg",
+				"specChanges":{"tilt":-7.25,"rotation":0.44,"useReverseLightForGlow":false,"glowColor":[238,235,106,255],"planetColor":[238,235,206,255],"iconColor":[238,235,206,255],"texture":"sol.jpg",
 					"typeOverride":["star_yellow","Yellow Dwarf Star"]}
 },
 
@@ -73,10 +74,12 @@
 				"orbitRadius":4400,
 				"orbitDays":730, #realistic 365,
 				"orbitClockwise":false,
-				"specChanges":{"cloudColor":[235,240,250,225],"cloudRotation":9.0,"atmosphereThickness":0,"cloudTexture":"US_clouds_textureMedium.png","tilt":-23.4,"rotation":12.0,"texture":"earth.jpg",
+				"specChanges":{"cloudColor":[235,240,250,225],"cloudRotation":-5,"cloudTexture":"US_clouds_textureMedium.png","tilt":-23.4,"rotation":12.0,
+				"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],"iconColor":[155,185,255,255],"texture":"earth.jpg","planetColor":[255,255,255,255],
 					"typeOverride":["US_magnetic","Origin"]},
 				#"conditions":["habitable","mild_climate","farmland_bountiful","ore_sparse","ruins_vast","organics_plentiful","high_gravity"], #DEFAULT REALISTIC
 				"conditions":["habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast","pre_collapse_facility","US_elevator","US_religious","US_magnetic","rat_ancient_megacities","rat_bionic_plantlife","rat_engineered_utopia"],
+				#"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_HullDecon"},
 				#"factionId":"player", #do we colonize?
 				#"marketSize":3,
 				#"industries":["population", "spaceport", "lightindustry", "heavyindustry"]
@@ -90,7 +93,7 @@
 				"orbitRadius":6000,
 				"orbitDays":1374, #realistic 687,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloud_rotation":23.30,"texture":"mars.jpg"},
+				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloud_rotation":-12.65,"texture":"mars.jpg"},
 				"conditions":["ruins_widespread","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common","pre_collapse_facility","rat_ancient_military_hub","US_elevator","US_shrooms","rat_ancient_megacities","rat_kinetic_launchsystem","rat_warscape","rat_ancient_industries","rat_rampant_military_core","rat_defensive_drones"],
 },
 { #5 Jupiter - Hazard 100%
@@ -102,7 +105,7 @@
 				"orbitRadius":9800,
 				"orbitDays":8666, #realistic 4333,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":-3.1,"rotation":29.27,"texture":"jupiter.jpg"	},
+				"specChanges":{"tilt":-3.1,"rotation":29.27,"cloudTexture":"US_clouds_textureGiant.png","texture":"jupiter.jpg"	},
 				#"conditions":["volatiles_diffuse","toxic_atmosphere","high_gravity","solar_array"], #DEFAULT REALISTIC
 				"conditions":["high_gravity","volatiles_plentiful","ruins_vast","pre_collapse_facility","US_floating","rat_ancient_fuel_hub","IndEvo_mineFieldCondition"],
 },
@@ -115,7 +118,7 @@
 				"orbitRadius":14000,
 				"orbitDays":21512, #realistic 10756,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":-26.7,"rotation":26.665,"texture":"saturn.jpg"},
+				"specChanges":{"tilt":-26.7,"rotation":26.665,"cloudTexture":"US_clouds_textureGiant.png","texture":"saturn.jpg"},
 				#"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity", #DEFAULT REALISTIC
 				"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity","IndEvo_mineFieldCondition","pre_collapse_facility","US_floating","US_fluorescent","rat_ancient_fuel_hub"],
 },
@@ -129,7 +132,7 @@
 				"orbitDays":61374, #realistic 30687,
 				"orbitClockwise":false,
 				"conditions":["water_surface","volatiles_abundant","poor_light","extreme_weather","toxic_atmosphere","very_cold","high_gravity"],
-				"specChanges":{"tilt":82.2,"rotation":33.33,"texture":"uranus.jpg"}
+				"specChanges":{"tilt":82.2,"rotation":33.33,"cloudTexture":"US_clouds_textureSwept.png","texture":"uranus.jpg"}
 },
 { #8 Neptune - Hazard 250%
 				"entity":"planet",
@@ -141,7 +144,7 @@
 				"orbitDays":120380,  #realistic 60190,
 				"orbitClockwise":false,
 				"conditions":["volatiles_diffuse","dark","very_cold","high_gravity","ruins_scattered"],
-				"specChanges":{"tilt":-28.3,"rotation":16.665,"texture":"neptune.jpg"}
+				"specChanges":{"tilt":-28.3,"rotation":16.665,"cloudTexture":"US_clouds_textureSwept.png","texture":"neptune.jpg"}
 },
 
 ## DWARFS
@@ -186,7 +189,8 @@
 				"orbitClockwise":false,
 				#"conditions":["no_atmosphere","low_gravity","rare_ore_sparse"],
 				"conditions":["ruins_vast","no_atmosphere","low_gravity","ore_sparse","rare_ore_rich","pre_collapse_facility","US_base","US_tunnels","US_crystals","rat_ancient_industries"],
-				"specChanges":{"tilt":-5.14,"rotation":0.44,"texture":"luna.jpg"}
+				"specChanges":{"tilt":-5.14,"rotation":0.44,"texture":"luna.jpg"},
+				#"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_ResLab"},
 },
 { #12 Io, orbiting Jupiter - Hazard 225%
 				"entity":"planet",
@@ -199,7 +203,7 @@
 				"orbitDays":3.54, #realistic 1.77,
 				"orbitClockwise":false,
 				"conditions":["tectonic_activity","poor_light","hot","thin_atmosphere","low_gravity","ore_abundant","rare_ore_abundant"],
-				"specChanges":{"tilt":-1.0,"rotation":6.78,"glowColor":[250,250,250,225],"useReverseLightForGlow":true,"texture":"io.jpg"}
+				"specChanges":{"tilt":-1.0,"rotation":6.78,"cloudRotation":-3.39,"glowColor":[250,250,250,225],"useReverseLightForGlow":true,"texture":"io.jpg"}
 },
 { #13 Europa, orbiting Jupiter - Hazard 225%
 				"entity":"planet",
@@ -344,19 +348,19 @@
 
 			{ #23 Main asteroid belt
 				"entity":"asteroid_belt",
-					"name":"Main Belt","orbitRadius":7000,"orbitDays":2000,"orbitClockwise":false,"innerBandIndex":0,"outerBandIndex":0,"size":512,"numAsteroids": 500,
+					"name":"Main Belt","orbitRadius":7000,"orbitDays":2000,"orbitClockwise":false,"innerBandIndex":0,"outerBandIndex":0,"size":512,"numAsteroids":500,
 			},
 			{ #24 Kuiper Belt
 				"entity":"asteroid_belt",
-					"name":"Kuiper Belt","orbitRadius":24000,"orbitDays":203400,"orbitClockwise":false,"size":1000,"numAsteroids": 500,
+					"name":"Kuiper Belt","orbitRadius":24000,"orbitDays":203400,"orbitClockwise":false,"size":1000,"numAsteroids":500,
 			},
 			{ #25 Kuiper Belt 2
 				"entity":"asteroid_belt",
-					"name":"Kuiper Belt2","type":"rings_asteroids0","orbitRadius":24500,"orbitDays":152550,"orbitClockwise":false,"bandIndex":2,"size":1000,"numAsteroids": 500,
+					"name":"Kuiper Belt2","type":"rings_asteroids0","orbitRadius":24500,"orbitDays":152550,"orbitClockwise":false,"bandIndex":2,"size":1000,"numAsteroids":500,
 			},
 			{ #26 Kuiper Belt 3
 				"entity":"asteroid_belt",
-					"name":"Kuiper Belt3","type":"rings_dust0","orbitRadius":25000,"orbitDays":101700,"orbitClockwise":false,"bandIndex":3,"size":1000,"numAsteroids": 500,
+					"name":"Kuiper Belt3","type":"rings_dust0","orbitRadius":25000,"orbitDays":101700,"orbitClockwise":false,"bandIndex":3,"size":1000,"numAsteroids":500,
 			},
 
 ## RING BANDS
@@ -473,8 +477,7 @@
 				"outerRadius":290, # Radius of focus + 110
 				"baseColor":[50,175,200,100],
 				"auroraFrequency":0.25,
-				"auroraColors":[[0,255,255,35],[191,255,0,35],[15,226,85,35],[50,150,255,35],[180,50,255,35],[255,100,200,35],[255,0,60,35]],
-				#[25,250,100,150],[255,153,51,35]
+				"auroraColors":[[0,255,255,35],[191,255,0,35],[15,226,85,35],[50,150,255,35],[25,250,100,150],[180,50,255,35],[255,100,200,35],[255,0,60,35],[255,153,51,35]],
 },
 { #38 Debris field 1
 				"entity":"debris_field",
@@ -509,7 +512,7 @@
 				{"entity":"orbital_habitat","orbitRadius":18888}, #50
 				{"entity":"station_research","orbitRadius":1666}, #51
 				{"entity":"station_mining_remnant","orbitRadius":20000}, #52
-				{"entity":"derelict_probe","orbitRadius": 8888}, #53
+				{"entity":"derelict_probe","orbitRadius":8888}, #53
 				{"entity":"derelict_cryosleeper","orbitRadius":12000}, #54
 				{"entity":"wreck","focus":0,"orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #55
 #EASTER EGGS
@@ -521,10 +524,12 @@
 				"orbitAngle":180,
 				"radius":300,
 				"orbitRadius":33333,
-				"orbitDays":66, 
+				"orbitDays":66,
 				"orbitClockwise":false,
 				"conditions":["US_sakura","US_hybrid","US_crystals","US_bedrock","US_unique_filter","US_cryosanctum","rat_engineered_utopia","habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast"],
-				"specChanges":{"tilt":1.618,"rotation":1.618,"texture":"US_planet_textureSakura.jpg"}
+				"specChanges":{"tilt":15,"rotation":-3,"pitch":1.0,"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],
+					"texture":"US_planet_textureSakura.jpg","cloudTexture":"US_clouds_textureMedium.png","cloudColor":[235,240,250,240],"cloudRotation":-5,
+						"planetColor":[255,255,255,255],"iconColor":[245,129,205,255],"tags":["codex_unlockable"]}
 },
 { #57 Pithos, orbiting Pandora - Hazard 25%
 				"entity":"planet",
@@ -539,7 +544,7 @@
 				"specChanges":{"tilt":-1.618,"rotation":1.618,"texture":"US_planet_textureHycean.jpg"}
 				
 },
-			{ # Remnant battlestation
+			{ # 58 Remnant battlestation - orbiting Pithos
 				"entity":"remnant_station",
 				"focus":[57,2],
 				"orbitAngle":-1,
@@ -547,14 +552,29 @@
 				"isDamaged":true,
 			},
 
-## Space Stations - Currently Will break if the only/starting colony owned
-			{"entity":"station", #58
-				"type":"station_hightech3",
-				"focus":0,
-				"orbitRadius":5555,
-				"orbitAngle":120,
-				"orbitDays":0,
+{ #59 Moonglow - Hazard 0%
+				"entity":"planet",
+				"name":"Moonglow",
+				"type":"US_fluorescent",
+				"orbitRadius":44444,
+				"radius":444,
+				"orbitDays":222, 
 				"orbitClockwise":false,
+				"conditions":["US_fluorescent","US_floating","US_shrooms","IndEvo_RuinsCondition","high_gravity","volatiles_plentiful","ruins_vast"],
+				#"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_ResLab"},
+				"specChanges":{"tilt":-15,"rotation":-3,"pitch":15,"atmosphereThickness":0.25,"atmosphereThicknessMin":62,"atmosphereColor":[39,20,211,100],
+					"texture":"US_planet_textureFluorescent.jpg","cloudTexture":"US_clouds_textureGiant.png","cloudColor":[107,112,253,100],"cloudRotation":-2,
+						"planetColor":[255,255,255,255],"iconColor":[93,46,247,255],"glowColor":[255,255,255,200],"glowTexture":"US_planet_textureFluorescent.jpg","tags":["codex_unlockable"]}
+},
+
+## Space Stations - Currently Will break if the only/starting colony owned
+			{"entity":"station", #60
+				"type":"station_hightech3",
+				"focus":[4,2], #orbiting Mars
+				#"orbitRadius":5555,
+				#"orbitAngle":120,
+				#"orbitDays":0,
+				#"orbitClockwise":false,
 			#	"name":"Elysium II",
 				#"customDescriptionId":"station_chupi_orco",
 			#	"conditions":"IndEvo_ArtilleryStationCondition",
@@ -585,4 +605,3 @@
 	#"css_newSystem":{},
 
 } # CLOSING
-
