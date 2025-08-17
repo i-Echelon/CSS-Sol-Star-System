@@ -1,3 +1,10 @@
+3.2.7
+-Optimization
+-new easter eggs
+-updated memory keys
+-several spec changes to atmosphere and clouds 
+-fixed earth and sol planet textures
+-stable
 3.2.6
 -Added array for aurora colors
 -Added a Station for Storage
@@ -14,4 +21,5 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
