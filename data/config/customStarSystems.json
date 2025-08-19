@@ -523,7 +523,7 @@
 				"type":"US_sakura",
 				"orbitAngle":180,
 				"radius":300,
-				"orbitRadius":33333,
+				"orbitRadius":32109,
 				"orbitDays":66,
 				"orbitClockwise":false,
 				"conditions":["US_sakura","US_hybrid","US_crystals","US_bedrock","US_unique_filter","US_cryosanctum","rat_engineered_utopia","habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast"],
@@ -556,7 +556,7 @@
 				"entity":"planet",
 				"name":"Moonglow",
 				"type":"US_fluorescent",
-				"orbitRadius":44444,
+				"orbitRadius":34567,
 				"radius":444,
 				"orbitDays":222, 
 				"orbitClockwise":false,
@@ -605,4 +605,3 @@
 	#"css_newSystem":{},
 
 } # CLOSING
-
