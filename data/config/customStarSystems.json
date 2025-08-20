@@ -517,7 +517,7 @@
 				{"entity":"derelict_probe","orbitRadius":8888}, #53
 				{"entity":"derelict_cryosleeper","orbitRadius":12000}, #54
 				{"entity":"wreck","focus":0,"orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #55
-				{"entity":"aotd_pluto_station","focus":[10,3]} #"factionId":"player" #56
+				{"entity":"aotd_pluto_station","focus":[10,3]}, #"factionId":"player" #56
 
 
 ## Space Stations - Currently Will break if the only/starting colony owned
@@ -558,3 +558,4 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
