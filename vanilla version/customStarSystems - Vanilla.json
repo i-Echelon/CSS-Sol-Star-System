@@ -4,7 +4,7 @@
 	# Left original speeds as comments incase you want to re-enable. You can also comment/remove the custom graphics to let procgen override. Same for conditions.
 	# Rotation speeds were also halved in speed for disorientation purposes
 {
-	"css_Sol_vanilla":{
+	"css_Sol":{
 		"isEnabled":true,
 		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
@@ -564,4 +564,3 @@
 	#"css_newSystem":{},
 
 } # CLOSING
-
