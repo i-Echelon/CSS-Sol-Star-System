@@ -8,7 +8,7 @@
 {
 	"css_Sol":{
 		"isEnabled":true,
-		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
+		"teleportUponGeneration":true, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
 		"hasSystemwideNebula":false,
 		"addDomainCryosleeper":true,
@@ -94,7 +94,7 @@
 				"orbitRadius":6000,
 				"orbitDays":1374, #realistic 687,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloud_rotation":-12.65,"texture":"mars.jpg"},
+				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"texture":"mars.jpg"},
 				#"conditions":["ruins_scattered","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common"], DEFAULT REALISTIC
 				"conditions":["ruins_widespread","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common","pre_collapse_facility","rat_ancient_military_hub","US_elevator","US_shrooms","rat_ancient_megacities","rat_kinetic_launchsystem","rat_warscape","rat_ancient_industries","rat_rampant_military_core","rat_defensive_drones"],
 },
@@ -121,7 +121,7 @@
 				"orbitDays":21512, #realistic 10756,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-26.7,"rotation":26.665,"cloudTexture":"US_clouds_textureGiant.png","texture":"saturn.jpg"},
-				#"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity", #DEFAULT REALISTIC
+				#"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity"], #DEFAULT REALISTIC
 				"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity","IndEvo_mineFieldCondition","pre_collapse_facility","US_floating","US_fluorescent","rat_ancient_fuel_hub"],
 },
 { #7 Uranus - Hazard 325%
@@ -157,7 +157,7 @@
 				"type":"barren",
 				"orbitAngle":270,
 				"radius":10,
-				"orbitRadius":6789,
+				"orbitRadius":8000,
 				"orbitDays":3364, #realistic 1682,
 				"orbitClockwise":false,
 				"conditions":["ruins_scattered","no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant","US_crystals"],
@@ -219,7 +219,7 @@
 				"orbitClockwise":false,
 				#"conditions":["volatiles_plentiful","organics_abundant","thin_atmosphere","cold","poor_light","low_gravity"],
 				 "conditions":["ruins_widespread","cold","low_gravity","thin_atmosphere","water_surface","poor_light","volatiles_plentiful","organics_abundant","rat_bionic_plantlife"],
-				"specChanges":{"tilt":1.79,"rotation":3.38,"cloud_rotation":3.0,"texture":"europa.jpg"}
+				"specChanges":{"tilt":1.79,"rotation":3.38,"cloudRotation":3.0,"texture":"europa.jpg"}
 },
 { #14 Ganymede, orbiting Jupiter - Hazard 150%
 				"entity":"planet",
@@ -261,7 +261,7 @@
 				"orbitClockwise":false,
 				#"conditions":["low_gravity","very_cold","tectonic_activity","poor_light","ore_abundant","volatiles_diffuse"],
 				 "conditions":["very_cold","ruins_scattered","tectonic_activity","low_gravity","poor_light","ore_moderate","rare_ore_rich","volatiles_diffuse","pre_collapse_facility","US_crash"],
-				"specChanges":{"tilt":-23.5,"rotation":8.76,"cloud_rotation":8.0,"texture":"enceladus.jpg"}
+				"specChanges":{"tilt":-23.5,"rotation":8.76,"cloudRotation":8.0,"texture":"enceladus.jpg"}
 },
 { #17 Titan, orbiting Saturn - Hazard 75%
 				"entity":"planet",
@@ -302,7 +302,7 @@
 				"orbitClockwise":false,
 				#"conditions":["ruins_extensive","thin_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace"],
 				"conditions":["ruins_extensive","thin_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace","pre_collapse_facility","US_tunnels","US_cryosanctum","US_shrooms"],
-				"specChanges":{"tilt":-78.9,"rotation":1.87,"cloud_rotation":1.80,"texture":"titania.jpg"}
+				"specChanges":{"tilt":-78.9,"rotation":1.87,"cloudRotation":1.80,"texture":"titania.jpg"}
 },
 { #20 Miranda, orbiting Uranus - Hazard 100%
 				"entity":"planet",
@@ -330,7 +330,7 @@
 				"orbitClockwise":false,
 				#"conditions":["rare_ore_sparse","ore_moderate","volatiles_abundant","dark","tectonic_activity","very_cold","low_gravity"],
 				"conditions":["ruins_scattered","very_cold","tectonic_activity","low_gravity","dark","rare_ore_sparse","ore_moderate","volatiles_abundant","pre_collapse_facility"],
-				"specChanges":{"tilt":-23.5,"rotation":2.04,"cloud_rotation":2.0,"texture":"tritonB.jpg"} # OR tritonA.jpg" OR tritonC.jpg
+				"specChanges":{"tilt":-23.5,"rotation":2.04,"cloudRotation":2.0,"texture":"tritonB.jpg"} # OR tritonA.jpg" OR tritonC.jpg
 },
 { #22 Charon, orbiting Pluto- Hazard 100%
 				"entity":"planet",
@@ -501,7 +501,7 @@
 				"tags":[],
 				"size":1000,
 },
-				{"entity":"jump_point","orbitRadius":2345,"orbitAngle":210,"orbitDays":0,"name":"Prime-Point","orbitClockwise":false}, #40
+				{"entity":"jump_point","orbitRadius":2345,"orbitAngle":210,"orbitDays":0,"name":"Prime-Point","orbitClockwise":false,"tags":["core_jump_point"]}, #40
 				{"entity":"jump_point","orbitRadius":11111,"orbitAngle":30,"orbitDays":0,"name":"Kuiper-Point","orbitClockwise":false}, #41
 				{"entity":"jump_point","orbitRadius":17777,"orbitAngle":270,"orbitDays":0,"name":"Orion-Point","orbitClockwise":false}, #42
 				{"entity":"inactive_gate","orbitRadius":18765,"orbitAngle":135,"orbitDays":0,"name":"Milky Way Gate","orbitClockwise":false}, #43
@@ -517,7 +517,7 @@
 				{"entity":"derelict_probe","orbitRadius":8888}, #53
 				{"entity":"derelict_cryosleeper","orbitRadius":12000}, #54
 				{"entity":"wreck","focus":0,"orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #55
-				{"entity":"aotd_pluto_station","focus":[10,3]}, #"factionId":"player" #56
+				{"entity":"aotd_pluto_station","focus":[10,2],"orbitAngle":0,"orbitDays":1000}, #"factionId":"player" #56
 
 
 ## Space Stations - Currently Will break if the only/starting colony owned
@@ -534,7 +534,7 @@
 			#	"memoryKeys":{},
 			#	"marketMemoryKeys":{},
 			#	"tags":[],
-			#	"factionId":"player",
+			#	"factionId":"player", 
 			#	"marketSize":6,
 			#	"freePort":false,
 			#	"aiCoreAdmin":false,
@@ -558,4 +558,3 @@
 	#"css_newSystem":{},
 
 } # CLOSING
-
