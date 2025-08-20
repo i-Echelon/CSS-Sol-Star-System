@@ -88,7 +88,7 @@
 { #4 Mars - Hazard 125%
 				"entity":"planet",
 				"name":"Mars",
-				"type":"barren",
+				"type":"barren", #override to barren-desert below
 				"orbitAngle":360,
 				"radius":80,
 				"orbitRadius":6000,
@@ -544,7 +544,7 @@
 				{"entity":"derelict_probe","orbitRadius":8888}, #55
 				{"entity":"derelict_cryosleeper","orbitRadius":12000}, #56
 				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #57
-				{"entity":"aotd_pluto_station","focus":[10,2],"orbitAngle":0,"orbitDays":1000}, #"factionId":"player" #58
+				{"entity":"aotd_pluto_station","focus":[10,2],"orbitAngle":0,"orbitDays":1000}, #58
 
 
 ## Space Stations - Currently Will break if the only/starting colony owned
@@ -585,6 +585,3 @@
 	#"css_newSystem":{},
 
 } # CLOSING
-
-
-
