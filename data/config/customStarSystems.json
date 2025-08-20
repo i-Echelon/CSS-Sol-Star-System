@@ -88,14 +88,14 @@
 { #4 Mars - Hazard 125%
 				"entity":"planet",
 				"name":"Mars",
-				"type":"barren-desert",
-				"typeOverride":["barren","Barren-Desert"], #workaround for tasc bug
+				"type":"barren",
 				"orbitAngle":360,
 				"radius":80,
 				"orbitRadius":6000,
 				"orbitDays":1374, #realistic 687,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"texture":"mars.jpg"},
+				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"texture":"mars.jpg",
+					"typeOverride":["barren-desert","Barren-Desert"]}, #workaround for tasc bug
 				#"conditions":["ruins_scattered","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common"], DEFAULT REALISTIC
 				"conditions":["ruins_widespread","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common","pre_collapse_facility","rat_ancient_military_hub","US_elevator","US_shrooms","rat_ancient_megacities","rat_kinetic_launchsystem","rat_warscape","rat_ancient_industries","rat_rampant_military_core","rat_defensive_drones"],
 },
@@ -585,4 +585,5 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
