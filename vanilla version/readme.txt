@@ -1,0 +1,1 @@
+Replace these files and rename them accordingly if you want to use the mod with no other mod requirements except Customizable Star Systems of course.
