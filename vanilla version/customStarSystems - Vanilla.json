@@ -94,7 +94,7 @@
 				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"texture":"mars.jpg"},
 				"conditions":["ruins_scattered","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common"]
 },
-{ #5 Jupiter - Hazard 100%
+{ #5 Jupiter - Hazard 150%
 				"entity":"planet",
 				"name":"Jupiter",
 				"type":"gas_giant",
@@ -106,7 +106,7 @@
 				"specChanges":{"tilt":-3.1,"rotation":29.27,"texture":"jupiter.jpg"	},
 				"conditions":["volatiles_diffuse","toxic_atmosphere","high_gravity","solar_array"], #DEFAULT REALISTIC
 },
-{ #6 Saturn - Hazard 125%
+{ #6 Saturn - Hazard 175%
 				"entity":"planet",
 				"name":"Saturn",
 				"type":"gas_giant",
@@ -172,7 +172,7 @@
 
 ## MOONS
 
-{ #11 Luna, orbiting Earth - Hazard 100%
+{ #11 Luna, orbiting Earth - Hazard 175%
 				"entity":"planet",
 				"name":"Luna",
 				"focus":3, # set to the 3rd entity to be declared a moon
@@ -186,7 +186,7 @@
 				"specChanges":{"tilt":-5.14,"rotation":0.44,"texture":"luna.jpg"},
 				#"marketMemoryKeys":{""},
 },
-{ #12 Phobos, orbiting Mars - Hazard 150%
+{ #12 Phobos, orbiting Mars - Hazard 175%
 			  "entity":"planet",
 			  "name":"Phobos",
 			  "focus":4,
@@ -199,7 +199,7 @@
 			  "conditions":["no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant"],
 			  "specChanges":{"tilt":0.0,"rotation":0.5,}#"texture":"phobos.jpg"}
 },
-{ #13 Deimos, orbiting Mars - Hazard 125%
+{ #13 Deimos, orbiting Mars - Hazard 175%
 			  "entity":"planet",
 			  "name":"Deimos",
 			  "focus":4,
@@ -238,7 +238,7 @@
 				"conditions":["volatiles_plentiful","organics_abundant","thin_atmosphere","cold","poor_light","low_gravity"],
 				"specChanges":{"tilt":1.79,"rotation":3.38,"cloudRotation":3.0,"texture":"europa.jpg"}
 },
-{ #16 Ganymede, orbiting Jupiter - Hazard 150%
+{ #16 Ganymede, orbiting Jupiter - Hazard 200%
 				"entity":"planet",
 				"name":"Ganymede",
 				"focus":5,
@@ -251,7 +251,7 @@
 				"conditions":["cold","poor_light","thin_atmosphere","low_gravity","ore_moderate","rare_ore_moderate","volatiles_abundant"],
 				"specChanges":{"tilt":-23.5,"rotation":1.68,"texture":"ganymede.jpg"}
 			},
-{ #17 Callisto, orbiting Jupiter - Hazard 100%
+{ #17 Callisto, orbiting Jupiter - Hazard 225%
 				"entity":"planet",
 				"name":"Callisto",
 				"focus":5,
@@ -264,7 +264,7 @@
 				"conditions":["cold","poor_light","low_gravity","no_atmosphere","ore_abundant","rare_ore_abundant","volatiles_abundant"],
 				"specChanges":{"tilt":-23.5,"rotation":0.72,"texture":"callisto.jpg"}
 },
-{ #18 Enceladus, orbiting Saturn - Hazard 175%
+{ #18 Enceladus, orbiting Saturn - Hazard 225%
 				"entity":"planet",
 				"name":"Enceladus",
 				"focus":6,
@@ -277,7 +277,7 @@
 				"conditions":["low_gravity","very_cold","tectonic_activity","poor_light","ore_abundant","volatiles_diffuse"],
 				"specChanges":{"tilt":-23.5,"rotation":8.76,"cloudRotation":8.0,"texture":"enceladus.jpg"}
 },
-{ #19 Titan, orbiting Saturn - Hazard 75%
+{ #19 Titan, orbiting Saturn - Hazard 175%
 				"entity":"planet",
 				"name":"Titan",
 				"focus":6,
@@ -303,7 +303,7 @@
 				"conditions":["ore_sparse","poor_light","no_atmosphere","very_cold","low_gravity"],
 				"specChanges":{"tilt":-97.8,"rotation":0.89,"texture":"oberonB.jpg"} # OR oberonA.jpg OR oberonC.jpg
 },
-{ #21 Titania, orbiting Uranus - Hazard 100%
+{ #21 Titania, orbiting Uranus - Hazard 175%
 				"entity":"planet",
 				"name":"Titania",
 				"focus":7,
@@ -316,7 +316,7 @@
 				"conditions":["ruins_extensive","thin_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace"],
 				"specChanges":{"tilt":-78.9,"rotation":1.87,"cloudRotation":1.80,"texture":"titania.jpg"}
 },
-{ #22 Miranda, orbiting Uranus - Hazard 100%
+{ #22 Miranda, orbiting Uranus - Hazard 225%
 				"entity":"planet",
 				"name":"Miranda",
 				"focus":7,
