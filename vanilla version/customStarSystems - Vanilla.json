@@ -85,14 +85,14 @@
 { #4 Mars - Hazard 125%
 				"entity":"planet",
 				"name":"Mars",
-				"type":"barren-desert",
-				"typeOverride":["barren","Barren-Desert"], #workaround for tasc bug
+				"type":"barren-	desert",
 				"orbitAngle":360,
 				"radius":80,
 				"orbitRadius":6000,
 				"orbitDays":1374, #realistic 687,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"texture":"mars.jpg"},
+				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"texture":"mars.jpg",
+					"typeOverride":["barren-desert","Barren-Desert"]}, #workaround for tasc bug
 				"conditions":["ruins_scattered","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common"]
 },
 { #5 Jupiter - Hazard 150%
@@ -565,5 +565,6 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
