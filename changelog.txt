@@ -1,6 +1,7 @@
 3.2.8
 - Removed easter eggs entities to push to a new system later, code pushed to easter_eggs.json if wanted. only sol bodies exist.
 - Added a vanilla preset that has no mods requirements except CSS. customizableStarSystems - Vanilla.json. Remove the "- Vanilla" and replace the modded one to enable or swap names.
+- Added a mod_info - Vanilla.json to replace the default one if using the Vanilla version of Sol System
 - Adjusted position of Ceres.
 - Moved Prime jump point slightly closer in the inner system.
 - Removed factionId player tags from sensor array, nav buoy, and comm relay.
@@ -31,6 +32,7 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
 
 
