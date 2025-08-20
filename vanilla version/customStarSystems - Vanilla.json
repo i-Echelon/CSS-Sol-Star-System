@@ -86,6 +86,7 @@
 				"entity":"planet",
 				"name":"Mars",
 				"type":"barren-desert",
+				"typeOverride":["barren","Barren-Desert"], #workaround for tasc bug
 				"orbitAngle":360,
 				"radius":80,
 				"orbitRadius":6000,
@@ -564,4 +565,5 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
