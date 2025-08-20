@@ -485,7 +485,7 @@
 				"tags":[],
 				"size":1000,
 },
-				{"entity":"jump_point","orbitRadius":2345,"orbitAngle":210,"orbitDays":0,"name":"Prime-Point","orbitClockwise":false}, #40
+				{"entity":"jump_point","orbitRadius":2345,"orbitAngle":135,"orbitDays":730,"name":"Prime-Point","orbitClockwise":false,"tags":["core_jump_point"]}, #40
 				{"entity":"jump_point","orbitRadius":11111,"orbitAngle":30,"orbitDays":0,"name":"Kuiper-Point","orbitClockwise":false}, #41
 				{"entity":"jump_point","orbitRadius":17777,"orbitAngle":270,"orbitDays":0,"name":"Orion-Point","orbitClockwise":false}, #42
 				{"entity":"inactive_gate","orbitRadius":18765,"orbitAngle":135,"orbitDays":0,"name":"Milky Way Gate","orbitClockwise":false}, #43
@@ -536,5 +536,6 @@
 	}, #Sol System END
 	
 	#"css_newSystem":{},
+
 
 } # CLOSING
