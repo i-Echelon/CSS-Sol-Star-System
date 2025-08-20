@@ -2,7 +2,6 @@
 	# All "orbitDays" for planets and moons were increased to be more inline with starsectors time/speed pass.
 	# Using realistic values (Earth 365/y, Luna 28/m) you would have to use emergency burn to even catch some of the moons who orbits at high speed, but that would be realistic i guess.
 	# Left original speeds as comments incase you want to re-enable. You can also comment/remove the custom graphics to let procgen override. Same for conditions.
-	# Recently change "conditions" of most planets and moons to use some from US/RAT/IE/AotD-VoK. Left the original realish ones as comments.
 	# Rotation speeds were also halved in speed for disorientation purposes
 {
 	"css_Sol_vanilla":{
@@ -152,7 +151,7 @@
 				"type":"barren",
 				"orbitAngle":270,
 				"radius":10,
-				"orbitRadius":7000,
+				"orbitRadius":6789,
 				"orbitDays":3364, #realistic 1682,
 				"orbitClockwise":false,
 				"conditions":["ruins_scattered","no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant"],
@@ -486,16 +485,16 @@
 				"tags":[],
 				"size":1000,
 },
-				{"entity":"jump_point","orbitRadius":3333,"orbitAngle":210,"orbitDays":0,"name":"Prime-Point","orbitClockwise":false}, #40
+				{"entity":"jump_point","orbitRadius":2345,"orbitAngle":210,"orbitDays":0,"name":"Prime-Point","orbitClockwise":false}, #40
 				{"entity":"jump_point","orbitRadius":11111,"orbitAngle":30,"orbitDays":0,"name":"Kuiper-Point","orbitClockwise":false}, #41
 				{"entity":"jump_point","orbitRadius":17777,"orbitAngle":270,"orbitDays":0,"name":"Orion-Point","orbitClockwise":false}, #42
 				{"entity":"inactive_gate","orbitRadius":18765,"orbitAngle":135,"orbitDays":0,"name":"Milky Way Gate","orbitClockwise":false}, #43
 				{"entity":"empty_location","orbitRadius":15000,"orbitAngle":45,"orbitDays":0,"orbitClockwise":false}, #44
 				{"entity":"stable_location","orbitRadius":8765,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false}, #45
 				{"entity":"stable_location","orbitRadius":12345,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false}, #46
-				{"entity":"comm_relay","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #47
-				{"entity":"sensor_array","orbitRadius":5050,"orbitAngle":75,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #48
-				{"entity":"nav_buoy","orbitRadius":7000,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #49
+				{"entity":"comm_relay","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player", #47
+				{"entity":"sensor_array","orbitRadius":5050,"orbitAngle":75,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player", #48
+				{"entity":"nav_buoy","orbitRadius":7000,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player", #49
 				{"entity":"orbital_habitat","orbitRadius":18888}, #50
 				{"entity":"station_research","orbitRadius":1666}, #51
 				{"entity":"station_mining_remnant","orbitRadius":20000}, #52
