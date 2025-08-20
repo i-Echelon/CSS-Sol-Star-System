@@ -91,7 +91,7 @@
 				"orbitRadius":6000,
 				"orbitDays":1374, #realistic 687,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloud_rotation":-12.65,"texture":"mars.jpg"},
+				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"texture":"mars.jpg"},
 				"conditions":["ruins_scattered","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common"]
 },
 { #5 Jupiter - Hazard 100%
@@ -116,7 +116,7 @@
 				"orbitDays":21512, #realistic 10756,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-26.7,"rotation":26.665,"texture":"saturn.jpg"},
-				"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity", #DEFAULT REALISTIC
+				"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity"], #DEFAULT REALISTIC
 },
 { #7 Uranus - Hazard 325%
 				"entity":"planet",
@@ -151,7 +151,7 @@
 				"type":"barren",
 				"orbitAngle":270,
 				"radius":10,
-				"orbitRadius":6789,
+				"orbitRadius":8910,
 				"orbitDays":3364, #realistic 1682,
 				"orbitClockwise":false,
 				"conditions":["ruins_scattered","no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant"],
@@ -210,7 +210,7 @@
 				"orbitDays":7, #realistic 3.5,
 				"orbitClockwise":false,
 				"conditions":["volatiles_plentiful","organics_abundant","thin_atmosphere","cold","poor_light","low_gravity"],
-				"specChanges":{"tilt":1.79,"rotation":3.38,"cloud_rotation":3.0,"texture":"europa.jpg"}
+				"specChanges":{"tilt":1.79,"rotation":3.38,"cloudRotation":3.0,"texture":"europa.jpg"}
 },
 { #14 Ganymede, orbiting Jupiter - Hazard 150%
 				"entity":"planet",
@@ -249,7 +249,7 @@
 				"orbitDays":2.74, #realistic 1.37,
 				"orbitClockwise":false,
 				"conditions":["low_gravity","very_cold","tectonic_activity","poor_light","ore_abundant","volatiles_diffuse"],
-				"specChanges":{"tilt":-23.5,"rotation":8.76,"cloud_rotation":8.0,"texture":"enceladus.jpg"}
+				"specChanges":{"tilt":-23.5,"rotation":8.76,"cloudRotation":8.0,"texture":"enceladus.jpg"}
 },
 { #17 Titan, orbiting Saturn - Hazard 75%
 				"entity":"planet",
@@ -288,7 +288,7 @@
 				"orbitDays":39,
 				"orbitClockwise":false,
 				"conditions":["ruins_extensive","thin_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace"],
-				"specChanges":{"tilt":-78.9,"rotation":1.87,"cloud_rotation":1.80,"texture":"titania.jpg"}
+				"specChanges":{"tilt":-78.9,"rotation":1.87,"cloudRotation":1.80,"texture":"titania.jpg"}
 },
 { #20 Miranda, orbiting Uranus - Hazard 100%
 				"entity":"planet",
@@ -314,7 +314,7 @@
 				"orbitDays":11.8, #realistic 5.9,
 				"orbitClockwise":false,
 				"conditions":["rare_ore_sparse","ore_moderate","volatiles_abundant","dark","tectonic_activity","very_cold","low_gravity"],
-				"specChanges":{"tilt":-23.5,"rotation":2.04,"cloud_rotation":2.0,"texture":"tritonB.jpg"} # OR tritonA.jpg" OR tritonC.jpg
+				"specChanges":{"tilt":-23.5,"rotation":2.04,"cloudRotation":2.0,"texture":"tritonB.jpg"} # OR tritonA.jpg" OR tritonC.jpg
 },
 { #22 Charon, orbiting Pluto- Hazard 100%
 				"entity":"planet",
