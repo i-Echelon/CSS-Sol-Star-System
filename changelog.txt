@@ -1,5 +1,4 @@
 3.2.8
-- Removed easter eggs entities to push to a new system later, code pushed to easter_eggs.json if wanted. only sol bodies exist.
 - Added a vanilla preset that has no mods requirements except CSS. customizableStarSystems - Vanilla.json. Remove the "- Vanilla" and replace the modded one to enable or swap names.
 - Added a mod_info - Vanilla.json to replace the default one if using the Vanilla version of Sol System
 - Adjusted position of Ceres.
@@ -9,7 +8,9 @@
 - Removed factionId player tags from sensor array, nav buoy, and comm relay.
 - Added the Pluto Mining Station from AOTD-VoK to Pluto's Orbit (Lagrange 2) [default modded version]
 - Added 2 new moons to Mars, Phobos and Deimos.
-- Remnant station orbiting Easter Eggs removed.
+- Removed easter eggs entities to populate to a new system later, code pushed to easter_eggs.json if wanted. only sol bodies exist.
+- Remnant station that was orbiting [REDACTED] removed.
+- Adjusted Hazard %'s in vanilla version
 3.2.7
 - Optimization
 - Added storage station to 2nd lagrange of Mars.
@@ -34,6 +35,7 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
 
 
