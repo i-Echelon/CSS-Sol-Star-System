@@ -1,14 +1,22 @@
+3.2.8
+- Removed easter eggs entities to push to a new system later, code pushed to easter_eggs.json if wanted. only sol bodies exist.
+- Added a vanilla preset that has no mods requirements except CSS. customizableStarSystems - Vanilla.json. Remove the "- Vanilla" and replace the modded one to enable or swap names.
+- Adjusted position of Ceres.
+- Moved Prime jump point slightly closer in the inner system.
+- Removed factionId player tags from sensor array, nav buoy, and comm relay.
+- Added the Pluto Mining Station from AOTD-VoK to Pluto's Orbit (Lagrange 3) [default modded version]
+- Remnant station orbiting Easter Eggs removed.
 3.2.7
--Optimization
--added storage station to 2nd lagrange of Mars
--updated memory keys
--several spec changes to atmosphere and clouds 
--fixed earth and sol planet textures
--new easter eggs
+- Optimization
+- Added storage station to 2nd lagrange of Mars.
+- Updated memory keys.
+- Several spec changes to atmosphere and clouds.
+- Fixed earth and sol planet textures.
+- New easter eggs.
 -stable
 3.2.6
--Added array for aurora colors
--Added a Station for Storage
+- Added array for aurora colors
+- Added a Station for Storage
 -Increased orbit speed of [REDACTED]
 3.2.5
 - Several Adjustments.
@@ -22,6 +30,7 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
 
 
