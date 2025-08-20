@@ -1,4 +1,5 @@
 	# Sol Star Sysyem by Bugatti Echelon #Discord #bugatti_echelon
+	# Modded version - requires CSS, AOTD-VoK, RAT, INDO-EVO, & US
 	# All "orbitDays" for planets and moons were increased to be more inline with starsectors time/speed pass.
 	# Using realistic values (Earth 365/y, Luna 28/m) you would have to use emergency burn to even catch some of the moons who orbits at high speed, but that would be realistic i guess.
 	# Left original speeds as comments incase you want to re-enable. You can also comment/remove the custom graphics to let procgen override. Same for conditions.
@@ -18,7 +19,7 @@
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge":"average",
-		"systemTags":["theme_misc","theme_derelict_survey_ship","theme_derelict_cryosleeper", "theme_remnant_suppressed"],
+		"systemTags":["theme_misc","theme_derelict_survey_ship","theme_derelict_cryosleeper"],
 
 
 		"entities":[ #Celestial Bodies START
@@ -94,6 +95,7 @@
 				"orbitDays":1374, #realistic 687,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloud_rotation":-12.65,"texture":"mars.jpg"},
+				#"conditions":["ruins_scattered","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common"], DEFAULT REALISTIC
 				"conditions":["ruins_widespread","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common","pre_collapse_facility","rat_ancient_military_hub","US_elevator","US_shrooms","rat_ancient_megacities","rat_kinetic_launchsystem","rat_warscape","rat_ancient_industries","rat_rampant_military_core","rat_defensive_drones"],
 },
 { #5 Jupiter - Hazard 100%
@@ -155,7 +157,7 @@
 				"type":"barren",
 				"orbitAngle":270,
 				"radius":10,
-				"orbitRadius":7000,
+				"orbitRadius":6789,
 				"orbitDays":3364, #realistic 1682,
 				"orbitClockwise":false,
 				"conditions":["ruins_scattered","no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant","US_crystals"],
@@ -499,76 +501,27 @@
 				"tags":[],
 				"size":1000,
 },
-				{"entity":"jump_point","orbitRadius":4444,"orbitAngle":210,"orbitDays":0,"name":"Prime-Point","orbitClockwise":false}, #40
+				{"entity":"jump_point","orbitRadius":2345,"orbitAngle":210,"orbitDays":0,"name":"Prime-Point","orbitClockwise":false}, #40
 				{"entity":"jump_point","orbitRadius":11111,"orbitAngle":30,"orbitDays":0,"name":"Kuiper-Point","orbitClockwise":false}, #41
 				{"entity":"jump_point","orbitRadius":17777,"orbitAngle":270,"orbitDays":0,"name":"Orion-Point","orbitClockwise":false}, #42
 				{"entity":"inactive_gate","orbitRadius":18765,"orbitAngle":135,"orbitDays":0,"name":"Milky Way Gate","orbitClockwise":false}, #43
 				{"entity":"empty_location","orbitRadius":15000,"orbitAngle":45,"orbitDays":0,"orbitClockwise":false}, #44
 				{"entity":"stable_location","orbitRadius":8765,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false}, #45
 				{"entity":"stable_location","orbitRadius":12345,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false}, #46
-				{"entity":"comm_relay","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #47
-				{"entity":"sensor_array","orbitRadius":5050,"orbitAngle":75,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #48
-				{"entity":"nav_buoy","orbitRadius":7000,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #49
+				{"entity":"comm_relay","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player" #47
+				{"entity":"sensor_array","orbitRadius":5050,"orbitAngle":75,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player", #48
+				{"entity":"nav_buoy","orbitRadius":7000,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player" #49
 				{"entity":"orbital_habitat","orbitRadius":18888}, #50
 				{"entity":"station_research","orbitRadius":1666}, #51
 				{"entity":"station_mining_remnant","orbitRadius":20000}, #52
 				{"entity":"derelict_probe","orbitRadius":8888}, #53
 				{"entity":"derelict_cryosleeper","orbitRadius":12000}, #54
 				{"entity":"wreck","focus":0,"orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #55
-#EASTER EGGS
+				{"entity":"aotd_pluto_station","focus":[10,3]} #"factionId":"player" #56
 
-{ #56 Pandora - Hazard 0%
-				"entity":"planet",
-				"name":"Pandora",
-				"type":"US_sakura",
-				"orbitAngle":180,
-				"radius":300,
-				"orbitRadius":32109,
-				"orbitDays":66,
-				"orbitClockwise":false,
-				"conditions":["US_sakura","US_hybrid","US_crystals","US_bedrock","US_unique_filter","US_cryosanctum","rat_engineered_utopia","habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast"],
-				"specChanges":{"tilt":15,"rotation":-3,"pitch":1.0,"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],
-					"texture":"US_planet_textureSakura.jpg","cloudTexture":"US_clouds_textureMedium.png","cloudColor":[235,240,250,240],"cloudRotation":-5,
-						"planetColor":[255,255,255,255],"iconColor":[245,129,205,255],"tags":["codex_unlockable"]}
-},
-{ #57 Pithos, orbiting Pandora - Hazard 25%
-				"entity":"planet",
-				"name":"Pithos",
-				"type":"US_waterHycean",
-				"radius":100,
-				"focus":56, # set to the 56th entity to be declared a moon
-				"orbitRadius":777,
-				"orbitDays":133, 
-				"orbitClockwise":false,
-				"conditions":["US_fluorescent","US_hybrid","US_crystals","US_bedrock","US_crash","US_unique_filter","rat_ancient_megacities","rat_bionic_plantlife","rat_kinetic_launchsystem","water_surface","rare_ore_ultrarich","volatiles_abundant","ruins_vast"],
-				"specChanges":{"tilt":-1.618,"rotation":1.618,"texture":"US_planet_textureHycean.jpg"}
-				
-},
-			{ # 58 Remnant battlestation - orbiting Pithos
-				"entity":"remnant_station",
-				"focus":[57,2],
-				"orbitAngle":-1,
-				"orbitDays":666,
-				"isDamaged":true,
-			},
-
-{ #59 Moonglow - Hazard 0%
-				"entity":"planet",
-				"name":"Moonglow",
-				"type":"US_fluorescent",
-				"orbitRadius":34567,
-				"radius":444,
-				"orbitDays":222, 
-				"orbitClockwise":false,
-				"conditions":["US_fluorescent","US_floating","US_shrooms","IndEvo_RuinsCondition","high_gravity","volatiles_plentiful","ruins_vast"],
-				#"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_ResLab"},
-				"specChanges":{"tilt":-15,"rotation":-3,"pitch":15,"atmosphereThickness":0.25,"atmosphereThicknessMin":62,"atmosphereColor":[39,20,211,100],
-					"texture":"US_planet_textureFluorescent.jpg","cloudTexture":"US_clouds_textureGiant.png","cloudColor":[107,112,253,100],"cloudRotation":-2,
-						"planetColor":[255,255,255,255],"iconColor":[93,46,247,255],"glowColor":[255,255,255,200],"glowTexture":"US_planet_textureFluorescent.jpg","tags":["codex_unlockable"]}
-},
 
 ## Space Stations - Currently Will break if the only/starting colony owned
-			{"entity":"station", #60
+			{"entity":"station", #57
 				"type":"station_hightech3",
 				"focus":[4,2], #orbiting Mars
 				#"orbitRadius":5555,
