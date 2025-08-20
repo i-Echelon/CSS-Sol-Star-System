@@ -4,7 +4,7 @@
 - Added a mod_info - Vanilla.json to replace the default one if using the Vanilla version of Sol System
 - Adjusted position of Ceres.
 - Fixed cloudRotation tags
-- Moved Prime jump point slightly closer in the inner system.
+- Set a [core_jump_point] tag on Prime point slightly closer in the inner system. Will orbit at same speed as Earth.
 - Moved Storage Station to Venus's orbit
 - Removed factionId player tags from sensor array, nav buoy, and comm relay.
 - Added the Pluto Mining Station from AOTD-VoK to Pluto's Orbit (Lagrange 2) [default modded version]
@@ -34,6 +34,7 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
 
 
