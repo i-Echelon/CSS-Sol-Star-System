@@ -20,4 +20,6 @@ Vanilla version (optional) Requires:
 
 -Customizable Star Systems mod
 
+*files used to use a Vanilla friendly system are in /vanilla version folder. Rename and Replace.
+
 Forum topic: https://fractalsoftworks.com/forum/index.php?topic=33848.0
