@@ -13,7 +13,7 @@
 		"addCoronalHypershunt":false,
 		#"memoryKeys":{"$US_skipSystem":true}, # Memory key to prevent Unknown Skies scripts from modifying this system (false to allow)
 		"setLocation":[0,-45000], #originally used "setLocation":2, (2 constellations away from Core Worlds( 0 for random))
-		"systemBackground":"galaxy0.png",
+		"systemBackground":"milkyway.png",
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge":"average",
@@ -193,7 +193,7 @@
 			  "focus":4,
 			  "type":"barren-bombarded",
 			  "orbitAngle":90,
-			  "radius":8,
+			  "radius":16,
 			  "orbitRadius":120,
 			  "orbitDays":1.0, # realistic ~0.3 days (7.65h), doubled
 			  "orbitClockwise":false,
@@ -206,7 +206,7 @@
 			  "focus":4,
 			  "type":"barren",
 			  "orbitAngle":210,
-			  "radius":6,
+			  "radius":12,
 			  "orbitRadius":250,
 			  "orbitDays":2.5, # realistic ~1.25 days, doubled
 			  "orbitClockwise":false,
@@ -565,6 +565,7 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
 
