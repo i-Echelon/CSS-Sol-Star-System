@@ -528,10 +528,17 @@
 				{"entity":"derelict_probe","orbitRadius":8888}, #55
 				{"entity":"derelict_cryosleeper","orbitRadius":12000}, #56
 				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #57
-
+				{"entity":"wreck","orbitRadius":11000,"orbitAngle":210,"orbitDays":0,"variantId":"wolf_Assault"}, #58
+				{"entity":"wreck","orbitRadius":12000,"orbitAngle":240,"orbitDays":0,"variantId":"lasher_CS"}, #59
+				{"entity":"wreck","orbitRadius":13000,"orbitAngle":270,"orbitDays":0,"variantId":"kite_Standard"}, #60
+				{"entity":"wreck","orbitRadius":15000,"orbitAngle":300,"orbitDays":0,"variantId":"tarsus_d_Standard"}, #61
+				{"entity":"wreck","orbitRadius":16000,"orbitAngle":330,"orbitDays":0,"variantId":"buffalo2_FS"}, #62
+				{"entity":"wreck","orbitRadius":17000,"orbitAngle":360,"orbitDays":0,"variantId":"hammerhead_Balanced"}, #63
+				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"variantId":"condor_Support"}, #64
+				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"variantId":"dram_Light"}, #65
 
 ## Space Stations - Currently Will break if the only/starting colony owned
-			{"entity":"station", #58
+			{"entity":"station", #66
 				"type":"station_hightech3",
 				"focus":[4,2], #orbiting Mars
 				#"orbitRadius":5555,
@@ -565,6 +572,7 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
 
