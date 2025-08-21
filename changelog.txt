@@ -1,3 +1,6 @@
+3.2.9.
+- Added a new system background - Milkyway Realistic
+- Slightly increased size of Phobos and Deimos.
 3.2.8
 - Added a vanilla preset that has no mods requirements except CSS. customizableStarSystems - Vanilla.json. Remove the "- Vanilla" and replace the modded one to enable or swap names.
 - Added a mod_info - Vanilla.json to replace the default one if using the Vanilla version of Sol System
@@ -36,3 +39,4 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
