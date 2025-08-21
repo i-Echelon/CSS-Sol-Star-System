@@ -28,9 +28,12 @@
 			"charon": "graphics/planets/charon.jpg",
 			"titania": "graphics/planets/titania.jpg",
 			"miranda": "graphics/planets/miranda.jpg",
+			#"phobos": "graphics/planets/phobos.png",
+			#"deimos": "graphics/planets/deimos.png",
 		},
 		"backgrounds":{
 			"galaxy0":"graphics/backgrounds/galaxy0.png",
+			"milkyway":"graphics/backgrounds/milkyway.png",
 		},
 		"misc": {
 			"saturn_belt": "graphics/planets/saturn_belt.png",
