@@ -1,3 +1,5 @@
+3.3.0
+- Added several more salvageable derelict ships (recoverable)
 3.2.9.
 - Added a new system background - Milkyway Realistic
 - Slightly increased size of Phobos and Deimos.
@@ -39,4 +41,5 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
