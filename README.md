@@ -2,8 +2,7 @@
 
 Adds a realistic Sol Solar System to Starsector
 
-
-Modded version (default) Requires:
+*Modded version (default) Requires:
 
 -Customizable Star Systems
 
@@ -15,11 +14,8 @@ Modded version (default) Requires:
 
 -Unknown Skies
 
-
-Vanilla version (optional) Requires:
+*Vanilla version (optional) Requires:
 
 -Customizable Star Systems mod
-
-*files used to use a Vanilla friendly system are in /vanilla version folder. Rename and Replace.
 
 Forum topic: https://fractalsoftworks.com/forum/index.php?topic=33848.0
