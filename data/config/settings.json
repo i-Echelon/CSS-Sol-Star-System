@@ -5,6 +5,7 @@
 			"mercury": "graphics/planets/mercury.jpg",
 			"venus": "graphics/planets/venus.jpg",
 			"earth": "graphics/planets/earth.jpg",
+			"earthClouds": "graphics/planets/earthClouds.png",
 			"mars": "graphics/planets/mars.jpg",
 			"ceres": "graphics/planets/ceres.jpg",
 			"jupiter": "graphics/planets/jupiter.jpg",
@@ -41,4 +42,5 @@
 	}
 
 }
+
 
