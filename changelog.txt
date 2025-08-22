@@ -1,3 +1,5 @@
+3.3.1
+Add Hi-Res textures for Earth and her clouds.
 3.3.0
 - Added several more salvageable derelict ships (recoverable)
 3.2.9.
@@ -41,5 +43,6 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
 
