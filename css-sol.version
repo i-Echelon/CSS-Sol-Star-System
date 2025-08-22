@@ -2,16 +2,17 @@
     "masterVersionFile":"https://raw.githubusercontent.com/i-Echelon/CSS-Sol-Star-System/refs/heads/main/css-sol.version",
     "modName":"Customizable Star Systems-SOL",
     "modThreadId":33848.0,
-    "directDownloadURL":"https://github.com/i-Echelon/CSS-Sol-Star-System/archive/refs/heads/main.zip",
+    "directDownloadURL":"https://github.com/i-Echelon/CSS-Sol-Star-System/releases",
     "changelogURL":"https://raw.githubusercontent.com/i-Echelon/CSS-Sol-Star-System/refs/heads/main/changelog.txt",
     "modVersion":
     {
         "major":3,
         "minor":3,
-        "patch":0
+        "patch":1
     },
 
 }
+
 
 
 
