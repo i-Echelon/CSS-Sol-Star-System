@@ -537,7 +537,7 @@
 				{"entity":"stable_location","orbitRadius":12345,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false}, #48
 				{"entity":"comm_relay","name":"Deep Space Network","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player" #49
 				{"entity":"sensor_array","name":"Space Surveillance Network","orbitRadius":5050,"orbitAngle":75,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player", #50
-				{"entity":"nav_buoy","name":"Hubble Buoy","orbitRadius":7000,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player" #51
+				{"entity":"nav_buoy","name":"Hubble Buoy","orbitRadius":7890,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player" #51
 				{"entity":"orbital_habitat","orbitRadius":18888}, #52
 				{"entity":"station_research","orbitRadius":1666}, #53
 				{"entity":"station_mining_remnant","orbitRadius":20000}, #54
@@ -592,6 +592,7 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
 
