@@ -528,16 +528,16 @@
 				"tags":[],
 				"size":1000,
 },
-				{"entity":"jump_point","orbitRadius":2345,"orbitAngle":135,"orbitDays":730,"name":"Prime-Point","orbitClockwise":false,"tags":["core_jump_point"]}, #42
-				{"entity":"jump_point","orbitRadius":11111,"orbitAngle":30,"orbitDays":0,"name":"Kuiper-Point","orbitClockwise":false}, #43
-				{"entity":"jump_point","orbitRadius":17777,"orbitAngle":270,"orbitDays":0,"name":"Orion-Point","orbitClockwise":false}, #44
-				{"entity":"inactive_gate","orbitRadius":18765,"orbitAngle":135,"orbitDays":0,"name":"Milky Way Gate","orbitClockwise":false}, #45
+				{"entity":"jump_point","orbitRadius":2345,"orbitAngle":135,"orbitDays":730,"name":"Zenith Jump-Point","orbitClockwise":false,"tags":["core_jump_point"]}, #42
+				{"entity":"jump_point","orbitRadius":11111,"orbitAngle":30,"orbitDays":0,"name":"Nadir Jump-Point","orbitClockwise":false}, #43
+				{"entity":"jump_point","orbitRadius":17777,"orbitAngle":270,"orbitDays":0,"name":"Orion Spur","orbitClockwise":false}, #44
+				{"entity":"inactive_gate","orbitRadius":18765,"orbitAngle":135,"orbitDays":0,"name":"Charon Gate","orbitClockwise":false}, #45
 				{"entity":"empty_location","orbitRadius":15000,"orbitAngle":45,"orbitDays":0,"orbitClockwise":false}, #46
 				{"entity":"stable_location","orbitRadius":8765,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false}, #47
 				{"entity":"stable_location","orbitRadius":12345,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false}, #48
-				{"entity":"comm_relay","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player" #49
-				{"entity":"sensor_array","orbitRadius":5050,"orbitAngle":75,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player", #50
-				{"entity":"nav_buoy","orbitRadius":7000,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player" #51
+				{"entity":"comm_relay","name":"Deep Space Network","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player" #49
+				{"entity":"sensor_array","name":"Space Surveillance Network","orbitRadius":5050,"orbitAngle":75,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player", #50
+				{"entity":"nav_buoy","name":"Hubble Buoy","orbitRadius":7000,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player" #51
 				{"entity":"orbital_habitat","orbitRadius":18888}, #52
 				{"entity":"station_research","orbitRadius":1666}, #53
 				{"entity":"station_mining_remnant","orbitRadius":20000}, #54
@@ -592,6 +592,7 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
 
