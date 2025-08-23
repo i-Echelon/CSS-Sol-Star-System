@@ -552,7 +552,7 @@
 				{"entity":"wreck","orbitRadius":17000,"orbitAngle":360,"orbitDays":0,"variantId":"hammerhead_Balanced"}, #63
 				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"variantId":"condor_Support"}, #64
 				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"variantId":"dram_Light"}, #65
-				{"entity":"aotd_pluto_station","focus":[10,2],"orbitAngle":0,"orbitDays":1000}, #66
+				{"entity":"aotd_pluto_station","focus":[10,2],"orbitAngle":0,"orbitDays":1000}, #66 - AOTD Pluto Mining Station orbiting Pluto
 
 ## Space Stations - Currently Will break if the only/starting colony owned
 			{"entity":"station", #67
@@ -592,6 +592,7 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
 
