@@ -540,7 +540,8 @@
 ## Space Stations - Currently Will break if the only/starting colony owned
 			{"entity":"station", #66
 				"type":"station_hightech3",
-				"focus":[4,2], #orbiting Mars
+				"name":"International Space Station",
+				"focus":[4,2], #orbiting Venus
 				#"orbitRadius":5555,
 				#"orbitAngle":120,
 				#"orbitDays":0,
@@ -572,6 +573,7 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
 
