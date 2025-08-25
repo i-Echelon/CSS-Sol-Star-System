@@ -499,7 +499,7 @@
 
 { #39 Magnetic Field around Earth
 				"entity":"magnetic_field",
-				"name":"geo-magnetic field
+				"name":"geo-magnetic field",
 				"size":80,  # Band width; always 80
 				"middleRadius":230, # Radius of focus + 50
 				"focus":3,
@@ -594,6 +594,7 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
 
