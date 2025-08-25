@@ -26,7 +26,7 @@
 
 { #0 Sol - Yellow Dwarf, (but white sun) Magnetic?, Neutronic
 				"entity":"star",
-				"type":"star_yellow",
+				"type":"star_white",
 				"name":"Sol",
 				"radius":1250,
 				"coronaRadius":500,
@@ -483,6 +483,7 @@
 
 { #39 Magnetic Field around Earth
 				"entity":"magnetic_field",
+				"name":"geo-magnetic field",
 				"size":80,  # Band width; always 80
 				"middleRadius":230, # Radius of focus + 50
 				"focus":3,
@@ -526,7 +527,7 @@
 				{"entity":"station_research","orbitRadius":1666}, #53
 				{"entity":"station_mining_remnant","orbitRadius":20000}, #54
 				{"entity":"derelict_probe","orbitRadius":8888}, #55
-				{"entity":"derelict_cryosleeper","orbitRadius":12000}, #56
+				{"entity":"derelict_cryosleeper","name":"Foundation","orbitRadius":12000}, #56
 				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #57
 				{"entity":"wreck","orbitRadius":11000,"orbitAngle":210,"orbitDays":0,"variantId":"wolf_Assault"}, #58
 				{"entity":"wreck","orbitRadius":12000,"orbitAngle":240,"orbitDays":0,"variantId":"lasher_CS"}, #59
@@ -573,6 +574,7 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
 
