@@ -17,7 +17,7 @@
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge":"average",
-		"systemTags":["theme_misc","theme_derelict_survey_ship","theme_derelict_cryosleeper"],
+		"systemTags":["theme_misc","theme_interesting","theme_ruins","theme_derelict","theme_derelict_probes","theme_derelict_survey_ship","theme_derelict_cryosleeper"],
 
 
 		"entities":[ #Celestial Bodies START
@@ -574,6 +574,7 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
 
