@@ -194,7 +194,7 @@
 			  "type":"barren-bombarded",
 			  "orbitAngle":90,
 			  "radius":16,
-			  "orbitRadius":120,
+			  "orbitRadius":180,
 			  "orbitDays":1.0, # realistic ~0.3 days (7.65h), doubled
 			  "orbitClockwise":false,
 			  "conditions":["no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant"],
@@ -207,7 +207,7 @@
 			  "type":"barren",
 			  "orbitAngle":210,
 			  "radius":12,
-			  "orbitRadius":250,
+			  "orbitRadius":320,
 			  "orbitDays":2.5, # realistic ~1.25 days, doubled
 			  "orbitClockwise":false,
 			  "conditions":["no_atmosphere","low_gravity","ore_sparse"],
@@ -574,6 +574,7 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
 
