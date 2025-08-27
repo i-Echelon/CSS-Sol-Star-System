@@ -1,3 +1,13 @@
+3.3.3
+- Added Custom Descriptions & Lore for Majority of Planets and Entities. +Nicknames on mouse hover.
+- Moved ISS to Earth's Orbit. Moved SSN closer to Mars.
+- Tweaked some planets icon Colors to stand out more from moons.
+- Set System Wide Nebula based on the System's Age.
+- Gave Jupiter a Jovian-magnetosphere
+- Unique names to Trans-Neptunian objects
+- Reverted system with a more SS friendly background
+- Increased brightness of Sol and unique description
+- Other various tweaks.
 3.3.2
 - Adjusted positions of Phobos and Deimos
 - Added names for most entities
@@ -50,6 +60,7 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
 
 
