@@ -10,12 +10,12 @@
 		"isEnabled":true,
 		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
-		"hasSystemwideNebula":false,
-		"addDomainCryosleeper":true,
+		"hasSystemwideNebula":true,
+		"addDomainCryosleeper":false,
 		"addCoronalHypershunt":false,
 		"memoryKeys":{"$US_skipSystem":true}, # Memory key to prevent Unknown Skies scripts from modifying this system (false to allow)
 		"setLocation":[0,-45000], #originally used "setLocation":2, (2 constellations away from Core Worlds( 0 for random))
-		"systemBackground":"milkyway.png",
+		"systemBackground":"galaxy0.png",#"milkyway.png",
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge":"average",
@@ -30,14 +30,17 @@
 				"entity":"star",
 				"type":"star_white",
 				"name":"Sol",
+				"customDescriptionId":"sol_Sol",
 				"radius":1250,
 				"coronaRadius":500,
-				"flareChance":1.0,
+				"flareChance":10.0,
 				"orbitClockwise":false,
 				"memoryKeys":{"$US_starVariant":3}, #unique
 				"tags":["neutrino"],
-				"specChanges":{"tilt":-7.25,"rotation":0.44,"useReverseLightForGlow":false,"glowColor":[238,235,106,255],"planetColor":[238,235,206,255],"iconColor":[238,235,206,255],"texture":"sol.jpg",
-					"typeOverride":["star_yellow","Yellow Dwarf Star"]}
+				"specChanges":{"tilt":-7.25,"rotation":0.44,"useReverseLightForGlow":false,"glowColor":[255,255,255,255],"planetColor":[238,235,206,255],"iconColor":[238,235,206,255],"texture":"sol.jpg",
+					"typeOverride":["star_yellow","Yellow Dwarf Star"]
+					#"icon":"graphics/warroom/placeholder.png"
+					}
 },
 
 ## PLANETS
@@ -45,18 +48,20 @@
 { #1 Mercury - Hazard 275%
 				"entity":"planet",
 				"name":"Mercury",
+				"customDescriptionId":"sol_Mercury",
 				"type":"barren-bombarded",
 				"orbitAngle":270,
 				"radius":60,
 				"orbitRadius":2500,
 				"orbitDays":120, #realistic 59,
 				"orbitClockwise":false,
-				"conditions":["hot","irradiated","thin_atmosphere","toxic_atmosphere","low_gravity","ore_ultrarich","rare_ore_ultrarich"],
-				"specChanges":{"tilt":-0.03,"rotation":0.2035,"texture":"mercury.jpg"}
+				"conditions":["hot","irradiated","thin_atmosphere","toxic_atmosphere","low_gravity","ore_ultrarich","rare_ore_ultrarich","solar_array"],
+				"specChanges":{"tilt":-0.03,"rotation":0.2035,"iconColor":[227,151,118,255],"texture":"mercury.jpg"}
 },
 { #2 Venus - Hazard 275%
 				"entity":"planet",
 				"name":"Venus",
+				"customDescriptionId":"sol_Venus",
 				"type":"toxic",
 				"orbitAngle":180,
 				"radius":140,
@@ -69,6 +74,7 @@
 { #3 Earth - Hazard 50%
 				"entity":"planet",
 				"name":"Earth",
+				"customDescriptionId":"sol_Earth",
 				"type":"US_continent",
 				"orbitAngle":90,
 				"radius":180,
@@ -77,24 +83,32 @@
 				"orbitClockwise":false,
 				"specChanges":{"cloudColor":[235,240,250,225],"cloudRotation":-5,"cloudTexture":"earthClouds.png","tilt":-23.4,"rotation":12.0,
 				"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],"iconColor":[155,185,255,255],"texture":"earth.jpg","planetColor":[255,255,255,255],
-					"typeOverride":["US_magnetic","Origin"]},
+					"typeOverride":["US_magnetic","Terrestrial"]},
 				#"conditions":["habitable","mild_climate","farmland_bountiful","ore_sparse","ruins_vast","organics_plentiful","high_gravity"], #DEFAULT REALISTIC
-				"conditions":["habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast","pre_collapse_facility","US_elevator","US_religious","US_magnetic","rat_ancient_megacities","rat_bionic_plantlife","rat_engineered_utopia"],
+				"conditions":[
+				"habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast","pre_collapse_facility","US_elevator","US_religious","US_magnetic","rat_ancient_megacities","rat_bionic_plantlife","rat_engineered_utopia",
+				#"IndEvo_ArtilleryStationCondition"
+				],
 				#"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_HullDecon"},
 				#"factionId":"player", #do we colonize?
 				#"marketSize":3,
-				#"industries":["population", "spaceport", "lightindustry", "heavyindustry"]
+				#"industries":[
+					#"population", "spaceport", "farming",
+					#["orbitalworks",,"pristine_nanoforge"],
+					#["IndEvo_Artillery_railgun",,,true]
+				#]
 },
 { #4 Mars - Hazard 125%
 				"entity":"planet",
 				"name":"Mars",
+				"customDescriptionId":"sol_Mars",
 				"type":"barren", #override to barren-desert below
 				"orbitAngle":360,
 				"radius":80,
 				"orbitRadius":6000,
 				"orbitDays":1374, #realistic 687,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"texture":"mars.jpg",
+				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"iconColor":[255,68,14,250],"texture":"mars.jpg",
 					"typeOverride":["barren-desert","Barren-Desert"]}, #workaround for tasc bug
 				#"conditions":["ruins_scattered","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common"], DEFAULT REALISTIC
 				"conditions":["ruins_widespread","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common","pre_collapse_facility","rat_ancient_military_hub","US_elevator","US_shrooms","rat_ancient_megacities","rat_kinetic_launchsystem","rat_warscape","rat_ancient_industries","rat_rampant_military_core","rat_defensive_drones"],
@@ -102,6 +116,7 @@
 { #5 Jupiter - Hazard 100%
 				"entity":"planet",
 				"name":"Jupiter",
+				"customDescriptionId":"sol_Jupiter",
 				"type":"US_gas_giant",
 				"orbitAngle":150,
 				"radius":500,
@@ -115,6 +130,7 @@
 { #6 Saturn - Hazard 125%
 				"entity":"planet",
 				"name":"Saturn",
+				"customDescriptionId":"sol_Saturn",
 				"type":"US_gas_giantB",
 				"orbitAngle":300,
 				"radius":425,
@@ -128,6 +144,7 @@
 { #7 Uranus - Hazard 325%
 				"entity":"planet",
 				"name":"Uranus",
+				"customDescriptionId":"sol_Uranus",
 				"type":"US_iceA",
 				"orbitAngle":0,
 				"radius":350,
@@ -140,6 +157,7 @@
 { #8 Neptune - Hazard 250%
 				"entity":"planet",
 				"name":"Neptune",
+				"customDescriptionId":"sol_Neptune",
 				"type":"US_iceB",
 				"orbitAngle":60,
 				"radius":340,
@@ -155,6 +173,7 @@
 { #9 Ceres - Hazard 175%
 				"entity":"planet",
 				"name":"Ceres",
+				"customDescriptionId":"sol_Ceres",
 				"type":"barren",
 				"orbitAngle":270,
 				"radius":10,
@@ -167,6 +186,7 @@
 { #10 Pluto - Hazard 225%
 				"entity":"planet",
 				"name":"Pluto",
+				"customDescriptionId":"sol_Pluto",
 				"type":"barren",
 				"orbitAngle":240,
 				"radius":28,
@@ -183,6 +203,7 @@
 { #11 Luna, orbiting Earth - Hazard 100%
 				"entity":"planet",
 				"name":"Luna",
+				"customDescriptionId":"sol_Luna",
 				"focus":3, # set to the 3rd entity to be declared a moon
 				"type":"barren-bombarded",
 				"orbitAngle":0,
@@ -198,6 +219,7 @@
 { #12 Phobos, orbiting Mars - Hazard 175%
 			  "entity":"planet",
 			  "name":"Phobos",
+			  "customDescriptionId":"sol_Phobos",
 			  "focus":4,
 			  "type":"barren-bombarded",
 			  "orbitAngle":90,
@@ -211,6 +233,7 @@
 { #13 Deimos, orbiting Mars - Hazard 175%
 			  "entity":"planet",
 			  "name":"Deimos",
+			  "customDescriptionId":"sol_Deimos",
 			  "focus":4,
 			  "type":"barren",
 			  "orbitAngle":210,
@@ -224,6 +247,7 @@
 { #14 Io, orbiting Jupiter - Hazard 225%
 				"entity":"planet",
 				"name":"Io",
+				"customDescriptionId":"sol_Io",
 				"focus":5,
 				"type":"lava_minor",
 				"orbitAngle":120,
@@ -237,6 +261,7 @@
 { #15 Europa, orbiting Jupiter - Hazard 225%
 				"entity":"planet",
 				"name":"Europa",
+				"customDescriptionId":"sol_Europa",
 				"focus":5,
 				"type":"frozen",
 				"orbitAngle":0,
@@ -251,6 +276,7 @@
 { #16 Ganymede, orbiting Jupiter - Hazard 150%
 				"entity":"planet",
 				"name":"Ganymede",
+				"customDescriptionId":"sol_Ganymede",
 				"focus":5,
 				"type":"rocky_ice",
 				"orbitAngle":240,
@@ -265,6 +291,7 @@
 { #17 Callisto, orbiting Jupiter - Hazard 100%
 				"entity":"planet",
 				"name":"Callisto",
+				"customDescriptionId":"sol_Callisto",
 				"focus":5,
 				"type":"barren-bombarded",
 				"orbitAngle":160,
@@ -279,6 +306,7 @@
 { #18 Enceladus, orbiting Saturn - Hazard 175%
 				"entity":"planet",
 				"name":"Enceladus",
+				"customDescriptionId":"sol_Enceladus",
 				"focus":6,
 				"type":"cryovolcanic",
 				"orbitAngle":180,
@@ -293,6 +321,7 @@
 { #19 Titan, orbiting Saturn - Hazard 75%
 				"entity":"planet",
 				"name":"Titan",
+				"customDescriptionId":"sol_Titan",
 				"focus":6,
 				"type":"rocky_ice",
 				"orbitAngle":0,
@@ -307,6 +336,7 @@
 { #20 Oberon, orbiting Uranus - Hazard 250%
 				"entity":"planet",
 				"name":"Oberon",
+				"customDescriptionId":"sol_Oberon",
 				"focus":7,
 				"type":"rocky_ice",
 				"orbitAngle":30,
@@ -320,6 +350,7 @@
 { #21 Titania, orbiting Uranus - Hazard 100%
 				"entity":"planet",
 				"name":"Titania",
+				"customDescriptionId":"sol_Titania",
 				"focus":7,
 				"type":"tundra",
 				"orbitAngle":120,
@@ -334,6 +365,7 @@
 { #22 Miranda, orbiting Uranus - Hazard 100%
 				"entity":"planet",
 				"name":"Miranda",
+				"customDescriptionId":"sol_Miranda",
 				"focus":7,
 				"type":"rocky_ice",
 				"orbitAngle":210,
@@ -348,6 +380,7 @@
 { #23 Triton, orbiting Neptune - Hazard 250%
 				"entity":"planet",
 				"name":"Triton",
+				"customDescriptionId":"sol_Triton",
 				"focus":8,
 				"type":"cryovolcanic",
 				"orbitAngle":0,
@@ -362,6 +395,7 @@
 { #24 Charon, orbiting Pluto- Hazard 100%
 				"entity":"planet",
 				"name":"Charon",
+				"customDescriptionId":"sol_Charon",
 				"focus":10,
 				"type":"barren",
 				"orbitAngle":0,
@@ -381,15 +415,15 @@
 			},
 			{ #26 Kuiper Belt
 				"entity":"asteroid_belt",
-					"name":"Kuiper Belt","orbitRadius":24000,"orbitDays":203400,"orbitClockwise":false,"size":1000,"numAsteroids":500,
+					"name":"Edgeworth-Kuiper Belt","orbitRadius":24000,"orbitDays":203400,"orbitClockwise":false,"size":1000,"numAsteroids":500,
 			},
 			{ #27 Kuiper Belt 2
 				"entity":"asteroid_belt",
-					"name":"Kuiper Belt2","type":"rings_asteroids0","orbitRadius":24500,"orbitDays":152550,"orbitClockwise":false,"bandIndex":2,"size":1000,"numAsteroids":500,
+					"name":"Edgeworth-Kuiper Belt","type":"rings_asteroids0","orbitRadius":24500,"orbitDays":152550,"orbitClockwise":false,"bandIndex":2,"size":1000,"numAsteroids":500,
 			},
 			{ #28 Kuiper Belt 3
 				"entity":"asteroid_belt",
-					"name":"Kuiper Belt3","type":"rings_dust0","orbitRadius":25000,"orbitDays":101700,"orbitClockwise":false,"bandIndex":3,"size":1000,"numAsteroids":500,
+					"name":"Edgeworth-Kuiper Belt","type":"rings_dust0","orbitRadius":25000,"orbitDays":101700,"orbitClockwise":false,"bandIndex":3,"size":1000,"numAsteroids":500,
 			},
 
 ## RING BANDS
@@ -404,7 +438,7 @@
 				"type":"rings_asteroids0",
 				"bandIndex":4,
 },
-{ #30 Jupiter's Band
+{ #30 Jupiter's Band1
 				"entity":"ring",
 				"name":"Jupiter's Halo",
 				"type":"rings_ice0",
@@ -414,7 +448,7 @@
 				"orbitClockwise":false,
 				"bandIndex":1,
 },
-{ #30 Jupiter's Band
+{ #30 Jupiter's Band2
 				"entity":"ring",
 				"name":"Jupiter's Halo",
 				"type":"rings_ice0",
@@ -466,7 +500,7 @@
 },
 { #36 Uranus' Band
 				"entity":"ring",
-				"name":"Uranus' Belt",
+				"name":"Uranian Ring System",
 				"type":"rings_ice0",
 				"focus":7,
 				"orbitRadius":450,
@@ -474,9 +508,9 @@
 				"orbitClockwise":false,
 				"bandIndex":0,
 },
-{ #37 Neptune's Band
+{ #37 Neptune's Band1
 				"entity":"ring",
-				"name":"Neptune's Belt",
+				"name":"Trans-Neptunian Object",
 				"type":"rings_ice0",
 				"focus":8,
 				"orbitRadius":500,
@@ -484,9 +518,9 @@
 				"orbitClockwise":false,
 				"bandIndex":3,
 },
-{ #38 Neptune's Band
+{ #38 Neptune's Band2
 				"entity":"ring",
-				"name":"Neptune's Belt",
+				"name":"Trans-Neptunian Object",
 				"type":"rings_ice0",
 				"focus":8,
 				"orbitRadius":500,
@@ -499,7 +533,7 @@
 
 { #39 Magnetic Field around Earth
 				"entity":"magnetic_field",
-				"name":"geo-magnetic field",
+				"name":"Geo-magnetic field",
 				"size":80,  # Band width; always 80
 				"middleRadius":230, # Radius of focus + 50
 				"focus":3,
@@ -509,7 +543,19 @@
 				"auroraFrequency":0.25,
 				"auroraColors":[[0,255,255,35],[191,255,0,35],[15,226,85,35],[50,150,255,35],[25,250,100,150],[180,50,255,35],[255,100,200,35],[255,0,60,35],[255,153,51,35]],
 },
-{ #40 Debris field 1
+{ #40 Magnetic Field around Jupiter
+				"entity":"magnetic_field",
+				"name":"Jovian-magnetosphere",
+				"size":80,
+				"middleRadius":550,
+				"focus":5,
+				"orbitRadius":500,
+				"outerRadius":610,
+				"baseColor":[250,125,100,150],
+				"auroraFrequency":0.25,
+				"auroraColors":[[25,250,100,150],[0,155,205,75],[91,155,0,85],[15,126,75,35],[100,75,155,65],[80,170,255,35]],
+},
+{ #41 Debris field 1
 				"entity":"debris_field",
 				"orbitRadius":6000,
 				"orbitAngle":-1,
@@ -519,7 +565,7 @@
 				"tags":[],
 				"size":1000,
 },
-{ #41 Asteroid field 2
+{ #42 Asteroid field 2
 				"entity":"asteroid_field",
 				"orbitRadius":18000,
 				"orbitAngle":-1,
@@ -529,43 +575,43 @@
 				"tags":[],
 				"size":1000,
 },
-				{"entity":"jump_point","orbitRadius":2345,"orbitAngle":135,"orbitDays":730,"name":"Zenith Jump-Point","orbitClockwise":false,"tags":["core_jump_point"]}, #42
-				{"entity":"jump_point","orbitRadius":11111,"orbitAngle":30,"orbitDays":0,"name":"Nadir Jump-Point","orbitClockwise":false}, #43
-				{"entity":"jump_point","orbitRadius":17777,"orbitAngle":270,"orbitDays":0,"name":"Orion Spur","orbitClockwise":false}, #44
-				{"entity":"inactive_gate","orbitRadius":18765,"orbitAngle":135,"orbitDays":0,"name":"Charon Gate","orbitClockwise":false}, #45
-				{"entity":"empty_location","orbitRadius":15000,"orbitAngle":45,"orbitDays":0,"orbitClockwise":false}, #46
-				{"entity":"stable_location","orbitRadius":8765,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false}, #47
-				{"entity":"stable_location","orbitRadius":12345,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false}, #48
-				{"entity":"comm_relay","name":"Deep Space Network","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player" #49
-				{"entity":"sensor_array","name":"Space Surveillance Network","orbitRadius":5050,"orbitAngle":75,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player", #50
-				{"entity":"nav_buoy","name":"Hubble Buoy","orbitRadius":7890,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false}, #"factionId":"player" #51
-				{"entity":"orbital_habitat","orbitRadius":18888}, #52
-				{"entity":"station_research","orbitRadius":1666}, #53
-				{"entity":"station_mining_remnant","orbitRadius":20000}, #54
-				{"entity":"derelict_probe","orbitRadius":8888}, #55
-				{"entity":"derelict_cryosleeper","name":"Foundation","orbitRadius":12000}, #56
-				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #57
-				{"entity":"wreck","orbitRadius":11000,"orbitAngle":210,"orbitDays":0,"variantId":"wolf_Assault"}, #58
-				{"entity":"wreck","orbitRadius":12000,"orbitAngle":240,"orbitDays":0,"variantId":"lasher_CS"}, #59
-				{"entity":"wreck","orbitRadius":13000,"orbitAngle":270,"orbitDays":0,"variantId":"kite_Standard"}, #60
-				{"entity":"wreck","orbitRadius":15000,"orbitAngle":300,"orbitDays":0,"variantId":"tarsus_d_Standard"}, #61
-				{"entity":"wreck","orbitRadius":16000,"orbitAngle":330,"orbitDays":0,"variantId":"buffalo2_FS"}, #62
-				{"entity":"wreck","orbitRadius":17000,"orbitAngle":360,"orbitDays":0,"variantId":"hammerhead_Balanced"}, #63
-				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"variantId":"condor_Support"}, #64
-				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"variantId":"dram_Light"}, #65
-				{"entity":"aotd_pluto_station","focus":[10,2],"orbitAngle":0,"orbitDays":1000}, #66 - AOTD Pluto Mining Station orbiting Pluto
+				{"entity":"jump_point","orbitRadius":2345,"orbitAngle":135,"orbitDays":730,"name":"Zenith Jump-Point","orbitClockwise":false,"tags":["core_jump_point"]}, #43
+				{"entity":"jump_point","orbitRadius":11111,"orbitAngle":30,"orbitDays":0,"name":"Nadir Jump-Point","orbitClockwise":false}, #44
+				{"entity":"jump_point","orbitRadius":17777,"orbitAngle":270,"orbitDays":0,"name":"Orion Spur","orbitClockwise":false}, #45
+				{"entity":"inactive_gate","orbitRadius":18765,"orbitAngle":135,"orbitDays":0,"name":"Charon Gate","orbitClockwise":false}, #46
+				{"entity":"empty_location","orbitRadius":15000,"orbitAngle":45,"orbitDays":0,"orbitClockwise":false}, #47
+				{"entity":"stable_location","orbitRadius":8765,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false}, #48
+				{"entity":"stable_location","orbitRadius":12345,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false}, #49
+				{"entity":"comm_relay","name":"Deep Space Network","customDescriptionId":"sol_DSN","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false}, #50
+				{"entity":"sensor_array","name":"Space Surveillance Network","customDescriptionId":"sol_SSN","orbitRadius":5050,"orbitAngle":30,"orbitDays":1000,"orbitClockwise":false}, #51
+				{"entity":"nav_buoy","name":"Hubble Buoy","orbitRadius":7890,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false}, #52
+				{"entity":"orbital_habitat","orbitRadius":18888}, #53
+				{"entity":"station_research","orbitRadius":1666}, #54
+				{"entity":"station_mining_remnant","orbitRadius":20000}, #55
+				{"entity":"derelict_probe","orbitRadius":8888}, #56
+				{"entity":"derelict_cryosleeper","name":"Foundation","orbitRadius":12000}, #57
+				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #58
+				{"entity":"wreck","orbitRadius":11000,"orbitAngle":210,"orbitDays":0,"variantId":"wolf_Assault"}, #59
+				{"entity":"wreck","orbitRadius":12000,"orbitAngle":240,"orbitDays":0,"variantId":"lasher_CS"}, #60
+				{"entity":"wreck","orbitRadius":13000,"orbitAngle":270,"orbitDays":0,"variantId":"kite_Standard"}, #61
+				{"entity":"wreck","orbitRadius":15000,"orbitAngle":300,"orbitDays":0,"variantId":"tarsus_d_Standard"}, #62
+				{"entity":"wreck","orbitRadius":16000,"orbitAngle":330,"orbitDays":0,"variantId":"buffalo2_FS"}, #63
+				{"entity":"wreck","orbitRadius":17000,"orbitAngle":360,"orbitDays":0,"variantId":"hammerhead_Balanced"}, #64
+				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"variantId":"condor_Support"}, #65
+				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"variantId":"dram_Light"}, #66
+				{"entity":"aotd_pluto_station","focus":[10,2],"orbitAngle":0,"orbitDays":1000}, #67 - AOTD Pluto Mining Station orbiting Pluto
 
 ## Space Stations - Currently Will break if the only/starting colony owned
-			{"entity":"station", #67
-				"type":"station_hightech3",
+			{"entity":"station", #68
+				"type":"station_side00",
 				"name":"International Space Station",
-				"focus":[2,2], #orbiting Venus
-				#"orbitRadius":5555,
-				#"orbitAngle":120,
+				"focus":3, #orbiting near Earth
+				"orbitRadius":1050,
+				"orbitAngle":30,
+				"customDescriptionId":"sol_ISS",
+				#"radius":100,
 				#"orbitDays":0,
 				#"orbitClockwise":false,
-			#	"name":"Elysium II",
-				#"customDescriptionId":"station_chupi_orco",
 			#	"conditions":"IndEvo_ArtilleryStationCondition",
 			#	"memoryKeys":{},
 			#	"marketMemoryKeys":{},
@@ -585,8 +631,7 @@
 			#		["lightindustry",,"biofactory_embryo",true],
 			#		["IndEvo_IntArray",,"IndEvo_transmitter"],
 			#		["IndEvo_Artillery_railgun",,,true],
-			#		"IndEvo_Academy",
-			#	]
+			#		"IndEvo_Academy",]
 			},
 		], #Celestial Bodies END
 	}, #Sol System END
