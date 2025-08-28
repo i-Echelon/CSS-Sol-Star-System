@@ -66,7 +66,7 @@
 				"orbitRadius":3200,
 				"orbitDays":450, #realistic 225,
 				"orbitClockwise":false,
-				"conditions":["very_hot","irradiated","tectonic_activity","dense_atmosphere","ore_ultrarich","rare_ore_ultrarich","pre_collapse_facility"],
+				"conditions":["very_hot","irradiated","tectonic_activity","dense_atmosphere","ore_ultrarich","rare_ore_ultrarich"],
 				"specChanges":{"tilt":177.4,"rotation":0.0495,"cloudRotation":0.02475,"texture":"venus.jpg"}
 },
 { #3 Earth - Hazard 50%
@@ -630,5 +630,3 @@
 	#"css_newSystem":{},
 
 } # CLOSING
-
-
