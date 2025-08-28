@@ -1,6 +1,6 @@
 3.3.4
 - Fixed small syntax in Vanilla version
-- Added Abandoned Station near Mars
+- Added Unique Abandoned Station near Mars
 - Scattered some Cache
 - New unique Derelict
 - Updated descriptions
@@ -68,6 +68,7 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
 
 
