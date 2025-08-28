@@ -6,7 +6,7 @@ Adds a realistic Sol Solar System to Starsector
 
 -Customizable Star Systems
 
--Ashes of Domain - Vaults of Knowledge
+-Ashes of Domain - Vaults of Knowledge (bonus: Arthur's Ships & Shit)
 
 -Industrial Evolution
 
