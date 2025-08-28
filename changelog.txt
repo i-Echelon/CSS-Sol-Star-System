@@ -1,3 +1,11 @@
+3.3.4
+- Fixed small syntax in Vanilla version
+- Added Abandoned Station near Mars
+- Scattered some Cache
+- New unique Derelict
+- Updated descriptions
+- Added an Arkoship reuires Arthur's Ships & Shit
+- Tweaked some Entities angles
 3.3.3
 - Added Custom Descriptions & Lore for Majority of Planets and Entities. +Nicknames on mouse hover.
 - Moved ISS to Earth's Orbit. Moved SSN closer to Mars.
@@ -60,6 +68,7 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
 
 
