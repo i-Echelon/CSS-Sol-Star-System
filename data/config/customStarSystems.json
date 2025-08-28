@@ -111,8 +111,7 @@
 				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"iconColor":[255,68,14,250],"texture":"mars.jpg",
 					"typeOverride":["barren-desert","Barren-Desert"]}, #workaround for tasc bug
 				#"conditions":["ruins_scattered","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common"], DEFAULT REALISTIC
-				"conditions":["ruins_widespread","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common","pre_collapse_facility","rat_ancient_military_hub","US_elevator","US_shrooms","rat_ancient_megacities","rat_kinetic_launchsystem","rat_warscape","rat_ancient_industries","rat_rampant_military_core","rat_defensive_drones"],
-},
+				"conditions":["ruins_widespread","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common","pre_collapse_facility","IndEvo_RuinsCondition","US_elevator","US_shrooms","rat_ancient_megacities","rat_ancient_military_hub","rat_kinetic_launchsystem","rat_warscape","rat_ancient_industries","rat_rampant_military_core","rat_defensive_drones"],
 { #5 Jupiter - Hazard 100%
 				"entity":"planet",
 				"name":"Jupiter",
@@ -575,34 +574,51 @@
 				"tags":[],
 				"size":1000,
 },
-				{"entity":"jump_point","orbitRadius":2345,"orbitAngle":135,"orbitDays":730,"name":"Zenith Jump-Point","orbitClockwise":false,"tags":["core_jump_point"]}, #43
-				{"entity":"jump_point","orbitRadius":11111,"orbitAngle":30,"orbitDays":0,"name":"Nadir Jump-Point","orbitClockwise":false}, #44
+# CUSTOM ENTITIES
+				{"entity":"jump_point","orbitRadius":2345,"orbitAngle":135,"orbitDays":730,"name":"Zenith Point","orbitClockwise":false,"tags":["core_jump_point"]}, #43
+				{"entity":"jump_point","orbitRadius":11111,"orbitAngle":30,"orbitDays":0,"name":"Nadir Point","orbitClockwise":false}, #44
 				{"entity":"jump_point","orbitRadius":17777,"orbitAngle":270,"orbitDays":0,"name":"Orion Spur","orbitClockwise":false}, #45
-				{"entity":"inactive_gate","orbitRadius":18765,"orbitAngle":135,"orbitDays":0,"name":"Charon Gate","orbitClockwise":false}, #46
-				{"entity":"empty_location","orbitRadius":15000,"orbitAngle":45,"orbitDays":0,"orbitClockwise":false}, #47
-				{"entity":"stable_location","orbitRadius":8765,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false}, #48
+				{"entity":"inactive_gate","orbitRadius":18765,"orbitAngle":135,"orbitDays":0,"name":"Newton Gate","orbitClockwise":false}, #46
+				{"entity":"stable_location","orbitRadius":15000,"orbitAngle":45,"orbitDays":0,"orbitClockwise":false,"tags":["neutrino_high"]}, #47
+				{"entity":"stable_location","orbitRadius":8765,"orbitAngle":195,"orbitDays":0,"orbitClockwise":false}, #48
 				{"entity":"stable_location","orbitRadius":12345,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false}, #49
-				{"entity":"comm_relay","name":"Deep Space Network","customDescriptionId":"sol_DSN","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false}, #50
-				{"entity":"sensor_array","name":"Space Surveillance Network","customDescriptionId":"sol_SSN","orbitRadius":5050,"orbitAngle":30,"orbitDays":1000,"orbitClockwise":false}, #51
-				{"entity":"nav_buoy","name":"Hubble Buoy","orbitRadius":7890,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false}, #52
+				{"entity":"comm_relay","name":"Deep Space Network","customDescriptionId":"sol_DSN","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #50
+				{"entity":"sensor_array","name":"Space Surveillance Network","customDescriptionId":"sol_SSN","orbitRadius":5050,"orbitAngle":30,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #51
+				{"entity":"nav_buoy","name":"Hubble Buoy","orbitRadius":7890,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #52
 				{"entity":"orbital_habitat","orbitRadius":18888}, #53
-				{"entity":"station_research","orbitRadius":1666}, #54
+				{"entity":"station_research","orbitRadius":3636}, #54
 				{"entity":"station_mining_remnant","orbitRadius":20000}, #55
-				{"entity":"derelict_probe","orbitRadius":8888}, #56
-				{"entity":"derelict_cryosleeper","name":"Foundation","orbitRadius":12000}, #57
-				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #58
-				{"entity":"wreck","orbitRadius":11000,"orbitAngle":210,"orbitDays":0,"variantId":"wolf_Assault"}, #59
-				{"entity":"wreck","orbitRadius":12000,"orbitAngle":240,"orbitDays":0,"variantId":"lasher_CS"}, #60
-				{"entity":"wreck","orbitRadius":13000,"orbitAngle":270,"orbitDays":0,"variantId":"kite_Standard"}, #61
-				{"entity":"wreck","orbitRadius":15000,"orbitAngle":300,"orbitDays":0,"variantId":"tarsus_d_Standard"}, #62
-				{"entity":"wreck","orbitRadius":16000,"orbitAngle":330,"orbitDays":0,"variantId":"buffalo2_FS"}, #63
-				{"entity":"wreck","orbitRadius":17000,"orbitAngle":360,"orbitDays":0,"variantId":"hammerhead_Balanced"}, #64
-				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"variantId":"condor_Support"}, #65
-				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"variantId":"dram_Light"}, #66
-				{"entity":"aotd_pluto_station","focus":[10,2],"orbitAngle":0,"orbitDays":1000}, #67 - AOTD Pluto Mining Station orbiting Pluto
+				{"entity":"derelict_probe","orbitAngle":90,"orbitRadius":8888}, #56
+				{"entity":"derelict_survey_ship","orbitAngle":250,"orbitRadius":8888}, #57
+				{"entity":"derelict_cryosleeper","name":"Foundation","orbitRadius":12000,"orbitAngle":90}, #58
+				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #59
+				{"entity":"wreck","orbitRadius":11000,"orbitAngle":210,"orbitDays":0,"variantId":"wolf_Assault"}, #60
+				{"entity":"wreck","orbitRadius":12000,"orbitAngle":240,"orbitDays":0,"variantId":"lasher_CS"}, #61
+				{"entity":"wreck","orbitRadius":13000,"orbitAngle":270,"orbitDays":0,"variantId":"kite_Standard"}, #62
+				{"entity":"wreck","orbitRadius":15000,"orbitAngle":300,"orbitDays":0,"variantId":"tarsus_d_Standard"}, #63
+				{"entity":"wreck","orbitRadius":16000,"orbitAngle":330,"orbitDays":0,"variantId":"buffalo2_FS"}, #64
+				{"entity":"wreck","orbitRadius":17000,"orbitAngle":360,"orbitDays":0,"variantId":"hammerhead_Balanced"}, #65
+				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"variantId":"condor_Support"}, #66
+				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"variantId":"dram_Light"}, #67
+				{"entity":"wreck","orbitRadius":20000,"orbitAngle":90,"orbitDays":0,"variantId":"ass_arkship_D_variant"}, #68 ASS - Ark Variant
+				{"entity":"ark","name":"Noah's Ark","orbitRadius":9999,"orbitAngle":330,"orbitDays":1825}, #69 - AOTD/ASS - Ark
+				{"entity":"aotd_pluto_station","focus":[10,2],"orbitAngle":0,"orbitDays":1000}, #70 - AOTD Pluto Mining Station orbiting Pluto
+				{"entity":"rat_cryochamber","orbitRadius":4680,"orbitAngle":240,"orbitDays":1095}, #71 - RAT Punitive Cryostation
+				{"entity":"rat_abyssal_shipyard","orbitRadius":18888,"orbitAngle":120,"orbitDays":2190}, #72 - RAT Abyssal Shipyard
+				{"entity":"rat_sariel_outpost","orbitRadius":22222,"orbitAngle":210,"orbitDays":730}, #73 - RAT Abyssal Outpost
+				{"entity":"rat_sariel_outpost","orbitRadius":22222,"orbitAngle":315,"orbitDays":730}, #74 - RAT Abyssal Outpost
+				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095}, #75
 
-## Space Stations - Currently Will break if the only/starting colony owned
-			{"entity":"station", #68
+## Space Stations - Will break if the only/starting colony owned
+			{"entity":"station",
+				"type":"IndEvo_SubspaceStation",
+				"name":"Red-Rock Space Station",
+				"customDescriptionId":"sol_RedAlert",
+				"focus":4, #76 - IND-EVO Subspace Station orbiting Mars
+				"orbitRadius":540,"orbitAngle":0,"orbitDays":1000
+			},
+			
+			{"entity":"station", #77
 				"type":"station_side00",
 				"name":"International Space Station",
 				"focus":3, #orbiting near Earth
