@@ -1,11 +1,11 @@
 {
 	"id": "customizablestarsystems-sol",
-	"name": "Customizable Star Systems-SOL",
+	"name": "Sol Solar System",
 	"author": "Bugatti Echelon",
 	"version": {
 		"major": 3,
 		"minor": 3,
-		"patch": 3
+		"patch": 4
 	},
 	"description": "Adds Sol, via Customizable Star Systems Mod.",
 	"gameVersion": "0.98a-RC8",
@@ -15,6 +15,11 @@
             "id": "customizablestarsystems",
             "name": "Customizable Star Systems",
 			"version": "3.0.2",
+        },
+        {
+            "id": "arthrships",
+            "name": "Arthur's Ships n Shit",
+			"version": "0.100-dev",
         },
         {
             "id": "aotd_vok",
@@ -39,12 +44,6 @@
 	],
 	#"suppressVCUnsupported": true
 }
-
-
-
-
-
-
 
 
 
