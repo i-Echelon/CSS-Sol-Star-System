@@ -81,7 +81,8 @@
 				"orbitClockwise":false,
 				"specChanges":{"cloudColor":[235,240,250,225],"cloudRotation":-5,"cloudTexture":"earthClouds.png","tilt":-23.4,"rotation":12.0,
 				"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],"iconColor":[155,185,255,255],"texture":"earth.jpg","planetColor":[255,255,255,255],
-					#"typeOverride":["Terran","Terrestrial"]},
+					#"typeOverride":["Terran","Terrestrial"]
+					},
 				"conditions":["habitable","mild_climate","farmland_bountiful","ore_sparse","ruins_vast","organics_plentiful","high_gravity"], #DEFAULT REALISTIC
 				#"marketMemoryKeys":{""},
 				#"factionId":"player", #do we colonize?
@@ -629,4 +630,5 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
