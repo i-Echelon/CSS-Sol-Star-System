@@ -582,9 +582,9 @@
 				{"entity":"stable_location","orbitRadius":15000,"orbitAngle":45,"orbitDays":0,"orbitClockwise":false,"tags":["neutrino_high"]}, #47
 				{"entity":"stable_location","orbitRadius":8765,"orbitAngle":195,"orbitDays":0,"orbitClockwise":false}, #48
 				{"entity":"stable_location","orbitRadius":12345,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false}, #49
-				{"entity":"comm_relay","name":"Deep Space Network","customDescriptionId":"sol_DSN","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #50
-				{"entity":"sensor_array","name":"Space Surveillance Network","customDescriptionId":"sol_SSN","orbitRadius":5050,"orbitAngle":30,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #51
-				{"entity":"nav_buoy","name":"Hubble Buoy","orbitRadius":7890,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #52
+				{"entity":"comm_relay","name":"Deep Space Network","customDescriptionId":"sol_DSN","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false}, #50
+				{"entity":"sensor_array","name":"Space Surveillance Network","customDescriptionId":"sol_SSN","orbitRadius":5050,"orbitAngle":30,"orbitDays":1000,"orbitClockwise":false}, #51
+				{"entity":"nav_buoy","name":"Hubble Buoy","orbitRadius":7890,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false}, #52
 				{"entity":"orbital_habitat","orbitRadius":18888}, #53
 				{"entity":"station_research","orbitRadius":3636}, #54
 				{"entity":"station_mining_remnant","orbitRadius":20000}, #55
@@ -655,3 +655,4 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
