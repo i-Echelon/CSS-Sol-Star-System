@@ -1,3 +1,9 @@
+3.3.5
+- Redid the main asteroid belt, and increased rock count
+- Removed mining field from Saturn (Modded)
+- Added an abandoned siphon station to Saturn (Modded)
+- Extended radius of Saturn's rings
+- Extendeded Jupiter's geo magnetofield
 3.3.4
 - Gave both variants of the system unique id
 - Single zip with both vanilla and modded version. doesn't conflict with eachother
@@ -72,6 +78,7 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
 
 
