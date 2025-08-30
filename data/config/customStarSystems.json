@@ -112,7 +112,7 @@
 					"typeOverride":["barren-desert","Barren-Desert"]}, #workaround for tasc bug
 				#"conditions":["ruins_scattered","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common"], DEFAULT REALISTIC
 				"conditions":["ruins_widespread","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common","pre_collapse_facility","IndEvo_RuinsCondition","US_elevator","US_shrooms","rat_ancient_megacities","rat_ancient_military_hub","rat_kinetic_launchsystem","rat_warscape","rat_ancient_industries","rat_rampant_military_core","rat_defensive_drones"],
-}
+},
 { #5 Jupiter - Hazard 100%
 				"entity":"planet",
 				"name":"Jupiter",
@@ -672,3 +672,4 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
