@@ -1,6 +1,6 @@
 {
 	"id": "css-sol-vanilla",
-	"name": "Customizable Star Systems-SOL",
+	"name": "Sol Solar System",
 	"author": "Bugatti Echelon",
 	"version": {
 		"major": 3,
@@ -19,6 +19,7 @@
 	],
 	#"suppressVCUnsupported": true
 }
+
 
 
 
