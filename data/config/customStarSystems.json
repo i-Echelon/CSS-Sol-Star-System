@@ -314,7 +314,7 @@
 				"type":"cryovolcanic",
 				"orbitAngle":180,
 				"radius":20,
-				"orbitRadius":1550,
+				"orbitRadius":1500,
 				"orbitDays":2.74, #realistic 1.37,
 				"orbitClockwise":false,
 				#"conditions":["low_gravity","very_cold","tectonic_activity","poor_light","ore_abundant","volatiles_diffuse"],
@@ -466,7 +466,7 @@
 				"name":"C Ring",
 				"type":"saturn_belt",
 				"focus":6,
-				"orbitRadius":750,
+				"orbitRadius":700,
 				"orbitDays":90, #realistic 45,
 				"orbitClockwise":false,
 				"bandIndex":0,
@@ -486,7 +486,7 @@
 				"name":"A Ring",
 				"type":"saturn_belt",
 				"focus":6,
-				"orbitRadius":1200,
+				"orbitRadius":1300,
 				"orbitDays":90, #realistic 45,
 				"orbitClockwise":false,
 				"bandIndex":2,
@@ -496,7 +496,7 @@
 				"name":"Cassini Division",
 				"type":"saturn_belt",
 				"focus":6,
-				"orbitRadius":1450,
+				"orbitRadius":1600,
 				"orbitDays":90, #realistic 45,
 				"orbitClockwise":false,
 				"bandIndex":3,
@@ -553,7 +553,7 @@
 				"middleRadius":550,
 				"focus":5,
 				"orbitRadius":500,
-				"outerRadius":1610,
+				"outerRadius":750,
 				"baseColor":[250,125,100,150],
 				"auroraFrequency":0.25,
 				"auroraColors":[[25,250,100,150],[0,155,205,75],[91,155,0,85],[15,126,75,35],[100,75,155,65],[80,170,255,35]],
@@ -635,7 +635,7 @@
 
 			{"entity":"station", #77 Abanadoned 
 				"type":"station_side05",
-				"name":"Abandoned Siphon Station",
+				"name":"Titan's Eye",
 				"customDescriptionId":"sol_SiphonStation",
 				"focus":6,  # orbiting Saturn
 				"orbitRadius":500,"orbitAngle":0,"orbitDays":1000
@@ -678,4 +678,3 @@
 #		["IndEvo_IntArray",,"IndEvo_transmitter"],
 #		["IndEvo_Artillery_railgun",,,true],
 #		"IndEvo_Academy",]
-
