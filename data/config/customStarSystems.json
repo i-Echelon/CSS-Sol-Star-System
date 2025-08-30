@@ -638,7 +638,7 @@
 				"name":"Abandoned Siphon Station",
 				"customDescriptionId":"sol_SiphonStation",
 				"focus":6,  # orbiting Saturn
-				"orbitRadius":475,"orbitAngle":0,"orbitDays":1000
+				"orbitRadius":500,"orbitAngle":0,"orbitDays":1000
 			},
 			
 			{"entity":"station", #78
@@ -678,3 +678,4 @@
 #		["IndEvo_IntArray",,"IndEvo_transmitter"],
 #		["IndEvo_Artillery_railgun",,,true],
 #		"IndEvo_Academy",]
+
