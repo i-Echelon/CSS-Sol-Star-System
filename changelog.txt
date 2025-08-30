@@ -1,11 +1,15 @@
 3.3.4
+- Gave both variants of the system unique id
+- Single zip with both vanilla and modded version. doesn't conflict with eachother
 - Fixed small syntax in Vanilla version
-- Added Unique Abandoned Station near Mars
+- Added Unique Abandoned Station near Mars (modded)
 - Scattered some Cache
 - New unique Derelict
 - Updated descriptions
-- Added an Arkoship reuires Arthur's Ships & Shit
+- Added an [REDACTED] requires A$$
 - Tweaked some Entities angles
+- Fixed Pluto Mining Station crsh
+- Added aotd megastructure music to the PMS
 3.3.3
 - Added Custom Descriptions & Lore for Majority of Planets and Entities. +Nicknames on mouse hover.
 - Moved ISS to Earth's Orbit. Moved SSN closer to Mars.
@@ -68,6 +72,7 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
 
 
