@@ -8,7 +8,7 @@
 {
 	"css_Sol":{
 		"isEnabled":true,
-		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
+		"teleportUponGeneration":true, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
 		"hasSystemwideNebula":true,
 		"addDomainCryosleeper":false,
@@ -90,13 +90,13 @@
 				#"IndEvo_ArtilleryStationCondition"
 				],
 				#"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_HullDecon"},
-				#"factionId":"player", #do we colonize?
-				#"marketSize":3,
-				#"industries":[
-					#"population", "spaceport", "farming",
-					#["orbitalworks",,"pristine_nanoforge"],
+				"factionId":"player", #do we colonize?
+				"marketSize":3,
+				"industries":[
+					"population", "spaceport", "farming",
+					["orbitalworks",,"pristine_nanoforge"],
 					#["IndEvo_Artillery_railgun",,,true]
-				#]
+				]
 },
 { #4 Mars - Hazard 125%
 				"entity":"planet",
@@ -606,7 +606,7 @@
 				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"variantId":"condor_Support"}, #67
 				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"variantId":"dram_Light"}, #68
 				{"entity":"wreck","orbitRadius":20000,"orbitAngle":90,"orbitDays":0,"variantId":"ass_arkship_D_variant"}, #69 ASS - Ark Variant
-				{"entity":"ark","name":"Noah's Ark","orbitRadius":9999,"orbitAngle":330,"orbitDays":1825}, #70 - AOTD/ASS - Ark
+				{"entity":"ark","name":"Abraham's Ark","orbitRadius":9999,"orbitAngle":330,"orbitDays":1825}, #70 - AOTD/ASS - Ark
 				{"entity":"rat_cryochamber","orbitRadius":4680,"orbitAngle":240,"orbitDays":1095}, #71 - RAT Punitive Cryostation
 				{"entity":"rat_abyssal_shipyard","orbitRadius":18888,"orbitAngle":120,"orbitDays":2190}, #72 - RAT Abyssal Shipyard
 				{"entity":"rat_sariel_outpost","orbitRadius":22222,"orbitAngle":210,"orbitDays":730}, #73 - RAT Abyssal Outpost
@@ -670,5 +670,3 @@
 	#"css_newSystem":{},
 
 } # CLOSING
-
-
