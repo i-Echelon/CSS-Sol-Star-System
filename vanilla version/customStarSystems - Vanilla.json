@@ -184,7 +184,7 @@
 				"orbitRadius":23000,
 				"orbitDays":181120, #realistic 90560,
 				"orbitClockwise":false,
-				"conditions":["dark","very_cold"],
+				"conditions":["dark","very_cold","rare_ore_abundant"],
 				"specChanges":{"tilt":-122.5,"rotation":1.875,"texture":"pluto.jpg"}
 },
 
@@ -630,3 +630,4 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
