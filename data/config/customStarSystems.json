@@ -6,9 +6,9 @@
 	# Recently change "conditions" of most planets and moons to use some from US/RAT/IE/AotD-VoK. Left the original realish ones as comments.
 	# Rotation speeds were also halved in speed for disorientation purposes
 {
-	"css_Sol":{
+	"css_Sol_Modded":{
 		"isEnabled":true,
-		"teleportUponGeneration":true, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
+		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
 		"hasSystemwideNebula":true,
 		"addDomainCryosleeper":false,
@@ -90,13 +90,13 @@
 				#"IndEvo_ArtilleryStationCondition"
 				],
 				#"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_HullDecon"},
-				"factionId":"player", #do we colonize?
-				"marketSize":3,
-				"industries":[
-					"population", "spaceport", "farming",
-					["orbitalworks",,"pristine_nanoforge"],
+				#"factionId":"player", #do we colonize?
+				#"marketSize":3,
+				#"industries":[
+					#"population", "spaceport", "farming",
+					#["orbitalworks",,"pristine_nanoforge"],
 					#["IndEvo_Artillery_railgun",,,true]
-				]
+				#]
 },
 { #4 Mars - Hazard 125%
 				"entity":"planet",
