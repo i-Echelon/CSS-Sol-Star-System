@@ -1,5 +1,5 @@
 {
-	"id": "customizablestarsystems-sol",
+	"id": "css-sol-vanilla",
 	"name": "Customizable Star Systems-SOL",
 	"author": "Bugatti Echelon",
 	"version": {
@@ -19,6 +19,7 @@
 	],
 	#"suppressVCUnsupported": true
 }
+
 
 
 
