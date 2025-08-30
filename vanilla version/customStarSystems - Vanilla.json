@@ -392,7 +392,7 @@
 
 			{ #25 Main asteroid belt
 				"entity":"asteroid_belt",
-					"name":"Main Belt","orbitRadius":7000,"orbitDays":2000,"orbitClockwise":false,"innerBandIndex":0,"outerBandIndex":0,"size":512,"numAsteroids":500,
+					"name":"Main Belt","orbitRadius":7000,"orbitDays":2000,"orbitClockwise":false,"innerBandIndex":0,"outerBandIndex":0,"size":512,"numAsteroids":1000,
 			},
 			{ #26 Kuiper Belt
 				"entity":"asteroid_belt",
@@ -417,7 +417,7 @@
 				"orbitClockwise":false,
 				"name":"Main Band",
 				"type":"rings_asteroids0",
-				"bandIndex":4,
+				"bandIndex":0,
 },
 { #30 Jupiter's Band1
 				"entity":"ring",
@@ -429,7 +429,7 @@
 				"orbitClockwise":false,
 				"bandIndex":1,
 },
-{ #31 Jupiter's Band2
+{ #30 Jupiter's Band2
 				"entity":"ring",
 				"name":"Jupiter's Halo",
 				"type":"rings_ice0",
@@ -444,7 +444,7 @@
 				"name":"C Ring",
 				"type":"saturn_belt",
 				"focus":6,
-				"orbitRadius":650,
+				"orbitRadius":750,
 				"orbitDays":90, #realistic 45,
 				"orbitClockwise":false,
 				"bandIndex":0,
@@ -454,7 +454,7 @@
 				"name":"B Ring",
 				"type":"saturn_belt",
 				"focus":6,
-				"orbitRadius":900,
+				"orbitRadius":1000,
 				"orbitDays":90, #realistic 45,
 				"orbitClockwise":false,
 				"bandIndex":1,
@@ -464,7 +464,7 @@
 				"name":"A Ring",
 				"type":"saturn_belt",
 				"focus":6,
-				"orbitRadius":1100,
+				"orbitRadius":1200,
 				"orbitDays":90, #realistic 45,
 				"orbitClockwise":false,
 				"bandIndex":2,
@@ -474,7 +474,7 @@
 				"name":"Cassini Division",
 				"type":"saturn_belt",
 				"focus":6,
-				"orbitRadius":1350,
+				"orbitRadius":1450,
 				"orbitDays":90, #realistic 45,
 				"orbitClockwise":false,
 				"bandIndex":3,
@@ -489,7 +489,7 @@
 				"orbitClockwise":false,
 				"bandIndex":0,
 },
-{ #37 Neptune's Band
+{ #37 Neptune's Band1
 				"entity":"ring",
 				"name":"Trans-Neptunian Object",
 				"type":"rings_ice0",
@@ -499,7 +499,7 @@
 				"orbitClockwise":false,
 				"bandIndex":3,
 },
-{ #38 Neptune's Band
+{ #38 Neptune's Band2
 				"entity":"ring",
 				"name":"Trans-Neptunian Object",
 				"type":"rings_ice0",
@@ -531,7 +531,7 @@
 				"middleRadius":550,
 				"focus":5,
 				"orbitRadius":500,
-				"outerRadius":610,
+				"outerRadius":1610,
 				"baseColor":[250,125,100,150],
 				"auroraFrequency":0.25,
 				"auroraColors":[[25,250,100,150],[0,155,205,75],[91,155,0,85],[15,126,75,35],[100,75,155,65],[80,170,255,35]],
@@ -585,14 +585,22 @@
 				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095}, #68
 
 ## Space Stations - Will break if the only/starting colony owned
-			{"entity":"station", #69
+			{"entity":"station", #69 Abandoned Station
 				"type":"station_lowtech2",
 				"name":"Red-Rock Space Station",
 				"customDescriptionId":"sol_RedAlert",
-				"focus":4, # Abandoned Station orbiting Mars
+				"focus":4, # orbiting Mars
 				"orbitRadius":540,"orbitAngle":0,"orbitDays":1000
 			},
-			
+
+			{"entity":"station", #77 Abanadoned Siphon Station
+				"type":"station_side05",
+				"name":"Abandoned Siphon Station",
+				"customDescriptionId":"sol_SiphonStation",
+				"focus":6,  # orbiting Saturn
+				"orbitRadius":475,"orbitAngle":0,"orbitDays":1000
+			},
+
 			{"entity":"station", #70
 				"type":"station_side00",
 				"name":"International Space Station",
@@ -630,5 +638,6 @@
 	#"css_newSystem":{},
 
 } # CLOSING
+
 
 
