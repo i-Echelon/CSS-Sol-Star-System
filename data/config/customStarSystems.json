@@ -139,7 +139,7 @@
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-26.7,"rotation":26.665,"cloudTexture":"US_clouds_textureGiant.png","texture":"saturn.jpg"},
 				#"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity"], #DEFAULT REALISTIC
-				"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity","IndEvo_mineFieldCondition","pre_collapse_facility","US_floating","US_fluorescent","rat_ancient_fuel_hub"],
+				"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity","pre_collapse_facility","US_floating","US_fluorescent","rat_ancient_fuel_hub"],
 },
 { #7 Uranus - Hazard 325%
 				"entity":"planet",
@@ -414,7 +414,7 @@
 
 			{ #25 Main asteroid belt
 				"entity":"asteroid_belt",
-					"name":"Main Belt","orbitRadius":7000,"orbitDays":2000,"orbitClockwise":false,"innerBandIndex":0,"outerBandIndex":0,"size":512,"numAsteroids":500,
+					"name":"Main Belt","orbitRadius":7000,"orbitDays":2000,"orbitClockwise":false,"innerBandIndex":0,"outerBandIndex":0,"size":512,"numAsteroids":1000,
 			},
 			{ #26 Kuiper Belt
 				"entity":"asteroid_belt",
@@ -439,7 +439,7 @@
 				"orbitClockwise":false,
 				"name":"Main Band",
 				"type":"rings_asteroids0",
-				"bandIndex":4,
+				"bandIndex":0,
 },
 { #30 Jupiter's Band1
 				"entity":"ring",
@@ -466,7 +466,7 @@
 				"name":"C Ring",
 				"type":"saturn_belt",
 				"focus":6,
-				"orbitRadius":650,
+				"orbitRadius":750,
 				"orbitDays":90, #realistic 45,
 				"orbitClockwise":false,
 				"bandIndex":0,
@@ -476,7 +476,7 @@
 				"name":"B Ring",
 				"type":"saturn_belt",
 				"focus":6,
-				"orbitRadius":900,
+				"orbitRadius":1000,
 				"orbitDays":90, #realistic 45,
 				"orbitClockwise":false,
 				"bandIndex":1,
@@ -486,7 +486,7 @@
 				"name":"A Ring",
 				"type":"saturn_belt",
 				"focus":6,
-				"orbitRadius":1100,
+				"orbitRadius":1200,
 				"orbitDays":90, #realistic 45,
 				"orbitClockwise":false,
 				"bandIndex":2,
@@ -496,7 +496,7 @@
 				"name":"Cassini Division",
 				"type":"saturn_belt",
 				"focus":6,
-				"orbitRadius":1350,
+				"orbitRadius":1450,
 				"orbitDays":90, #realistic 45,
 				"orbitClockwise":false,
 				"bandIndex":3,
@@ -553,7 +553,7 @@
 				"middleRadius":550,
 				"focus":5,
 				"orbitRadius":500,
-				"outerRadius":610,
+				"outerRadius":1610,
 				"baseColor":[250,125,100,150],
 				"auroraFrequency":0.25,
 				"auroraColors":[[25,250,100,150],[0,155,205,75],[91,155,0,85],[15,126,75,35],[100,75,155,65],[80,170,255,35]],
@@ -632,6 +632,14 @@
 				"focus":4,  # orbiting Mars
 				"orbitRadius":540,"orbitAngle":0,"orbitDays":1000
 			},
+
+			{"entity":"station", #77 Abanadoned 
+				"type":"station_side05",
+				"name":"Abandoned Siphon Station",
+				"customDescriptionId":"sol_SiphonStation",
+				"focus":6,  # orbiting Saturn
+				"orbitRadius":475,"orbitAngle":0,"orbitDays":1000
+			},
 			
 			{"entity":"station", #78
 				"type":"station_side00",
@@ -640,33 +648,33 @@
 				"orbitRadius":1050,
 				"orbitAngle":30,
 				"customDescriptionId":"sol_ISS",
-				#"radius":100,
-				#"orbitDays":0,
-				#"orbitClockwise":false,
-			#	"conditions":"IndEvo_ArtilleryStationCondition",
-			#	"memoryKeys":{},
-			#	"marketMemoryKeys":{},
-			#	"tags":[],
-			#	"factionId":"player", 
-			#	"marketSize":6,
-			#	"freePort":false,
-			#	"aiCoreAdmin":false,
-			#	"industries":[
-			#		"population",
-			#		["megaport",,"fullerene_spool",true],
-			#		["waystation",,,true],
-			#		["heavybatteries",,"drone_replicator",true],
-			#		["starfortress_high",,,true], # Only story-point improvement
-			#		["highcommand",,,true],
-			#		["farming",,"soil_nanites",true],
-			#		["lightindustry",,"biofactory_embryo",true],
-			#		["IndEvo_IntArray",,"IndEvo_transmitter"],
-			#		["IndEvo_Artillery_railgun",,,true],
-			#		"IndEvo_Academy",]
-			},
+			}
+
 		], #Celestial Bodies END
 	}, #Sol System END
-	
-	#"css_newSystem":{},
-
 } # CLOSING
+
+
+#	"radius":100,
+#	"orbitDays":0,
+#	"orbitClockwise":false,
+#	"conditions":"IndEvo_ArtilleryStationCondition",
+#	"memoryKeys":{},
+#	"marketMemoryKeys":{},
+#	"tags":[],
+#	"factionId":"player", 
+#	"marketSize":6,
+#	"freePort":false,
+#	"aiCoreAdmin":false,
+#	"industries":[
+#		"population",
+#		["megaport",,"fullerene_spool",true],
+#		["waystation",,,true],
+#		["heavybatteries",,"drone_replicator",true],
+#		["starfortress_high",,,true], # Only story-point improvement
+#		["highcommand",,,true],
+#		["farming",,"soil_nanites",true],
+#		["lightindustry",,"biofactory_embryo",true],
+#		["IndEvo_IntArray",,"IndEvo_transmitter"],
+#		["IndEvo_Artillery_railgun",,,true],
+#		"IndEvo_Academy",]
