@@ -8,7 +8,7 @@
 - Set market memory keys for some Ind-Evo Ruins; Memorial on Earth, Hull Deconstruction on Mars
 - 100% Fixed Pluoton Mining Station 
 - Tweaked Saturns and other Belts
-- Added [REDACTED]
+- [REDACTED]
 - Removed & replaced variant derelict ship from Arthur's ships & stuff
 - Various other tuneups
 3.3.5
@@ -91,3 +91,4 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
