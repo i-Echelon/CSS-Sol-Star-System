@@ -732,7 +732,7 @@
 				#	["IndEvo_IntArray",,"IndEvo_transmitter"], # IND-EVO
 				#	["IndEvo_Artillery_railgun","alpha_core",,true], #IND-EVO
 				#]
-			}
+			#}
 
 		] #Celestial Bodies END
 	} #Sol System END
@@ -763,3 +763,4 @@
 #		["IndEvo_IntArray",,"IndEvo_transmitter"],
 #		["IndEvo_Artillery_railgun",,,true],
 #		"IndEvo_Academy"]
+
