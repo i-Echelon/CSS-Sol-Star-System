@@ -690,7 +690,7 @@
 				"orbitRadius":540,"orbitAngle":0,"orbitDays":1000,"orbitClockwise":false
 			},
 
-			{"entity":"station", #78 Abanadoned Siphon Station
+			{"entity":"station", #78 Abandoned Siphon Station
 				"type":"station_side05",
 				"name":"Titan's Eye",
 				"customDescriptionId":"sol_SiphonStation",
@@ -766,3 +766,4 @@
 #		["IndEvo_IntArray",,"IndEvo_transmitter"],
 #		["IndEvo_Artillery_railgun",,,true],
 #		"IndEvo_Academy"]
+
