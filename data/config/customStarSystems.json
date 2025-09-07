@@ -377,7 +377,11 @@
 				"orbitDays":32, #realistic 16,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-23.5,"rotation":0.755,"texture":"titan.jpg"},
-				"conditions":["cold","inimical_biosphere","poor_light","ore_moderate","rare_ore_moderate","volatiles_plentiful","organics_common","US_crash","US_bedrock","rat_warscape","pre_collapse_facility"]
+				"conditions":["cold","inimical_biosphere","poor_light","ore_moderate","rare_ore_moderate","volatiles_plentiful","organics_common",
+					"US_crash","US_bedrock", #UNKNOWN SKIES
+					"rat_warscape", #RAT
+					"pre_collapse_facility" #AOTD
+				]
 },
 { #20 Oberon, orbiting Uranus - Hazard 250%
 				"entity":"planet",
