@@ -712,7 +712,7 @@
 				#"aiCoreAdmin":true,
 				"marketSize":6,
 				"conditions":[
-					#"IndEvo_ArtilleryStationCondition", #IND-EVO
+					"IndEvo_ArtilleryStationCondition", #IND-EVO
 					"rat_defensive_drones",
 					"rat_rampant_military_core" # RAT
 				],
@@ -762,3 +762,4 @@
 #		["IndEvo_IntArray",,"IndEvo_transmitter"],
 #		["IndEvo_Artillery_railgun",,,true],
 #		"IndEvo_Academy",]
+
