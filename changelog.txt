@@ -1,8 +1,12 @@
+3.3.7.
+- Removed Testing and Debugging stuff
+- Cleaned out [REDACTED]
+- Fixed Typos and suppressed some SystemTags
 3.3.6
 - Maintenance
 - Tagged all Modded entries for better readability and easier modifying
 - Set market memory keys for some Ind-Evo Ruins; Memorial on Earth, Hull Deconstruction on Mars
-- 100% Fixed Plouton Mining Station 
+- 100% Fixed Pluoton Mining Station 
 - Tweaked Saturns and other Belts
 - Added [REDACTED]
 - Removed & replaced variant derelict ship from Arthur's ships & stuff
@@ -87,18 +91,3 @@
 - Added System Music.
 1.0.0
 - First iteration.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
