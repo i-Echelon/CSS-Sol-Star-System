@@ -1,27 +1,30 @@
 	# Sol Star Sysyem by Bugatti Echelon #Discord #bugatti_echelon
-	# Modded version - requires CSS, AOTD-VoK, RAT, INDO-EVO, & US
+	# If you wish to removed modded content each condition/industry/spec has been tagged with mod's acronym for easier user readability
+	# Modded version - requires CSS, AOTD-VoK, Arthur's Ships & Shit (A$$), RAT, IND-EVO, & US
 	# All "orbitDays" for planets and moons were increased to be more inline with starsectors time/speed pass.
 	# Using realistic values (Earth 365/y, Luna 28/m) you would have to use emergency burn to even catch some of the moons who orbits at high speed, but that would be realistic i guess.
 	# Left original speeds as comments incase you want to re-enable. You can also comment/remove the custom graphics to let procgen override. Same for conditions.
 	# Recently change "conditions" of most planets and moons to use some from US/RAT/IE/AotD-VoK. Left the original realish ones as comments.
 	# Rotation speeds were also halved in speed for disorientation purposes
 {
-	"css_Sol_Modded":{
+	"css_Sol":{
 		"isEnabled":true,
-		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
+		"teleportUponGeneration":true, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
 		"hasSystemwideNebula":true,
 		"addDomainCryosleeper":false,
 		"addCoronalHypershunt":false,
-		"memoryKeys":{"$US_skipSystem":true}, # Memory key to prevent Unknown Skies scripts from modifying this system (false to allow)
+		"memoryKeys":{
+			"$US_skipSystem":true, # Memory key to prevent Unknown Skies scripts from modifying this system (false to allow)	
+		},
 		"setLocation":[0,-45000], #originally used "setLocation":2, (2 constellations away from Core Worlds( 0 for random))
 		"systemBackground":"galaxy0.png",#"milkyway.png",
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge":"average",
-		"systemTags":["theme_misc","theme_interesting","theme_ruins","theme_derelict","theme_derelict_probes","theme_derelict_survey_ship","theme_derelict_cryosleeper"],
-
-
+		"systemTags":["theme_misc","theme_interesting","theme_ruins","theme_derelict","theme_derelict_probes","theme_derelict_survey_ship","theme_derelict_mothership","has_coronal_tap",
+			"US_skipSystem" # UNKNOWN SKIES 
+		],
 		"entities":[ #Celestial Bodies START
 ## STARS
 
@@ -35,12 +38,13 @@
 				"coronaRadius":500,
 				"flareChance":10.0,
 				"orbitClockwise":false,
-				"memoryKeys":{"$US_starVariant":3}, #unique
+				"memoryKeys":{"$US_starVariant":3}, #unique UNKNOWN SKIES
 				"tags":["neutrino"],
 				"specChanges":{"tilt":-7.25,"rotation":0.44,"useReverseLightForGlow":false,"glowColor":[255,255,255,255],"planetColor":[238,235,206,255],"iconColor":[238,235,206,255],"texture":"sol.jpg",
 					"typeOverride":["star_yellow","Yellow Dwarf Star"]
 					#"icon":"graphics/warroom/placeholder.png"
-					}
+				},
+				#"conditions":[]
 },
 
 ## PLANETS
@@ -55,8 +59,8 @@
 				"orbitRadius":2500,
 				"orbitDays":120, #realistic 59,
 				"orbitClockwise":false,
-				"conditions":["hot","irradiated","thin_atmosphere","toxic_atmosphere","low_gravity","ore_ultrarich","rare_ore_ultrarich","solar_array"],
-				"specChanges":{"tilt":-0.03,"rotation":0.2035,"iconColor":[227,151,118,255],"texture":"mercury.jpg"}
+				"specChanges":{"tilt":-0.03,"rotation":0.2035,"iconColor":[227,151,118,255],"texture":"mercury.jpg"},
+				"conditions":["hot","irradiated","thin_atmosphere","toxic_atmosphere","low_gravity","ore_ultrarich","rare_ore_ultrarich","solar_array"]
 },
 { #2 Venus - Hazard 275%
 				"entity":"planet",
@@ -68,14 +72,16 @@
 				"orbitRadius":3200,
 				"orbitDays":450, #realistic 225,
 				"orbitClockwise":false,
-				"conditions":["very_hot","irradiated","tectonic_activity","dense_atmosphere","ore_ultrarich","rare_ore_ultrarich","pre_collapse_facility"],
-				"specChanges":{"tilt":177.4,"rotation":0.0495,"cloudRotation":0.02475,"texture":"venus.jpg"}
+				"specChanges":{"tilt":177.4,"rotation":0.0495,"cloudRotation":0.02475,"texture":"venus.jpg"},
+				"conditions":["very_hot","irradiated","tectonic_activity","dense_atmosphere","ore_ultrarich","rare_ore_ultrarich",
+					"pre_collapse_facility" # AOTD
+				]
 },
 { #3 Earth - Hazard 50%
 				"entity":"planet",
 				"name":"Earth",
 				"customDescriptionId":"sol_Earth",
-				"type":"US_continent",
+				"type":"US_continent", # Unknown Skies
 				"orbitAngle":90,
 				"radius":180,
 				"orbitRadius":4400,
@@ -83,20 +89,23 @@
 				"orbitClockwise":false,
 				"specChanges":{"cloudColor":[235,240,250,225],"cloudRotation":-5,"cloudTexture":"earthClouds.png","tilt":-23.4,"rotation":12.0,
 				"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],"iconColor":[155,185,255,255],"texture":"earth.jpg","planetColor":[255,255,255,255],
-					"typeOverride":["US_magnetic","Terrestrial"]},
-				#"conditions":["habitable","mild_climate","farmland_bountiful","ore_sparse","ruins_vast","organics_plentiful","high_gravity"], #DEFAULT REALISTIC
-				"conditions":[
-				"habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast","pre_collapse_facility","US_elevator","US_religious","US_magnetic","rat_ancient_megacities","rat_bionic_plantlife","rat_engineered_utopia",
-				#"IndEvo_ArtilleryStationCondition"
+					"typeOverride":["US_magnetic","Terrestrial"] # UNKNOWN SKIES
+				},
+				"conditions":["habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast",
+					"US_elevator","US_religious","US_magnetic", # UNKNOWN SKIES
+					"rat_ancient_megacities","rat_bionic_plantlife","rat_engineered_utopia", # RAT
+					"pre_collapse_facility", # AOTD
+					"IndEvo_RuinsCondition", # IND-EVO
+					#"IndEvo_ArtilleryStationCondition" # IND-EVO
 				],
-				#"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_HullDecon"},
-				#"factionId":"player", #do we colonize?
-				#"marketSize":3,
-				#"industries":[
-					#"population", "spaceport", "farming",
-					#["orbitalworks",,"pristine_nanoforge"],
-					#["IndEvo_Artillery_railgun",,,true]
-				#]
+				"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_Memorial"}, # IND-EVO
+				"factionId":"player", #initial colony?
+				"marketSize":3,
+				"industries":[
+					"population", "spaceport", "farming",
+					["orbitalworks",,"pristine_nanoforge"],
+					#["IndEvo_Artillery_railgun",,,true] # IND-EVO - should also use the related condition tag (IndEvo_ArtilleryStationCondition)
+				]
 },
 { #4 Mars - Hazard 125%
 				"entity":"planet",
@@ -109,63 +118,76 @@
 				"orbitDays":1374, #realistic 687,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"iconColor":[255,68,14,250],"texture":"mars.jpg",
-					"typeOverride":["barren-desert","Barren-Desert"]}, #workaround for tasc bug
-				#"conditions":["ruins_scattered","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common"], DEFAULT REALISTIC
-				"conditions":["ruins_widespread","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common","pre_collapse_facility","IndEvo_RuinsCondition","US_elevator","US_shrooms","rat_ancient_megacities","rat_ancient_military_hub","rat_kinetic_launchsystem","rat_warscape","rat_ancient_industries","rat_rampant_military_core","rat_defensive_drones"],
+					"typeOverride":["barren-desert","Barren-Desert"]  #workaround for TASC bug
+				},
+				"conditions":["ruins_widespread","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common",
+					"pre_collapse_facility", # AOTD
+					"IndEvo_RuinsCondition", # IND-EVO
+					"US_elevator","US_shrooms", # UNKNOWN SKIES
+					"rat_ancient_megacities","rat_ancient_military_hub","rat_kinetic_launchsystem","rat_warscape","rat_ancient_industries" # RAT
+				],
+				"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_HullDecon"}, # IND-EVO
 },
 { #5 Jupiter - Hazard 100%
 				"entity":"planet",
 				"name":"Jupiter",
 				"customDescriptionId":"sol_Jupiter",
-				"type":"US_gas_giant",
+				"type":"US_gas_giant", # UNKNOWN SKIES
 				"orbitAngle":150,
 				"radius":500,
 				"orbitRadius":9800,
 				"orbitDays":8666, #realistic 4333,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-3.1,"rotation":29.27,"cloudTexture":"US_clouds_textureGiant.png","texture":"jupiter.jpg"	},
-				#"conditions":["volatiles_diffuse","toxic_atmosphere","high_gravity","solar_array"], #DEFAULT REALISTIC
-				"conditions":["high_gravity","volatiles_plentiful","ruins_vast","pre_collapse_facility","US_floating","rat_ancient_fuel_hub","IndEvo_mineFieldCondition"],
+				"conditions":["high_gravity","volatiles_plentiful","ruins_vast",
+				"pre_collapse_facility", # AOTD
+				"US_floating", # UNKNOWN SKIES
+				"rat_ancient_fuel_hub", #RAT
+				"IndEvo_mineFieldCondition" # IND-EVO
+				]
 },
 { #6 Saturn - Hazard 125%
 				"entity":"planet",
 				"name":"Saturn",
 				"customDescriptionId":"sol_Saturn",
-				"type":"US_gas_giantB",
+				"type":"US_gas_giantB", # UNKNOWN SKIES
 				"orbitAngle":300,
 				"radius":425,
 				"orbitRadius":14000,
 				"orbitDays":21512, #realistic 10756,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-26.7,"rotation":26.665,"cloudTexture":"US_clouds_textureGiant.png","texture":"saturn.jpg"},
-				#"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity"], #DEFAULT REALISTIC
-				"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity","pre_collapse_facility","US_floating","US_fluorescent","rat_ancient_fuel_hub"],
+				"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity",
+					"pre_collapse_facility", # AOTD
+					"US_floating","US_fluorescent", # UNKNOWN SKIES
+					"rat_ancient_fuel_hub" # RAT
+				]
 },
 { #7 Uranus - Hazard 325%
 				"entity":"planet",
 				"name":"Uranus",
 				"customDescriptionId":"sol_Uranus",
-				"type":"US_iceA",
+				"type":"US_iceA", # UNKNOWN SKIES
 				"orbitAngle":0,
 				"radius":350,
 				"orbitRadius":18000,
 				"orbitDays":61374, #realistic 30687,
 				"orbitClockwise":false,
-				"conditions":["water_surface","volatiles_abundant","poor_light","extreme_weather","toxic_atmosphere","very_cold","high_gravity"],
-				"specChanges":{"tilt":82.2,"rotation":33.33,"cloudTexture":"US_clouds_textureSwept.png","texture":"uranus.jpg"}
+				"specChanges":{"tilt":82.2,"rotation":33.33,"cloudTexture":"US_clouds_textureSwept.png","texture":"uranus.jpg"},
+				"conditions":["water_surface","volatiles_abundant","poor_light","extreme_weather","toxic_atmosphere","very_cold","high_gravity"]
 },
 { #8 Neptune - Hazard 250%
 				"entity":"planet",
 				"name":"Neptune",
 				"customDescriptionId":"sol_Neptune",
-				"type":"US_iceB",
+				"type":"US_iceB", # UNKNOWN SKIES
 				"orbitAngle":60,
 				"radius":340,
 				"orbitRadius":21000,
 				"orbitDays":120380,  #realistic 60190,
 				"orbitClockwise":false,
-				"conditions":["volatiles_diffuse","dark","very_cold","high_gravity","ruins_scattered"],
-				"specChanges":{"tilt":-28.3,"rotation":16.665,"cloudTexture":"US_clouds_textureSwept.png","texture":"neptune.jpg"}
+				"specChanges":{"tilt":-28.3,"rotation":16.665,"cloudTexture":"US_clouds_textureSwept.png","texture":"neptune.jpg"},
+				"conditions":["volatiles_diffuse","dark","very_cold","high_gravity","ruins_scattered"]
 },
 
 ## DWARFS
@@ -180,8 +202,10 @@
 				"orbitRadius":8000,
 				"orbitDays":3364, #realistic 1682,
 				"orbitClockwise":false,
-				"conditions":["ruins_scattered","no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant","US_crystals"],
-				"specChanges":{"tilt":-4.0,"rotation":31.58,"texture":"ceres.jpg"}
+				"specChanges":{"tilt":-4.0,"rotation":31.58,"texture":"ceres.jpg"},
+				"conditions":["ruins_scattered","no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant",
+					"US_crystals" # UNKNOWN SKIES
+				],
 			},
 { #10 Pluto - Hazard 225%
 				"entity":"planet",
@@ -194,11 +218,18 @@
 				"orbitRadius":23000,
 				"orbitDays":181120, #realistic 90560,
 				"orbitClockwise":false,
-				#"conditions":["dark","very_cold"],
-				"conditions":["dark","very_cold","ruins_scattered","low_gravity","ore_rich","rare_ore_moderate","US_shrooms","aotd_pluto_station"],
 				"specChanges":{"tilt":-122.5,"rotation":1.875,"texture":"pluto.jpg"},
-				#"industries":["population","spaceport","pluto_station"],
-				#"marketMemoryKeys":{"$aotd_megastructure":"pluto_station", "$AoTDIndustries":"mining_megaplex"}, DONT TOUCH
+				"conditions":["dark","very_cold","ruins_scattered","low_gravity","ore_rich","rare_ore_moderate",
+					"US_shrooms", # UNKNOWN SKIES
+					"aotd_pluto_station" # AOTD
+				],
+				#"factionId":"neutral",
+				#"marketSize":3,
+				#"marketMemoryKeys":{"$aotd_megastructure":"pluto_station", "$AoTDIndustries":"mining_megaplex"}, # AOTD 
+				#"industries":["population","spaceport",
+				#	"pluto_station" # AOTD
+				#],
+				#"tags":["nex_canMine":true]
 },
 
 ## MOONS
@@ -214,10 +245,13 @@
 				"orbitRadius":350,
 				"orbitDays":56, #realistic 28,
 				"orbitClockwise":false,
-				#"conditions":["no_atmosphere","low_gravity","rare_ore_sparse"],
-				"conditions":["ruins_vast","no_atmosphere","low_gravity","ore_sparse","rare_ore_rich","pre_collapse_facility","US_base","US_tunnels","US_crystals","rat_ancient_industries"],
 				"specChanges":{"tilt":-5.14,"rotation":0.44,"texture":"luna.jpg"},
-				#"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_ResLab"},
+				#"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_ResLab"}, # IND-EVO
+				"conditions":["ruins_vast","no_atmosphere","low_gravity","ore_sparse","rare_ore_rich",
+					"pre_collapse_facility", # AOTD
+					"US_base","US_tunnels","US_crystals", # UNKNOWN SKIES
+					"rat_ancient_industries" # RAT
+				]
 },
 { #12 Phobos, orbiting Mars - Hazard 175%
 			  "entity":"planet",
@@ -230,8 +264,8 @@
 			  "orbitRadius":180,
 			  "orbitDays":1.0, # realistic ~0.3 days (7.65h), doubled
 			  "orbitClockwise":false,
-			  "conditions":["no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant"],
-			  "specChanges":{"tilt":0.0,"rotation":0.5}#,"texture":"phobos.jpg"}
+			  "specChanges":{"tilt":0.0,"rotation":0.5}, #"texture":"phobos.jpg",
+			  "conditions":["no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant"]
 },
 { #13 Deimos, orbiting Mars - Hazard 175%
 			  "entity":"planet",
@@ -244,8 +278,10 @@
 			  "orbitRadius":320,
 			  "orbitDays":2.5, # realistic ~1.25 days, doubled
 			  "orbitClockwise":false,
-			  "conditions":["no_atmosphere","low_gravity","ore_sparse","IndEvo_RuinsCondition"],
-			  "specChanges":{"tilt":0.0,"rotation":0.3}#,"texture":"deimos.jpg"}
+			  "specChanges":{"tilt":0.0,"rotation":0.3}, #"texture":"deimos.jpg",
+			  "conditions":["no_atmosphere","low_gravity","ore_sparse",
+				"IndEvo_RuinsCondition"  # IND-EVO
+			  ]
 },
 { #14 Io, orbiting Jupiter - Hazard 225%
 				"entity":"planet",
@@ -258,8 +294,8 @@
 				"orbitRadius":642,
 				"orbitDays":3.54, #realistic 1.77,
 				"orbitClockwise":false,
-				"conditions":["tectonic_activity","poor_light","hot","thin_atmosphere","low_gravity","ore_abundant","rare_ore_abundant"],
-				"specChanges":{"tilt":-1.0,"rotation":6.78,"cloudRotation":-3.39,"glowColor":[250,250,250,225],"useReverseLightForGlow":true,"texture":"io.jpg"}
+				"specChanges":{"tilt":-1.0,"rotation":6.78,"cloudRotation":-3.39,"glowColor":[250,250,250,225],"useReverseLightForGlow":true,"texture":"io.jpg"},
+				"conditions":["tectonic_activity","poor_light","hot","thin_atmosphere","low_gravity","ore_abundant","rare_ore_abundant"]
 },
 { #15 Europa, orbiting Jupiter - Hazard 225%
 				"entity":"planet",
@@ -272,9 +308,10 @@
 				"orbitRadius":1125,
 				"orbitDays":7, #realistic 3.5,
 				"orbitClockwise":false,
-				#"conditions":["volatiles_plentiful","organics_abundant","thin_atmosphere","cold","poor_light","low_gravity"],
-				 "conditions":["ruins_widespread","cold","low_gravity","thin_atmosphere","water_surface","poor_light","volatiles_plentiful","organics_abundant","rat_bionic_plantlife"],
-				"specChanges":{"tilt":1.79,"rotation":3.38,"cloudRotation":3.0,"texture":"europa.jpg"}
+				"specChanges":{"tilt":1.79,"rotation":3.38,"cloudRotation":3.0,"texture":"europa.jpg"},
+				 "conditions":["ruins_widespread","cold","low_gravity","thin_atmosphere","water_surface","poor_light","volatiles_plentiful","organics_abundant",
+					"rat_bionic_plantlife" # RAT
+				]
 },
 { #16 Ganymede, orbiting Jupiter - Hazard 150%
 				"entity":"planet",
@@ -287,9 +324,12 @@
 				"orbitRadius":1400,
 				"orbitDays":14.2, #realistic 7.1,
 				"orbitClockwise":false,
-				#"conditions":["cold","poor_light","thin_atmosphere","low_gravity","ore_moderate","rare_ore_moderate","volatiles_abundant"],
-				"conditions":["ruins_extensive","cold","thin_atmosphere","low_gravity","poor_light","ore_moderate","rare_ore_moderate","volatiles_abundant","pre_collapse_facility","rat_ancient_military_hub","rat_rampant_military_core","US_bedrock"],
-				"specChanges":{"tilt":-23.5,"rotation":1.68,"texture":"ganymede.jpg"}
+				"specChanges":{"tilt":-23.5,"rotation":1.68,"texture":"ganymede.jpg"},
+				"conditions":["ruins_extensive","cold","thin_atmosphere","low_gravity","poor_light","ore_moderate","rare_ore_moderate","volatiles_abundant",
+					"pre_collapse_facility", # AOTD
+					"rat_ancient_military_hub","rat_rampant_military_core", # RAT
+					"US_bedrock" # US
+				]
 			},
 { #17 Callisto, orbiting Jupiter - Hazard 100%
 				"entity":"planet",
@@ -302,9 +342,11 @@
 				"orbitRadius":1800,
 				"orbitDays":34, #realistic 17,
 				"orbitClockwise":false,
-				#"conditions":["cold","poor_light","low_gravity","no_atmosphere","ore_abundant","rare_ore_abundant","volatiles_abundant"],
-				"conditions":["ruins_extensive","cold","no_atmosphere","low_gravity","poor_light","ore_abundant","rare_ore_abundant","volatiles_abundant","pre_collapse_facility","US_tunnels","US_crystals"],
-				"specChanges":{"tilt":-23.5,"rotation":0.72,"texture":"callisto.jpg"}
+				"specChanges":{"tilt":-23.5,"rotation":0.72,"texture":"callisto.jpg"},
+				"conditions":["ruins_extensive","cold","no_atmosphere","low_gravity","poor_light","ore_abundant","rare_ore_abundant","volatiles_abundant",
+					"pre_collapse_facility", # AOTD
+					"US_tunnels","US_crystals" # UNKNOWN SKIES
+				]
 },
 { #18 Enceladus, orbiting Saturn - Hazard 175%
 				"entity":"planet",
@@ -317,9 +359,11 @@
 				"orbitRadius":1500,
 				"orbitDays":2.74, #realistic 1.37,
 				"orbitClockwise":false,
-				#"conditions":["low_gravity","very_cold","tectonic_activity","poor_light","ore_abundant","volatiles_diffuse"],
-				 "conditions":["very_cold","ruins_scattered","tectonic_activity","low_gravity","poor_light","ore_moderate","rare_ore_rich","volatiles_diffuse","pre_collapse_facility","US_crash"],
-				"specChanges":{"tilt":-23.5,"rotation":8.76,"cloudRotation":8.0,"texture":"enceladus.jpg"}
+				"specChanges":{"tilt":-23.5,"rotation":8.76,"cloudRotation":8.0,"texture":"enceladus.jpg"},
+				 "conditions":["very_cold","ruins_scattered","tectonic_activity","low_gravity","poor_light","ore_moderate","rare_ore_rich","volatiles_diffuse",
+					"pre_collapse_facility", # AOTD
+					"US_crash" # UNKNOWN SKIES
+				]
 },
 { #19 Titan, orbiting Saturn - Hazard 75%
 				"entity":"planet",
@@ -332,9 +376,8 @@
 				"orbitRadius":2000,
 				"orbitDays":32, #realistic 16,
 				"orbitClockwise":false,
-				#"conditions":["volatiles_plentiful","ore_moderate","rare_ore_moderate","organics_common","ore_abundant","cold","poor_light","inimical_biosphere"],
-				"conditions":["cold","inimical_biosphere","poor_light","ore_moderate","rare_ore_moderate","volatiles_plentiful","organics_common","US_crash","US_bedrock","rat_warscape","pre_collapse_facility"],
-				"specChanges":{"tilt":-23.5,"rotation":0.755,"texture":"titan.jpg"}
+				"specChanges":{"tilt":-23.5,"rotation":0.755,"texture":"titan.jpg"},
+				"conditions":["cold","inimical_biosphere","poor_light","ore_moderate","rare_ore_moderate","volatiles_plentiful","organics_common","US_crash","US_bedrock","rat_warscape","pre_collapse_facility"]
 },
 { #20 Oberon, orbiting Uranus - Hazard 250%
 				"entity":"planet",
@@ -347,8 +390,8 @@
 				"orbitRadius":1800,
 				"orbitDays":26,  #realistic 13,
 				"orbitClockwise":false,
-				"conditions":["ore_sparse","poor_light","no_atmosphere","very_cold","low_gravity"],
-				"specChanges":{"tilt":-97.8,"rotation":0.89,"texture":"oberonB.jpg"} # OR oberonA.jpg OR oberonC.jpg
+				"specChanges":{"tilt":-97.8,"rotation":0.89,"texture":"oberonB.jpg"}, # OR oberonA.jpg / oberonC.jpg
+				"conditions":["ore_sparse","poor_light","no_atmosphere","very_cold","low_gravity"]
 },
 { #21 Titania, orbiting Uranus - Hazard 100%
 				"entity":"planet",
@@ -361,9 +404,11 @@
 				"orbitRadius":1200,
 				"orbitDays":39,
 				"orbitClockwise":false,
-				#"conditions":["ruins_extensive","thin_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace"],
-				"conditions":["ruins_extensive","thin_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace","pre_collapse_facility","US_tunnels","US_cryosanctum","US_shrooms"],
-				"specChanges":{"tilt":-78.9,"rotation":1.87,"cloudRotation":1.80,"texture":"titania.jpg"}
+				"specChanges":{"tilt":-78.9,"rotation":1.87,"cloudRotation":1.80,"texture":"titania.jpg"},
+				"conditions":["ruins_extensive","thin_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace",
+					"pre_collapse_facility", # AOTD
+					"US_tunnels","US_cryosanctum","US_shrooms" # UNKNOWN SKIES
+				]
 },
 { #22 Miranda, orbiting Uranus - Hazard 100%
 				"entity":"planet",
@@ -376,9 +421,11 @@
 				"orbitRadius":600,
 				"orbitDays":52,
 				"orbitClockwise":false,
-				#"conditions":["ruins_widespread","cold","no_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace"],
-				"conditions":["ruins_widespread","cold","no_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace","pre_collapse_facility","US_tunnels"],
-				"specChanges":{"tilt":-89.7,"rotation":0.781,"texture":"miranda.jpg"}
+				"specChanges":{"tilt":-89.7,"rotation":0.781,"texture":"miranda.jpg"},
+				"conditions":["ruins_widespread","cold","no_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace",
+					"pre_collapse_facility", # AOTD
+					"US_tunnels" # UNKNOWN SKIES
+				]
 },
 { #23 Triton, orbiting Neptune - Hazard 250%
 				"entity":"planet",
@@ -391,9 +438,10 @@
 				"orbitRadius":900,
 				"orbitDays":11.8, #realistic 5.9,
 				"orbitClockwise":false,
-				#"conditions":["rare_ore_sparse","ore_moderate","volatiles_abundant","dark","tectonic_activity","very_cold","low_gravity"],
-				"conditions":["ruins_scattered","very_cold","tectonic_activity","low_gravity","dark","rare_ore_sparse","ore_moderate","volatiles_abundant","pre_collapse_facility"],
-				"specChanges":{"tilt":-23.5,"rotation":2.04,"cloudRotation":2.0,"texture":"tritonB.jpg"} # OR tritonA.jpg" OR tritonC.jpg
+				"specChanges":{"tilt":-23.5,"rotation":2.04,"cloudRotation":2.0,"texture":"tritonB.jpg"}, # OR tritonA.jpg" / tritonC.jpg
+				"conditions":["ruins_scattered","very_cold","tectonic_activity","low_gravity","dark","rare_ore_sparse","ore_moderate","volatiles_abundant",
+					"pre_collapse_facility" #AOTD
+				]
 },
 { #24 Charon, orbiting Pluto- Hazard 100%
 				"entity":"planet",
@@ -406,8 +454,10 @@
 				"orbitRadius":100,
 				"orbitDays":12.8, #realistic 6.4,
 				"orbitClockwise":false,
-				"conditions":["ore_ultrarich","rare_ore_ultrarich","IndEvo_RuinsCondition"],
-				"specChanges":{"tilt":-23.5,"rotation":1.88,"texture":"charon.jpg"}
+				"specChanges":{"tilt":-23.5,"rotation":1.88,"texture":"charon.jpg"},
+				"conditions":["ore_ultrarich","rare_ore_ultrarich",
+					"IndEvo_RuinsCondition" # IND-EVO
+				]
 },
 
 ## ASTEROID BELTS
@@ -561,7 +611,7 @@
 { #41 Debris field 1
 				"entity":"debris_field",
 				"orbitRadius":6000,
-				"orbitAngle":-1,
+				"orbitAngle":60,
 				"orbitDays":0,
 				"orbitClockwise":false,
 				"memoryKeys":{},
@@ -571,7 +621,7 @@
 { #42 Asteroid field 2
 				"entity":"asteroid_field",
 				"orbitRadius":18000,
-				"orbitAngle":-1,
+				"orbitAngle":90,
 				"orbitDays":0,
 				"orbitClockwise":false,
 				"memoryKeys":{},
@@ -586,74 +636,106 @@
 				{"entity":"stable_location","orbitRadius":15000,"orbitAngle":45,"orbitDays":0,"orbitClockwise":false,"tags":["neutrino_high"]}, #47
 				{"entity":"stable_location","orbitRadius":8765,"orbitAngle":195,"orbitDays":0,"orbitClockwise":false}, #48
 				{"entity":"stable_location","orbitRadius":12345,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false}, #49
-				{"entity":"comm_relay","name":"Deep Space Network","customDescriptionId":"sol_DSN","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #50
-				{"entity":"sensor_array","name":"Space Surveillance Network","customDescriptionId":"sol_SSN","orbitRadius":5050,"orbitAngle":30,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #51
-				{"entity":"nav_buoy","name":"Hubble Buoy","orbitRadius":7890,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false,"factionId":"player"}, #52
-				{"entity":"orbital_habitat","orbitRadius":18888}, #53
-				{"entity":"station_research","orbitRadius":3636}, #54
-				{"entity":"station_mining_remnant","orbitRadius":20000}, #55
-				{"entity":"derelict_probe","orbitAngle":90,"orbitRadius":8888}, #56
-				{"entity":"derelict_survey_ship","orbitAngle":250,"orbitRadius":8888}, #57
-				{"entity":"derelict_cryosleeper","name":"Foundation","orbitRadius":12000,"orbitAngle":90}, #58
-				{"entity":"derelict_mothership","name":"3I/ATLAS","orbitRadius":19876,"orbitAngle":120}, #59
-				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #60
-				{"entity":"wreck","orbitRadius":11000,"orbitAngle":210,"orbitDays":0,"variantId":"wolf_Assault"}, #61
-				{"entity":"wreck","orbitRadius":12000,"orbitAngle":240,"orbitDays":0,"variantId":"lasher_CS"}, #62
-				{"entity":"wreck","orbitRadius":13000,"orbitAngle":270,"orbitDays":0,"variantId":"kite_Standard"}, #63
-				{"entity":"wreck","orbitRadius":15000,"orbitAngle":300,"orbitDays":0,"variantId":"tarsus_d_Standard"}, #64
-				{"entity":"wreck","orbitRadius":16000,"orbitAngle":330,"orbitDays":0,"variantId":"buffalo2_FS"}, #65
-				{"entity":"wreck","orbitRadius":17000,"orbitAngle":360,"orbitDays":0,"variantId":"hammerhead_Balanced"}, #66
-				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"variantId":"condor_Support"}, #67
-				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"variantId":"dram_Light"}, #68
-				{"entity":"wreck","orbitRadius":20000,"orbitAngle":90,"orbitDays":0,"variantId":"ass_arkship_D_variant"}, #69 ASS - Ark Variant
-				{"entity":"ark","name":"Abraham's Ark","orbitRadius":9999,"orbitAngle":330,"orbitDays":1825}, #70 - AOTD/ASS - Ark
-				{"entity":"rat_cryochamber","orbitRadius":4680,"orbitAngle":240,"orbitDays":1095}, #71 - RAT Punitive Cryostation
-				{"entity":"rat_abyssal_shipyard","orbitRadius":18888,"orbitAngle":120,"orbitDays":2190}, #72 - RAT Abyssal Shipyard
-				{"entity":"rat_sariel_outpost","orbitRadius":22222,"orbitAngle":210,"orbitDays":730}, #73 - RAT Abyssal Outpost
-				{"entity":"rat_sariel_outpost","orbitRadius":22222,"orbitAngle":315,"orbitDays":730}, #74 - RAT Abyssal Outpost
-				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095}, #75
+				{"entity":"comm_relay","name":"Deep Space Network","customDescriptionId":"sol_DSN","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false,"factionId":"threat"}, #50
+				{"entity":"sensor_array","name":"Space Surveillance Network","customDescriptionId":"sol_SSN","orbitRadius":5050,"orbitAngle":30,"orbitDays":1000,"orbitClockwise":false,"factionId":"threat"}, #51
+				{"entity":"nav_buoy","name":"Hubble Buoy","orbitRadius":7890,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false,"factionId":"threat"}, #52
+				{"entity":"orbital_habitat","orbitRadius":18888,"orbitAngle":180,"orbitClockwise":false}, #53
+				{"entity":"station_research","orbitRadius":3636,"orbitAngle":225,"orbitClockwise":false}, #54
+				{"entity":"station_mining_remnant","orbitRadius":20000,"orbitClockwise":false}, #55
+				{"entity":"derelict_probe","orbitAngle":90,"orbitRadius":8888,"orbitClockwise":false}, #56
+				{"entity":"derelict_survey_ship","orbitAngle":250,"orbitRadius":8888,"orbitClockwise":false}, #57
+				{"entity":"derelict_cryosleeper","name":"Foundation","orbitRadius":12000,"orbitAngle":90,"orbitClockwise":false}, #58
+				{"entity":"derelict_mothership","name":"3I/ATLAS","orbitRadius":19876,"orbitAngle":120,"orbitClockwise":false}, #59
+				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"orbitClockwise":false,"variantId":"anubis_Standard"}, #60
+				{"entity":"wreck","orbitRadius":11000,"orbitAngle":210,"orbitDays":0,"orbitClockwise":false,"variantId":"wolf_Assault"}, #61
+				{"entity":"wreck","orbitRadius":12000,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false,"variantId":"lasher_CS"}, #62
+				{"entity":"wreck","orbitRadius":13000,"orbitAngle":270,"orbitDays":0,"orbitClockwise":false,"variantId":"kite_Standard"}, #63
+				{"entity":"wreck","orbitRadius":15000,"orbitAngle":300,"orbitDays":0,"orbitClockwise":false,"variantId":"tarsus_d_Standard"}, #64
+				{"entity":"wreck","orbitRadius":16000,"orbitAngle":330,"orbitDays":0,"orbitClockwise":false,"variantId":"buffalo2_FS"}, #65
+				{"entity":"wreck","orbitRadius":17000,"orbitAngle":360,"orbitDays":0,"orbitClockwise":false,"variantId":"hammerhead_Balanced"}, #66
+				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"orbitClockwise":false,"variantId":"condor_Support"}, #67
+				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false,"variantId":"dram_Light"}, #68
+				{"entity":"wreck","orbitRadius":20000,"orbitAngle":90,"orbitDays":0,"orbitClockwise":false,"variantId":"paragon_Raider"}, #69
+				{"entity":"ark","name":"Abraham's Ark","orbitRadius":9999,"orbitAngle":240,"orbitDays":1825,"orbitClockwise":false}, #70 - AOTD/A$$ - Ark
+				{"entity":"rat_cryochamber","orbitRadius":7000,"orbitAngle":180,"orbitDays":1095,"orbitClockwise":false}, #71 - RAT Punitive Cryostation
+				{"entity":"rat_abyssal_shipyard","orbitRadius":18888,"orbitAngle":120,"orbitDays":2190,"orbitClockwise":false}, #72 - RAT Abyssal Shipyard
+				{"entity":"rat_sariel_outpost","orbitRadius":22222,"orbitAngle":210,"orbitDays":730,"orbitClockwise":false}, #73 - RAT Abyssal Outpost
+				{"entity":"rat_sariel_outpost","orbitRadius":22222,"orbitAngle":315,"orbitDays":730,"orbitClockwise":false}, #74 - RAT Abyssal Outpost
+				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095,"orbitClockwise":false}, #75
 
-## Space Stations - Will break if the only/starting colony owned
+## Space Stations - (Will break/ctd if the only player colony owned) - +ADVANCED USERS ONLY
 
 			{"entity":"aotd_pluto_station",
 				"type":"aotd_pluto_station", #76 - AOTD Pluto Mining Station
 				"name":"Plouton Mining Station",
 				"focus":10, #orbiting Pluto
-				"orbitDays":181120,
-				"orbitAngle":270,
-				"orbitRadius":300,
+				"orbitDays":181120,"orbitAngle":270,"orbitRadius":300,"orbitClockwise":false,
 				"factionId":"neutral",
-				"memoryKeys":{"$musicSetId":"aotd_mega"}
+				"memoryKeys":{
+					"$musicSetId":"aotd_mega", 
+					#"$wh_discovered":true
+				},
+				#"tags":["wh_discovered_by_widehorizons"],
 			},
-			
-			{"entity":"station", #77 IND-EVO Subspace Station 
-				"type":"IndEvo_SubspaceStation",
+
+			{"entity":"station",
+				"type":"IndEvo_SubspaceStation", #77 IND-EVO Subspace Station 
 				"name":"Red-Rock Space Station",
 				"customDescriptionId":"sol_RedAlert",
 				"focus":4,  # orbiting Mars
-				"orbitRadius":540,"orbitAngle":0,"orbitDays":1000
+				"orbitRadius":540,"orbitAngle":0,"orbitDays":1000,"orbitClockwise":false
 			},
 
-			{"entity":"station", #77 Abanadoned 
+			{"entity":"station", #78 Abanadoned Siphon Station
 				"type":"station_side05",
 				"name":"Titan's Eye",
 				"customDescriptionId":"sol_SiphonStation",
 				"focus":6,  # orbiting Saturn
-				"orbitRadius":500,"orbitAngle":0,"orbitDays":1000
+				"orbitRadius":500,"orbitAngle":0,"orbitDays":1000,"orbitClockwise":false
 			},
 			
-			{"entity":"station", #78
+			{"entity":"station", #79
 				"type":"station_side00",
 				"name":"International Space Station",
 				"focus":3, #orbiting near Earth
-				"orbitRadius":1050,
-				"orbitAngle":30,
-				"customDescriptionId":"sol_ISS",
+				"orbitRadius":1050,"orbitAngle":30,"orbitClockwise":false,
+				"customDescriptionId":"sol_ISS"
+			},
+
+			{"entity":"station", #80 [REDACTED] station
+				"type":"derelict_mothership",
+				"name":"Zeta Drone Ship",
+				"customDescriptionId":"sol_Zeta",
+				"orbitRadius":22000,"orbitAngle":270,"orbitClockwise":false,
+				#"tags":[],
+				"factionId":"threat",
+				#"aiCoreAdmin":true,
+				"marketSize":6,
+				"conditions":[
+					#"IndEvo_ArtilleryStationCondition", #IND-EVO
+					"rat_defensive_drones",
+					"rat_rampant_military_core" # RAT
+				],
+				"industries":[
+					#["megaport",,"fullerene_spool",true],
+					#["waystation",,,true],
+					["population","alpha_core","coronal_portal",true],
+					["planetaryshield","beta_core",,true],
+					["lightindustry","beta_core","biofactory_embryo",true],
+					["orbitalworks","alpha_core","corrupted_nanoforge"],
+					["highcommand","alpha_core",,true],
+					["heavybatteries","alpha_core","drone_replicator",true],
+					["starfortress_high","alpha_core",,true],
+					["cryosanctum","gamma_core",,true],
+					["cryorevival","gamma_core",,true],
+					["IndEvo_IntArray",,"IndEvo_transmitter"], # IND-EVO
+					["IndEvo_Artillery_railgun","alpha_core",,true], #IND-EVO
+				]
 			}
 
-		], #Celestial Bodies END
-	}, #Sol System END
-} # CLOSING
+		] #Celestial Bodies END
+	} #Sol System END
+} # CLOSING Table
 
 
 #	"radius":100,
@@ -676,7 +758,7 @@
 #		["highcommand",,,true],
 #		["farming",,"soil_nanites",true],
 #		["lightindustry",,"biofactory_embryo",true],
+#		["heavyindustry","gamma_core","pristine_nanoforge"],
 #		["IndEvo_IntArray",,"IndEvo_transmitter"],
 #		["IndEvo_Artillery_railgun",,,true],
 #		"IndEvo_Academy",]
-
