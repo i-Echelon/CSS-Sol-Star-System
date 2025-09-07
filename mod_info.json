@@ -5,7 +5,7 @@
 	"version": {
 		"major": 3,
 		"minor": 3,
-		"patch": 5
+		"patch": 6
 	},
 	"description": "Adds Sol, via Customizable Star Systems Mod.",
 	"gameVersion": "0.98a-RC8",
@@ -17,11 +17,6 @@
 			"version": "3.0.2",
         },
         {
-            "id": "arthrships",
-            "name": "Arthur's Ships n Shit",
-			"version": "0.100-dev",
-        },
-        {
             "id": "aotd_vok",
             "name": "Ashes of the Domain - Vaults of Knowledge",
 			"version": "3.4.2"
@@ -29,7 +24,7 @@
         {
             "id": "assortment_of_things",
             "name": "Random Assortment of Things",
-			"version": "3.1.9"
+			"version": "3.2.1"
         },
         {
             "id": "IndEvo",
@@ -39,11 +34,12 @@
         {
             "id": "US",
             "name": "Unknown Skies",
-			"version": "3.0.2"
+			"version": "3.0.3"
         }
 	],
 	#"suppressVCUnsupported": true
 }
+
 
 
 
