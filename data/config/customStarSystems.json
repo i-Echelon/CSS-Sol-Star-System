@@ -618,9 +618,10 @@
 			{"entity":"aotd_pluto_station",
 				"type":"aotd_pluto_station", #76 - AOTD Pluto Mining Station
 				"name":"Plouton Mining Station",
-				"focus":[10,2], #orbiting Pluto
+				"focus":10, #orbiting Pluto
 				"orbitDays":181120,
 				"orbitAngle":270,
+				"orbitRadius":300,
 				"factionId":"neutral",
 				"memoryKeys":{"$musicSetId":"aotd_mega"}
 			},
@@ -678,3 +679,4 @@
 #		["IndEvo_IntArray",,"IndEvo_transmitter"],
 #		["IndEvo_Artillery_railgun",,,true],
 #		"IndEvo_Academy",]
+
