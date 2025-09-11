@@ -1,3 +1,11 @@
+3.3.8
+- Added theme_hidden tag, also workaround to fix Kaleidoscope compatibility
+- Ensure no other mods override our planet types and unique textures
+- [REDACTED]
+- Updated System tags
+- Adjusted location of Ceres
+- Added staging area for volatile transport (Neptune's orbit)
+- Sprinkled some caches
 3.3.7.
 - Removed Testing and Debugging stuff
 - Cleaned out [REDACTED]
@@ -91,5 +99,6 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
 
