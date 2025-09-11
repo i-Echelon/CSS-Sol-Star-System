@@ -60,7 +60,7 @@
 				"orbitDays":120, #realistic 59,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-0.03,"rotation":0.2035,"iconColor":[227,151,118,255],"texture":"mercury.jpg"},
-				"conditions":["hot","irradiated","thin_atmosphere","toxic_atmosphere","low_gravity","ore_ultrarich","rare_ore_ultrarich","solar_array"]
+				"conditions":["hot","irradiated","thin_atmosphere","toxic_atmosphere","low_gravity","ore_ultrarich","rare_ore_ultrarich"]
 },
 { #2 Venus - Hazard 275%
 				"entity":"planet",
@@ -73,7 +73,7 @@
 				"orbitDays":450, #realistic 225,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":177.4,"rotation":0.0495,"cloudRotation":0.02475,"texture":"venus.jpg"},
-				"conditions":["very_hot","irradiated","tectonic_activity","dense_atmosphere","ore_ultrarich","rare_ore_ultrarich",
+				"conditions":["very_hot","irradiated","tectonic_activity","dense_atmosphere","ore_ultrarich","rare_ore_ultrarich","solar_array",
 					"pre_collapse_facility" # AOTD
 				]
 },
@@ -216,7 +216,7 @@
 				"name":"Pluto",
 				"customDescriptionId":"sol_Pluto",
 				"type":"barren",
-				#"tags":[""],
+				#"tags":["theme_misc_skip"],
 				"orbitAngle":240,
 				"radius":28,
 				"orbitRadius":23000,
@@ -226,14 +226,7 @@
 				"conditions":["dark","very_cold","ruins_scattered","low_gravity","ore_rich","rare_ore_moderate",
 					"US_shrooms", # UNKNOWN SKIES
 					"aotd_pluto_station" # AOTD
-				],
-				#"factionId":"neutral",
-				#"marketSize":3,
-				#"marketMemoryKeys":{"$aotd_megastructure":"pluto_station", "$AoTDIndustries":"mining_megaplex"}, # AOTD 
-				#"industries":["population","spaceport",
-				#	"pluto_station" # AOTD
-				#],
-				#"tags":["nex_canMine":true]
+				]
 },
 
 ## MOONS
@@ -622,7 +615,6 @@
 				"orbitAngle":60,
 				"orbitDays":0,
 				"orbitClockwise":false,
-				"memoryKeys":{},
 				"tags":[],
 				"size":1000,
 },
@@ -632,7 +624,6 @@
 				"orbitAngle":90,
 				"orbitDays":0,
 				"orbitClockwise":false,
-				"memoryKeys":{},
 				"tags":[],
 				"size":1000,
 },
@@ -712,9 +703,42 @@
 				"isDamaged":true
 			},
 
+			{"entity":"asteroid_field", #80
+				"focus":1, #orbiting Mercury
+				"orbitDays":13337,"orbitRadius":300,"orbitClockwise":false,"size":512,
+			},
+			
+			{"entity":"asteroid_field", #81
+				"focus":9, #orbiting Ceres
+				"orbitDays":1337,"orbitRadius":300,"orbitClockwise":false,"size":512,
+			},
+			
+			{"entity":"asteroid_field", #82
+				"focus":3, #orbiting Earth
+				"orbitDays":1460,"orbitRadius":300,"orbitClockwise":false,"size":512,
+			},
+
+			{"entity":"asteroid_field", #83
+				"focus":4, #orbiting Mars
+				"orbitDays":1000,"orbitRadius":200,"orbitClockwise":false,"size":512,
+			},
+
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
 
 
-
+				#"memoryKeys":{"$plutoStation":true},
+				#"factionId":"neutral",
+				#"marketSize":1,
+				#"marketMemoryKeys":{
+					#"$AoTDIndustries":"mining_megaplex",
+					#"$aotd_megastructure":"pluto_station", 
+					#"$aotd_pluto_planet":true,
+					#"$aotd_megastructure":"pluto_station",
+					#"$aotd_misc_hidden_industry":false,
+					#"$isPlanetConditionMarketOnly":true},
+				#"industries":["population","spaceport",
+				#	"pluto_station" # AOTD
+				#],
+				#"tags":["nex_canMine":true]
