@@ -5,7 +5,7 @@
 - Updated System tags
 - Adjusted location of Ceres
 - Added staging area for volatile transport (Neptune's orbit)
-- Sprinkled some caches
+- Sprinkled some caches and asteroid fields
 3.3.7.
 - Removed Testing and Debugging stuff
 - Cleaned out [REDACTED]
@@ -99,6 +99,7 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
 
 
