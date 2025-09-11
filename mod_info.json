@@ -1,5 +1,5 @@
 {
-	"id": "customizablestarsystems-sol",
+	"id": "sol-Modded",
 	"name": "Sol Solar System - Modded",
 	"author": "Bugatti Echelon",
 	"version": {
@@ -39,6 +39,7 @@
 	],
 	#"suppressVCUnsupported": true
 }
+
 
 
 
