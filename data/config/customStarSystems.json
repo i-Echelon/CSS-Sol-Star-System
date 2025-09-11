@@ -173,7 +173,9 @@
 				"orbitRadius":18000,
 				"orbitDays":61374, #realistic 30687,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":82.2,"rotation":33.33,"cloudTexture":"US_clouds_textureSwept.png","texture":"uranus.jpg"},
+				"specChanges":{"tilt":82.2,"rotation":33.33,"texture":"uranus.jpg",
+					"cloudTexture":"US_clouds_textureSwept.png" # UNKNOWN SKIES
+				},
 				"conditions":["water_surface","volatiles_abundant","poor_light","extreme_weather","toxic_atmosphere","very_cold","high_gravity"]
 },
 { #8 Neptune - Hazard 250%
@@ -186,7 +188,9 @@
 				"orbitRadius":21000,
 				"orbitDays":120380,  #realistic 60190,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":-28.3,"rotation":16.665,"cloudTexture":"US_clouds_textureSwept.png","texture":"neptune.jpg"},
+				"specChanges":{"tilt":-28.3,"rotation":16.665,"texture":"neptune.jpg",
+					"cloudTexture":"US_clouds_textureSwept.png" # UNKNOWN SKIES
+				},
 				"conditions":["volatiles_diffuse","dark","very_cold","high_gravity","ruins_scattered"]
 },
 
@@ -711,5 +715,6 @@
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
+
 
 
