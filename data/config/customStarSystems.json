@@ -22,7 +22,7 @@
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge":"average",
-		"systemTags":["theme_misc","theme_interesting","theme_ruins","theme_derelict_probes","theme_derelict_survey_ship",
+		"systemTags":["theme_misc","theme_hidden","theme_ruins","theme_derelict","theme_derelict_probes","theme_derelict_survey_ship","theme_remnant_secondary","theme_remnant_suppressed",
 			"US_skipSystem" # UNKNOWN SKIES 
 		],
 		"entities":[ #Celestial Bodies START
@@ -41,7 +41,7 @@
 				"memoryKeys":{"$US_starVariant":3}, #unique UNKNOWN SKIES
 				"tags":["neutrino"],
 				"specChanges":{"tilt":-7.25,"rotation":0.44,"useReverseLightForGlow":false,"glowColor":[255,255,255,255],"planetColor":[238,235,206,255],"iconColor":[238,235,206,255],"texture":"sol.jpg",
-					"typeOverride":["star_yellow","Yellow Dwarf Star"]
+					"typeOverride":["star_white","Yellow Dwarf Star"]
 					#"icon":"graphics/warroom/placeholder.png"
 				},
 				#"conditions":[]
@@ -111,14 +111,14 @@
 				"entity":"planet",
 				"name":"Mars",
 				"customDescriptionId":"sol_Mars",
-				"type":"barren", #override to barren-desert below
+				"type":"barren-desert", #override to barren-desert below
 				"orbitAngle":360,
 				"radius":80,
 				"orbitRadius":6000,
 				"orbitDays":1374, #realistic 687,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"iconColor":[255,68,14,250],"texture":"mars.jpg",
-					"typeOverride":["barren-desert","Barren-Desert"]  #workaround for TASC bug
+					#"typeOverride":["barren-desert","Barren-Desert"]  #workaround for TASC bug
 				},
 				"conditions":["ruins_widespread","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common",
 					"pre_collapse_facility", # AOTD
@@ -199,7 +199,7 @@
 				"type":"barren",
 				"orbitAngle":270,
 				"radius":10,
-				"orbitRadius":8000,
+				"orbitRadius":7500,
 				"orbitDays":3364, #realistic 1682,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-4.0,"rotation":31.58,"texture":"ceres.jpg"},
@@ -663,31 +663,30 @@
 				{"entity":"ark","name":"Abraham's Ark","orbitRadius":9999,"orbitAngle":240,"orbitDays":1825,"orbitClockwise":false}, #70 - AOTD/A$$ - Ark
 				{"entity":"rat_cryochamber","orbitRadius":7000,"orbitAngle":180,"orbitDays":1095,"orbitClockwise":false}, #71 - RAT Punitive Cryostation
 				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095,"orbitClockwise":false}, #72
+				{"entity":"alpha_site_weapons_cache","orbitRadius":12345}, #73
+				{"entity":"station","type":"station_sporeship_derelict","name":"Telepylos Station","focus":8,"orbitAngle":90,"orbitRadius":420,"orbitDays":25,"orbitClockwise":false, #74
+					"customDescriptionId":"station_telepylus"}, #orbiting Neptune, staging area for volatiles transport
 
 ## Space Stations - (Will break/ctd if the only player colony owned) - +ADVANCED USERS ONLY
 
 			{"entity":"aotd_pluto_station",
-				"type":"aotd_pluto_station", #73 - AOTD Pluto Mining Station
+				"type":"aotd_pluto_station", #75 - AOTD Pluto Mining Station
 				"name":"Plouton Mining Station",
 				"focus":10, #orbiting Pluto
 				"orbitDays":181120,"orbitAngle":270,"orbitRadius":300,"orbitClockwise":false,
 				"factionId":"neutral",
-				"memoryKeys":{
-					"$musicSetId":"aotd_mega", 
-					#"$wh_discovered":true
-				},
-				#"tags":["wh_discovered_by_widehorizons"],
+				"memoryKeys":{"$musicSetId":"aotd_mega"},
 			},
 
 			{"entity":"station",
-				"type":"IndEvo_SubspaceStation", #74 IND-EVO Subspace Station 
+				"type":"IndEvo_SubspaceStation", #76 IND-EVO Subspace Station 
 				"name":"Red-Rock Space Station",
 				"customDescriptionId":"sol_RedAlert",
 				"focus":4,  # orbiting Mars
 				"orbitRadius":540,"orbitAngle":0,"orbitDays":1000,"orbitClockwise":false
 			},
 
-			{"entity":"station", #75 Abandoned Siphon Station
+			{"entity":"station", #77 Abandoned Siphon Station
 				"type":"station_side05",
 				"name":"Titan's Eye",
 				"customDescriptionId":"sol_SiphonStation",
@@ -695,13 +694,46 @@
 				"orbitRadius":500,"orbitAngle":0,"orbitDays":1000,"orbitClockwise":false
 			},
 			
-			{"entity":"station", #76
+			{"entity":"station", #78
 				"type":"station_side00",
 				"name":"International Space Station",
 				"focus":3, #orbiting near Earth
-				"orbitRadius":1050,"orbitAngle":30,"orbitClockwise":false,
+				"orbitRadius":1050,"orbitAngle":30,"orbitDays":365,"orbitClockwise":false,
 				"customDescriptionId":"sol_ISS"
 			},
+
+			{"entity":"remnant_station", #79 Remnant Station
+				"name":"The Cyan Comet",
+				"focus":[9,2], # orbiting Ceres
+				"isDamaged":true
+			},
+
+		] #Celestial Bodies END
+	} #Sol System END
+} # CLOSING Table
+
+
+
+#	"conditions":"IndEvo_ArtilleryStationCondition",
+#	"memoryKeys":{"$wh_discovered":true},
+#	"marketMemoryKeys":{},
+#	"tags":[wh_discovered_by_widehorizons],
+#	"factionId":"player", 
+#	"freePort":false,
+#	"aiCoreAdmin":false,
+#	"industries":[
+#		"population",
+#		["megaport",,"fullerene_spool",true],
+#		["waystation",,,true],
+#		["heavybatteries",,"drone_replicator",true],
+#		["starfortress_high",,,true], # Only story-point improvement
+#		["highcommand",,,true],
+#		["farming",,"soil_nanites",true],
+#		["lightindustry",,"biofactory_embryo",true],
+#		["heavyindustry","gamma_core","pristine_nanoforge"],
+#		["IndEvo_IntArray",,"IndEvo_transmitter"],
+#		["IndEvo_Artillery_railgun",,,true],
+#		"IndEvo_Academy"]
 
 			#{"entity":"station", #77 [REDACTED] station (SILLY TESTING)
 			#	"type":"derelict_mothership",
@@ -733,34 +765,3 @@
 				#	["IndEvo_Artillery_railgun","alpha_core",,true], #IND-EVO
 				#]
 			#}
-
-		] #Celestial Bodies END
-	} #Sol System END
-} # CLOSING Table
-
-
-#	"radius":100,
-#	"orbitDays":0,
-#	"orbitClockwise":false,
-#	"conditions":"IndEvo_ArtilleryStationCondition",
-#	"memoryKeys":{},
-#	"marketMemoryKeys":{},
-#	"tags":[],
-#	"factionId":"player", 
-#	"marketSize":6,
-#	"freePort":false,
-#	"aiCoreAdmin":false,
-#	"industries":[
-#		"population",
-#		["megaport",,"fullerene_spool",true],
-#		["waystation",,,true],
-#		["heavybatteries",,"drone_replicator",true],
-#		["starfortress_high",,,true], # Only story-point improvement
-#		["highcommand",,,true],
-#		["farming",,"soil_nanites",true],
-#		["lightindustry",,"biofactory_embryo",true],
-#		["heavyindustry","gamma_core","pristine_nanoforge"],
-#		["IndEvo_IntArray",,"IndEvo_transmitter"],
-#		["IndEvo_Artillery_railgun",,,true],
-#		"IndEvo_Academy"]
-
