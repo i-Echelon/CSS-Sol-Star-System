@@ -7,7 +7,7 @@
 	# Recently change "conditions" of most planets and moons to use some from US/RAT/IE/AotD-VoK. Left the original realish ones as comments.
 	# Rotation speeds were also halved in speed for disorientation purposes
 {
-	"css_Sol_Modded":{
+	"Sol_Modded":{
 		"isEnabled":true,
 		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
@@ -765,3 +765,4 @@
 				#	["IndEvo_Artillery_railgun","alpha_core",,true], #IND-EVO
 				#]
 			#}
+
