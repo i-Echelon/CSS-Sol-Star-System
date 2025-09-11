@@ -1,11 +1,11 @@
 {
-	"id": "sol-Modded",
+	"id": "sol-modded",
 	"name": "Sol Solar System - Modded",
 	"author": "Bugatti Echelon",
 	"version": {
 		"major": 3,
 		"minor": 3,
-		"patch": 7
+		"patch": 8
 	},
 	"description": "Adds Sol, via Customizable Star Systems Mod.",
 	"gameVersion": "0.98a-RC8",
@@ -39,6 +39,7 @@
 	],
 	#"suppressVCUnsupported": true
 }
+
 
 
 
