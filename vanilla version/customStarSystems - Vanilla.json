@@ -5,8 +5,8 @@
 	# Rotation speeds were also halved in speed for disorientation purposes
 {
 	"css_Sol_Vanilla":{
-		"isEnabled":true,
-		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
+		"isEnabled":false,
+		"teleportUponGeneration":true, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
 		"hasSystemwideNebula":true,
 		"addDomainCryosleeper":false,
@@ -17,8 +17,7 @@
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge":"average",
-		"systemTags":["theme_misc","theme_interesting","theme_ruins","theme_derelict_probes","theme_derelict_survey_ship"],
-
+		"systemTags":["theme_misc","theme_interesting","theme_ruins","theme_derelict","theme_derelict_probes","theme_derelict_survey_ship","theme_remnant_secondary","theme_remnant_suppressed"],
 
 		"entities":[ #Celestial Bodies START
 ## STARS
@@ -36,7 +35,7 @@
 				#"memoryKeys":{"$US_starVariant":3}, #unique
 				"tags":["neutrino"],
 				"specChanges":{"tilt":-7.25,"rotation":0.44,"useReverseLightForGlow":false,"glowColor":[255,255,255,255],"planetColor":[238,235,206,255],"iconColor":[238,235,206,255],"texture":"sol.jpg",
-					"typeOverride":["star_yellow","Yellow Dwarf Star"]
+					"typeOverride":["star_white","Yellow Dwarf Star"]
 					#"icon":"graphics/warroom/placeholder.png"
 					}
 },
@@ -168,7 +167,7 @@
 				"type":"barren",
 				"orbitAngle":270,
 				"radius":10,
-				"orbitRadius":8910,
+				"orbitRadius":7500,
 				"orbitDays":3364, #realistic 1682,
 				"orbitClockwise":false,
 				"conditions":["ruins_scattered","no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant"],
@@ -584,9 +583,12 @@
 				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"variantId":"dram_Light"}, #67
 				{"entity":"wreck","orbitRadius":20000,"orbitAngle":90,"orbitDays":0,"orbitClockwise":false,"variantId":"paragon_Raider"}, #68
 				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095}, #69
+				{"entity":"alpha_site_weapons_cache","orbitRadius":12345}, #70
+				{"entity":"station","type":"station_sporeship_derelict","name":"Telepylos Station","focus":8,"orbitAngle":90,"orbitRadius":420,"orbitDays":25,"orbitClockwise":false, #71
+					"customDescriptionId":"station_telepylus"}, # orbiting Neptune, staging area for volatiles transport
 
 ## Space Stations - Will break if the only/starting colony owned
-			{"entity":"station", #70 Abandoned Station
+			{"entity":"station", #72 Abandoned Station
 				"type":"station_lowtech2",
 				"name":"Red-Rock Space Station",
 				"customDescriptionId":"sol_RedAlert",
@@ -594,7 +596,7 @@
 				"orbitRadius":540,"orbitAngle":0,"orbitDays":1000
 			},
 
-			{"entity":"station", #71 Abandoned Siphon Station
+			{"entity":"station", #73 Abandoned Siphon Station
 				"type":"station_side05",
 				"name":"Titan's Eye",
 				"customDescriptionId":"sol_SiphonStation",
@@ -602,18 +604,20 @@
 				"orbitRadius":500,"orbitAngle":0,"orbitDays":1000
 			},
 
-			{"entity":"station", #72
+			{"entity":"station", #74
 				"type":"station_side00",
 				"name":"International Space Station",
 				"focus":3, # orbiting near Earth
-				"orbitRadius":1050,
-				"orbitAngle":30,
+				"orbitRadius":1050,"orbitAngle":30,"orbitDays":365,"orbitClockwise":false,
 				"customDescriptionId":"sol_ISS",
 			},
 
-		], #Celestial Bodies END
-	}, #Sol System END
-	
-	#"css_newSystem":{},
+			{"entity":"remnant_station", #75 Remnant Station
+				"name":"The Cyan Comet",
+				"focus":[9,2], # orbiting Ceres
+				"isDamaged":true
+			},
 
-} # CLOSING
+		] #Celestial Bodies END
+	} #Sol System END
+} # CLOSING Table
