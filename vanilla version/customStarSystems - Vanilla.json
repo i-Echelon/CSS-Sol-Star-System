@@ -6,7 +6,7 @@
 {
 	"Sol_Vanilla":{
 		"isEnabled":false,
-		"teleportUponGeneration":true, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
+		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
 		"hasSystemwideNebula":true,
 		"addDomainCryosleeper":false,
@@ -621,4 +621,5 @@
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
+
 
