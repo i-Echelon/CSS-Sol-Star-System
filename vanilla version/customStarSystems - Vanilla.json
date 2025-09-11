@@ -5,14 +5,14 @@
 	# Rotation speeds were also halved in speed for disorientation purposes
 {
 	"Sol_Vanilla":{
-		"isEnabled":false,
+		"isEnabled":true,
 		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
 		"hasSystemwideNebula":true,
 		"addDomainCryosleeper":false,
 		"addCoronalHypershunt":false,
 		#"memoryKeys":{"$US_skipSystem":true}, # Memory key to prevent Unknown Skies scripts from modifying this system (false to allow)
-		"setLocation":[0,-45000], #originally used "setLocation":2, (2 constellations away from Core Worlds( 0 for random))
+		"setLocation":[0,-44000], #originally used "setLocation":2, (2 constellations away from Core Worlds( 0 for random))
 		"systemBackground":"galaxy0.png",#"milkyway.png",
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
@@ -621,5 +621,6 @@
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
+
 
 
