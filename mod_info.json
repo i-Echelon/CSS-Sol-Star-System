@@ -4,60 +4,53 @@
 	"author": "Bugatti Echelon",
 	"version": {
 		"major": 3,
-		"minor": 3,
-		"patch": 9
+		"minor": 4,
+		"patch": 0
 	},
 	"description": "Adds Sol, via Customizable Star Systems Mod.",
 	"gameVersion": "0.98a-RC8",
 	"utility": "true",
-	 "dependencies": [# bare minimum versions required
-        {
-            "id": "customizablestarsystems",
-            "name": "Customizable Star Systems",
-			"version": "3.0.2",
-        },
-        {
-            "id": "nexerelin",
-            "name": "Nexerelin",
+	"dependencies": [# bare minimum versions required
+		{
+			"id": "lw_lazylib",
+			"name": "LazyLib",
+			#"version": "3.0.0"
+		},
+		{
+			"id": "customizablestarsystems",
+			"name": "Customizable Star Systems",
+			#"version": "3.0.2",
+		},
+		{
+			"id": "nexerelin",
+			"name": "Nexerelin",
 			#"version": "0.12.0c"
-        },
-        {
-            "id": "aotd_vok",
-            "name": "Ashes of the Domain - Vaults of Knowledge",
-			"version": "3.4.2"
-        },
-        {
-            "id": "Cryo_but_better",
-            "name": "Ashes of the Domain - Dreams of the Past",
-			"version": "3.0.4"
-        },
-        {
-            "id": "assortment_of_things",
-            "name": "Random Assortment of Things",
-			"version": "3.2.1"
-        },
-        {
-            "id": "IndEvo",
-            "name": "Industrial Evolution",
-            "version": "4.0.i"
-        },
-        {
-            "id": "US",
-            "name": "Unknown Skies",
-			"version": "3.0.3"
-        }
+		},
+		{
+			"id": "aotd_vok",
+			"name": "Ashes of the Domain - Vaults of Knowledge",
+			#"version": "4.0.0.A5"
+		},
+		{
+			"id": "Cryo_but_better",
+			"name": "Ashes of the Domain - Dreams of the Past",
+			#"version": "3.0.4"
+		},
+		{
+			"id": "assortment_of_things",
+			"name": "Random Assortment of Things",
+			#"version": "3.2.2"
+		},
+		{
+			"id": "IndEvo",
+			"name": "Industrial Evolution",
+			#"version": "4.1.3"
+		},
+		{
+			"id": "US",
+			"name": "Unknown Skies",
+			#"version": "3.0.3"
+		}
 	],
 	#"suppressVCUnsupported": true
 }
-
-
-
-
-
-
-
-
-
-
-
-
