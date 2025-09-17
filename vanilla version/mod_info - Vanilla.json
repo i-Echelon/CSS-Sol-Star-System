@@ -4,23 +4,21 @@
 	"author": "Bugatti Echelon",
 	"version": {
 		"major": 3,
-		"minor": 3,
-		"patch": 9
+		"minor": 4,
+		"patch": 0
 	},
 	"description": "Adds Sol, via Customizable Star Systems Mod.",
 	"gameVersion": "0.98a-RC8",
 	"utility": "true",
-	 "dependencies": [# bare minimum versions required
-        {
-            "id": "customizablestarsystems",
-            "name": "Customizable Star Systems",
+	"dependencies": [# bare minimum versions required
+		{
+			"id": "customizablestarsystems",
+			"name": "Customizable Star Systems",
 			"version": "3.0.2",
-        }
+		}
 	],
 	#"suppressVCUnsupported": true
 }
-
-
 
 
 
