@@ -14,11 +14,12 @@
 		{
 			"id": "customizablestarsystems",
 			"name": "Customizable Star Systems",
-			"version": "3.0.2",
+			#"version": "3.0.2",
 		}
 	],
 	#"suppressVCUnsupported": true
 }
+
 
 
 
