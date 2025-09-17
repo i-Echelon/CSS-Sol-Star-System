@@ -17,7 +17,7 @@
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge":"average",
-		"systemTags":["theme_misc","theme_interesting","theme_ruins","theme_derelict","theme_derelict_probes","theme_derelict_survey_ship","theme_remnant_secondary","theme_remnant_suppressed"],
+		"systemTags":["theme_misc","theme_interesting","theme_ruins","theme_derelict_probes","theme_derelict_survey_ship","theme_remnant_secondary","theme_remnant_suppressed"],
 
 		"entities":[ #Celestial Bodies START
 ## STARS
@@ -621,6 +621,7 @@
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
+
 
 
 
