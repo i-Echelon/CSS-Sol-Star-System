@@ -17,6 +17,11 @@
 			"version": "3.0.2",
         },
         {
+            "id": "nexerelin",
+            "name": "Nexerelin",
+			"version": "0.12.0c"
+        },
+        {
             "id": "aotd_vok",
             "name": "Ashes of the Domain - Vaults of Knowledge",
 			"version": "3.4.2"
@@ -44,6 +49,7 @@
 	],
 	#"suppressVCUnsupported": true
 }
+
 
 
 
