@@ -19,7 +19,7 @@
         {
             "id": "nexerelin",
             "name": "Nexerelin",
-			"version": "0.12.0c"
+			#"version": "0.12.0c"
         },
         {
             "id": "aotd_vok",
@@ -49,6 +49,7 @@
 	],
 	#"suppressVCUnsupported": true
 }
+
 
 
 
