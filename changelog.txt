@@ -3,6 +3,7 @@
 - Removed some debug entities
 - Adjusted position of Telepylos Station
 - Added a condition to Io
+- Moved Solar array from Mercury to Venus
 3.3.8
 - Added theme_hidden tag, also workaround to fix Kaleidoscope compatibility
 - Ensure no other mods override our planet types and unique textures
@@ -104,6 +105,7 @@
 - Added System Music.
 1.0.0
 - First iteration.
+
 
 
 
