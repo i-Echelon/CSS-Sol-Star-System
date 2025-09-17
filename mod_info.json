@@ -22,6 +22,11 @@
 			"version": "3.4.2"
         },
         {
+            "id": "aotd_vok",
+            "name": "Ashes of the Domain - Dreams of the Past",
+			"version": "3.0.4"
+        },
+        {
             "id": "assortment_of_things",
             "name": "Random Assortment of Things",
 			"version": "3.2.1"
@@ -39,6 +44,7 @@
 	],
 	#"suppressVCUnsupported": true
 }
+
 
 
 
