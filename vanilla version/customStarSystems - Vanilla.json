@@ -17,7 +17,7 @@
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge":"average",
-		"systemTags":["theme_misc","theme_interesting","theme_ruins","theme_derelict_probes","theme_derelict_survey_ship","theme_remnant_secondary","theme_remnant_suppressed"],
+		"systemTags":["theme_misc","theme_hidden","theme_ruins","theme_derelict_probes","theme_derelict_survey_ship","theme_remnant_secondary","theme_remnant_suppressed"],
 
 		"entities":[ #Celestial Bodies START
 ## STARS
@@ -52,7 +52,7 @@
 				"orbitRadius":2500,
 				"orbitDays":120, #realistic 59,
 				"orbitClockwise":false,
-				"conditions":["hot","irradiated","thin_atmosphere","toxic_atmosphere","low_gravity","ore_ultrarich","rare_ore_ultrarich","solar_array"],
+				"conditions":["hot","irradiated","thin_atmosphere","toxic_atmosphere","low_gravity","ore_ultrarich","rare_ore_ultrarich"],
 				"specChanges":{"tilt":-0.03,"rotation":0.2035,"iconColor":[227,151,118,255],"texture":"mercury.jpg"}
 },
 { #2 Venus - Hazard 275%
@@ -65,7 +65,7 @@
 				"orbitRadius":3200,
 				"orbitDays":450, #realistic 225,
 				"orbitClockwise":false,
-				"conditions":["very_hot","irradiated","tectonic_activity","dense_atmosphere","ore_ultrarich","rare_ore_ultrarich"],
+				"conditions":["very_hot","irradiated","tectonic_activity","dense_atmosphere","ore_ultrarich","rare_ore_ultrarich","solar_array"],
 				"specChanges":{"tilt":177.4,"rotation":0.0495,"cloudRotation":0.02475,"texture":"venus.jpg"}
 },
 { #3 Earth - Hazard 50%
@@ -541,7 +541,6 @@
 				"orbitAngle":-1,
 				"orbitDays":0,
 				"orbitClockwise":false,
-				"memoryKeys":{},
 				"tags":[],
 				"size":1000,
 },
@@ -551,7 +550,6 @@
 				"orbitAngle":-1,
 				"orbitDays":0,
 				"orbitClockwise":false,
-				"memoryKeys":{},
 				"tags":[],
 				"size":1000,
 },
@@ -584,7 +582,7 @@
 				{"entity":"wreck","orbitRadius":20000,"orbitAngle":90,"orbitDays":0,"orbitClockwise":false,"variantId":"paragon_Raider"}, #68
 				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095}, #69
 				{"entity":"alpha_site_weapons_cache","orbitRadius":12345}, #70
-				{"entity":"station","type":"station_sporeship_derelict","name":"Telepylos Station","focus":8,"orbitAngle":90,"orbitRadius":420,"orbitDays":25,"orbitClockwise":false, #71
+				{"entity":"station","type":"station_sporeship_derelict","name":"Telepylos Station","focus":8,"orbitAngle":90,"orbitRadius":480,"orbitDays":25,"orbitClockwise":false, #71
 					"customDescriptionId":"station_telepylus"}, # orbiting Neptune, staging area for volatiles transport
 
 ## Space Stations - Will break if the only/starting colony owned
@@ -617,11 +615,27 @@
 				"focus":[9,2], # orbiting Ceres
 				"isDamaged":true
 			},
+# EXTRAS
+			{"entity":"asteroid_field", #76
+				"focus":1, #orbiting Mercury
+				"orbitDays":13337,"orbitRadius":300,"orbitClockwise":false,"size":512,
+			},
+			
+			{"entity":"asteroid_field", #77
+				"focus":9, #orbiting Ceres
+				"orbitDays":1337,"orbitRadius":300,"orbitClockwise":false,"size":512,
+			},
+			
+			{"entity":"asteroid_field", #78
+				"focus":3, #orbiting Earth
+				"orbitDays":1460,"orbitRadius":300,"orbitClockwise":false,"size":512,
+			},
+			
+			{"entity":"asteroid_field", #79
+				"focus":4, #orbiting Mars
+				"orbitDays":1000,"orbitRadius":200,"orbitClockwise":false,"size":512,
+			},
 
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
-
-
-
-
