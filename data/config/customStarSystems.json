@@ -75,7 +75,8 @@
 				"specChanges":{"tilt":177.4,"rotation":0.0495,"cloudRotation":0.02475,"texture":"venus.jpg"},
 				"conditions":["very_hot","irradiated","tectonic_activity","dense_atmosphere","ore_ultrarich","rare_ore_ultrarich","solar_array",
 					"pre_collapse_facility" # AOTD
-				]
+				],
+				#"marketMemoryKeys":{"$isSurveyed":false, "$visitedBefore":false, "$surveyLevel":"PRELIMINARY"}
 },
 { #3 Earth - Hazard 50%
 				"entity":"planet",
@@ -98,8 +99,9 @@
 					"IndEvo_RuinsCondition", # IND-EVO
 					#"IndEvo_ArtilleryStationCondition" # IND-EVO
 				],
-				"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_Memorial"}, # IND-EVO
+				#"memoryKeys":{"$nex_no_invade":true, "$nex_no_raids": true}, # NEXERELIN
 				#"factionId":"player", #initial colony?
+				"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_Memorial"}, # IND-EVO
 				#"marketSize":3,
 				#"industries":[
 				#	"population", "spaceport", "farming",
@@ -226,7 +228,8 @@
 				"conditions":["dark","very_cold","ruins_scattered","low_gravity","ore_rich","rare_ore_moderate",
 					"US_shrooms", # UNKNOWN SKIES
 					"aotd_pluto_station" # AOTD
-				]
+				],
+				"industries":["pluto_station"]
 },
 
 ## MOONS
@@ -292,7 +295,9 @@
 				"orbitDays":3.54, #realistic 1.77,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-1.0,"rotation":6.78,"cloudRotation":-3.39,"glowColor":[250,250,250,225],"useReverseLightForGlow":true,"texture":"io.jpg"},
-				"conditions":["tectonic_activity","poor_light","hot","thin_atmosphere","low_gravity","ore_abundant","rare_ore_abundant"]
+				"conditions":["tectonic_activity","poor_light","hot","thin_atmosphere","low_gravity","ore_abundant","rare_ore_abundant",
+					"US_cryosanctum" # UNKNOWN SKIES
+				]
 },
 { #15 Europa, orbiting Jupiter - Hazard 225%
 				"entity":"planet",
@@ -663,12 +668,12 @@
 
 ## Space Stations - (Will break/ctd if the only player colony owned) - +ADVANCED USERS ONLY
 
-			{"entity":"aotd_pluto_station",
+			{"entity":"aotd_pluto_station", # NOTE: Abandoned/NonFunctional Post AOTD-VOK v4.0.0.ALPHA
 				"type":"aotd_pluto_station", #74 - AOTD Pluto Mining Station
-				"name":"Plouton Mining Station",
+				"name":"Plouton Mining Station (Sabotaged)",
 				"focus":10, #orbiting Pluto
 				"orbitDays":181120,"orbitAngle":270,"orbitRadius":300,"orbitClockwise":false,
-				"factionId":"neutral",
+				#"factionId":"neutral",
 				"memoryKeys":{"$musicSetId":"aotd_mega"},
 			},
 
@@ -722,7 +727,7 @@
 				"orbitDays":1000,"orbitRadius":200,"orbitClockwise":false,"size":512,
 			},
 			
-			#{"entity":"derelict_mothership","name":"3I/ATLAS","orbitRadius":19876,"orbitAngle":120,"orbitClockwise":false}, #59
+			#{"entity":"derelict_mothership","name":"3I/ATLAS","orbitRadius":19876,"orbitAngle":120,"orbitClockwise":false}, #83
 		
 		] #Celestial Bodies END
 	} #Sol System END
@@ -743,4 +748,5 @@
 				#	"pluto_station" # AOTD
 				#],
 				#"tags":["nex_canMine":true]
+
 
