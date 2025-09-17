@@ -655,7 +655,7 @@
 				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"orbitClockwise":false,"variantId":"condor_Support"}, #67
 				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false,"variantId":"dram_Light"}, #68
 				{"entity":"wreck","orbitRadius":20000,"orbitAngle":90,"orbitDays":0,"orbitClockwise":false,"variantId":"paragon_Raider"}, #69
-				{"entity":"ark","name":"Abraham's Ark","orbitRadius":9999,"orbitAngle":240,"orbitDays":1825,"orbitClockwise":false}, #70 - AOTD/A$$ - Ark
+				{"entity":"ark","name":"Abraham's Ark","orbitRadius":9999,"orbitAngle":240,"orbitDays":1825,"orbitClockwise":false}, #70 - AOTD - Dreams of Past Ark
 				{"entity":"rat_cryochamber","orbitRadius":7000,"orbitAngle":180,"orbitDays":1095,"orbitClockwise":false}, #71 - RAT Punitive Cryostation
 				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095,"orbitClockwise":false}, #72
 				{"entity":"alpha_site_weapons_cache","orbitRadius":12345}, #73
