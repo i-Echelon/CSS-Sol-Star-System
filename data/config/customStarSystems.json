@@ -22,7 +22,7 @@
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge":"average",
-		"systemTags":["theme_misc","theme_hidden","theme_ruins","theme_derelict","theme_derelict_probes","theme_derelict_survey_ship","theme_remnant_secondary","theme_remnant_suppressed",
+		"systemTags":["theme_misc","theme_hidden","theme_ruins","theme_derelict_probes","theme_derelict_survey_ship","theme_remnant_secondary","theme_remnant_suppressed",
 			"US_skipSystem" # UNKNOWN SKIES 
 		],
 		"entities":[ #Celestial Bodies START
@@ -644,28 +644,27 @@
 				{"entity":"derelict_probe","orbitAngle":90,"orbitRadius":8888,"orbitClockwise":false}, #56
 				{"entity":"derelict_survey_ship","orbitAngle":250,"orbitRadius":8888,"orbitClockwise":false}, #57
 				{"entity":"derelict_cryosleeper","name":"Foundation","orbitRadius":12000,"orbitAngle":90,"orbitClockwise":false}, #58
-				{"entity":"derelict_mothership","name":"3I/ATLAS","orbitRadius":19876,"orbitAngle":120,"orbitClockwise":false}, #59
-				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"orbitClockwise":false,"variantId":"anubis_Standard"}, #60
-				{"entity":"wreck","orbitRadius":11000,"orbitAngle":210,"orbitDays":0,"orbitClockwise":false,"variantId":"wolf_Assault"}, #61
-				{"entity":"wreck","orbitRadius":12000,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false,"variantId":"lasher_CS"}, #62
-				{"entity":"wreck","orbitRadius":13000,"orbitAngle":270,"orbitDays":0,"orbitClockwise":false,"variantId":"kite_Standard"}, #63
-				{"entity":"wreck","orbitRadius":15000,"orbitAngle":300,"orbitDays":0,"orbitClockwise":false,"variantId":"tarsus_d_Standard"}, #64
-				{"entity":"wreck","orbitRadius":16000,"orbitAngle":330,"orbitDays":0,"orbitClockwise":false,"variantId":"buffalo2_FS"}, #65
-				{"entity":"wreck","orbitRadius":17000,"orbitAngle":360,"orbitDays":0,"orbitClockwise":false,"variantId":"hammerhead_Balanced"}, #66
-				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"orbitClockwise":false,"variantId":"condor_Support"}, #67
-				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false,"variantId":"dram_Light"}, #68
-				{"entity":"wreck","orbitRadius":20000,"orbitAngle":90,"orbitDays":0,"orbitClockwise":false,"variantId":"paragon_Raider"}, #69
-				{"entity":"ark","name":"Abraham's Ark","orbitRadius":9999,"orbitAngle":240,"orbitDays":1825,"orbitClockwise":false}, #70 - AOTD - Dreams of Past Ark
-				{"entity":"rat_cryochamber","orbitRadius":7000,"orbitAngle":180,"orbitDays":1095,"orbitClockwise":false}, #71 - RAT Punitive Cryostation
-				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095,"orbitClockwise":false}, #72
-				{"entity":"alpha_site_weapons_cache","orbitRadius":12345}, #73
-				{"entity":"station","type":"station_sporeship_derelict","name":"Telepylos Station","focus":8,"orbitAngle":90,"orbitRadius":420,"orbitDays":25,"orbitClockwise":false, #74
+				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"orbitClockwise":false,"variantId":"anubis_Standard"}, #59
+				{"entity":"wreck","orbitRadius":11000,"orbitAngle":210,"orbitDays":0,"orbitClockwise":false,"variantId":"wolf_Assault"}, #60
+				{"entity":"wreck","orbitRadius":12000,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false,"variantId":"lasher_CS"}, #61
+				{"entity":"wreck","orbitRadius":13000,"orbitAngle":270,"orbitDays":0,"orbitClockwise":false,"variantId":"kite_Standard"}, #62
+				{"entity":"wreck","orbitRadius":15000,"orbitAngle":300,"orbitDays":0,"orbitClockwise":false,"variantId":"tarsus_d_Standard"}, #63
+				{"entity":"wreck","orbitRadius":16000,"orbitAngle":330,"orbitDays":0,"orbitClockwise":false,"variantId":"buffalo2_FS"}, #64
+				{"entity":"wreck","orbitRadius":17000,"orbitAngle":360,"orbitDays":0,"orbitClockwise":false,"variantId":"hammerhead_Balanced"}, #65
+				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"orbitClockwise":false,"variantId":"condor_Support"}, #66
+				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false,"variantId":"dram_Light"}, #67
+				{"entity":"wreck","orbitRadius":20000,"orbitAngle":90,"orbitDays":0,"orbitClockwise":false,"variantId":"paragon_Raider"}, #68
+				{"entity":"ark","name":"Abraham's Ark","orbitRadius":9999,"orbitAngle":240,"orbitDays":1825,"orbitClockwise":false}, #69 - AOTD - Dreams of Past Ark
+				{"entity":"rat_cryochamber","orbitRadius":7000,"orbitAngle":180,"orbitDays":1095,"orbitClockwise":false}, #70 - RAT Punitive Cryostation
+				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095,"orbitClockwise":false}, #71
+				{"entity":"alpha_site_weapons_cache","orbitRadius":12345}, #72
+				{"entity":"station","type":"station_sporeship_derelict","name":"Telepylos Station","focus":8,"orbitAngle":90,"orbitRadius":480,"orbitDays":25,"orbitClockwise":false, #73
 					"customDescriptionId":"station_telepylus"}, #orbiting Neptune, staging area for volatiles transport
 
 ## Space Stations - (Will break/ctd if the only player colony owned) - +ADVANCED USERS ONLY
 
 			{"entity":"aotd_pluto_station",
-				"type":"aotd_pluto_station", #75 - AOTD Pluto Mining Station
+				"type":"aotd_pluto_station", #74 - AOTD Pluto Mining Station
 				"name":"Plouton Mining Station",
 				"focus":10, #orbiting Pluto
 				"orbitDays":181120,"orbitAngle":270,"orbitRadius":300,"orbitClockwise":false,
@@ -674,14 +673,14 @@
 			},
 
 			{"entity":"station",
-				"type":"IndEvo_SubspaceStation", #76 IND-EVO Subspace Station 
+				"type":"IndEvo_SubspaceStation", #75 IND-EVO Subspace Station 
 				"name":"Red-Rock Space Station",
 				"customDescriptionId":"sol_RedAlert",
 				"focus":4,  # orbiting Mars
 				"orbitRadius":540,"orbitAngle":0,"orbitDays":1000,"orbitClockwise":false
 			},
 
-			{"entity":"station", #77 Abandoned Siphon Station
+			{"entity":"station", #76 Abandoned Siphon Station
 				"type":"station_side05",
 				"name":"Titan's Eye",
 				"customDescriptionId":"sol_SiphonStation",
@@ -689,7 +688,7 @@
 				"orbitRadius":500,"orbitAngle":0,"orbitDays":1000,"orbitClockwise":false
 			},
 			
-			{"entity":"station", #78
+			{"entity":"station", #77
 				"type":"station_side00",
 				"name":"International Space Station",
 				"focus":3, #orbiting near Earth
@@ -697,32 +696,34 @@
 				"customDescriptionId":"sol_ISS"
 			},
 
-			{"entity":"remnant_station", #79 Remnant Station
+			{"entity":"remnant_station", #78 Remnant Station
 				"name":"The Cyan Comet",
 				"focus":[9,2], # orbiting Ceres
 				"isDamaged":true
 			},
 
-			{"entity":"asteroid_field", #80
+			{"entity":"asteroid_field", #79
 				"focus":1, #orbiting Mercury
 				"orbitDays":13337,"orbitRadius":300,"orbitClockwise":false,"size":512,
 			},
 			
-			{"entity":"asteroid_field", #81
+			{"entity":"asteroid_field", #80
 				"focus":9, #orbiting Ceres
 				"orbitDays":1337,"orbitRadius":300,"orbitClockwise":false,"size":512,
 			},
 			
-			{"entity":"asteroid_field", #82
+			{"entity":"asteroid_field", #81
 				"focus":3, #orbiting Earth
 				"orbitDays":1460,"orbitRadius":300,"orbitClockwise":false,"size":512,
 			},
 
-			{"entity":"asteroid_field", #83
+			{"entity":"asteroid_field", #82
 				"focus":4, #orbiting Mars
 				"orbitDays":1000,"orbitRadius":200,"orbitClockwise":false,"size":512,
 			},
-
+			
+			#{"entity":"derelict_mothership","name":"3I/ATLAS","orbitRadius":19876,"orbitAngle":120,"orbitClockwise":false}, #59
+		
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
@@ -742,3 +743,4 @@
 				#	"pluto_station" # AOTD
 				#],
 				#"tags":["nex_canMine":true]
+
