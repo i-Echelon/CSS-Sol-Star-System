@@ -6,6 +6,8 @@ Adds a realistic Sol Solar System to Starsector
 
 -Customizable Star Systems
 
+-Nexerelin
+
 -Ashes of Domain - Vaults of Knowledge + (Dreams of the Past)
 
 -Industrial Evolution
