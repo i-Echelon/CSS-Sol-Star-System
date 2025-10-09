@@ -103,7 +103,7 @@
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"iconColor":[255,68,14,250],"texture":"mars.jpg",
 					"typeOverride":["barren-desert","Barren-Desert"]}, #workaround for tasc bug
-				"conditions":["ruins_scattered","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common"]
+				"conditions":["cold","thin_atmosphere","low_gravity","ruins_scattered","ore_moderate","rare_ore_moderate","organics_common"]
 },
 { #5 Jupiter - Hazard 150%
 				"entity":"planet",
@@ -639,3 +639,4 @@
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
+
