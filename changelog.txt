@@ -1,3 +1,11 @@
+3.4.0
+- Made compatible with AOTD 4.0+
+- Added new textures for Earth and Sol
+- Added planet clouds overlay for Venus
+- Updated texture for Saturn, Uranus, and Neptune
+- Changed some US_base conditions to pre_collapse_facility
+- Updated all Modded dependancies versionings.
+- Various other small tweaks.
 3.3.9.
 - Added Nexerelin and Dreams of the Past Requirements
 - Removed some debug entities
@@ -105,10 +113,3 @@
 - Added System Music.
 1.0.0
 - First iteration.
-
-
-
-
-
-
-
