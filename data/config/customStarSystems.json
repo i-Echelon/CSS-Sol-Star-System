@@ -1,6 +1,6 @@
 	# Sol Star Sysyem by Bugatti Echelon #Discord #bugatti_echelon
 	# If you wish to removed modded content each condition/industry/spec has been tagged with mod's acronym for easier user readability
-	# Modded version - requires CSS, AOTD-VoK, Arthur's Ships & Shit (A$$), RAT, IND-EVO, & US
+	# Modded version - requires CSS, AOTD-VoK, AOTD-DOP, RAT, IND-EVO, & US
 	# All "orbitDays" for planets and moons were increased to be more inline with starsectors time/speed pass.
 	# Using realistic values (Earth 365/y, Luna 28/m) you would have to use emergency burn to even catch some of the moons who orbits at high speed, but that would be realistic i guess.
 	# Left original speeds as comments incase you want to re-enable. You can also comment/remove the custom graphics to let procgen override. Same for conditions.
@@ -9,7 +9,7 @@
 {
 	"Sol_Modded":{
 		"isEnabled":true,
-		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
+		"teleportUponGeneration":true, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
 		"hasSystemwideNebula":true,
 		"addDomainCryosleeper":false,
@@ -72,7 +72,7 @@
 				"orbitRadius":3200,
 				"orbitDays":450, #realistic 225,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":177.4,"rotation":0.0495,"cloudRotation":0.02475,"texture":"venus.jpg"},
+				"specChanges":{"tilt":177.4,"rotation":0.0495,"cloudRotation":0.02475,"cloudTexture":"venusCloudsMap.jpg","texture":"venus.jpg"},
 				"conditions":["very_hot","irradiated","tectonic_activity","dense_atmosphere","ore_ultrarich","rare_ore_ultrarich","solar_array",
 					"pre_collapse_facility" # AOTD
 				],
@@ -88,26 +88,25 @@
 				"orbitRadius":4400,
 				"orbitDays":730, #realistic 365,
 				"orbitClockwise":false,
-				"specChanges":{"cloudColor":[235,240,250,225],"cloudRotation":-5,"cloudTexture":"earthClouds.png","tilt":-23.4,"rotation":12.0,
-				"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],"iconColor":[155,185,255,255],"texture":"earth.jpg","planetColor":[255,255,255,255],
+				"specChanges":{"cloudColor":[235,240,250,225],"cloudRotation":-5,"cloudTexture":"earthCloudsSmog.png","tilt":-23.4,"rotation":12.0,
+				"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],"iconColor":[155,185,255,255],"texture":"earth_nuked.png","planetColor":[255,255,255,255],
 					"typeOverride":["US_magnetic","Terrestrial"] # UNKNOWN SKIES
 				},
 				"conditions":["habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast",
-					"US_elevator","US_religious","US_magnetic", # UNKNOWN SKIES
+					"US_elevator","US_religious","US_magnetic","US_base", # UNKNOWN SKIES
 					"rat_ancient_megacities","rat_bionic_plantlife","rat_engineered_utopia", # RAT
-					"pre_collapse_facility", # AOTD
 					"IndEvo_RuinsCondition", # IND-EVO
 					#"IndEvo_ArtilleryStationCondition" # IND-EVO
 				],
-				#"memoryKeys":{"$nex_no_invade":true, "$nex_no_raids": true}, # NEXERELIN
+				"memoryKeys":{"$nex_no_invade":true, "$nex_no_raids": true}, #NEXERELIN
 				#"factionId":"player", #initial colony?
-				"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_Memorial"}, # IND-EVO
 				#"marketSize":3,
-				#"industries":[
-				#	"population", "spaceport", "farming",
-				#	["orbitalworks",,"pristine_nanoforge"],
+				"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_Memorial"}, # IND-EVO ($MemKey to turn ruins into a Memorial 100%)
+				"industries":[
+					"population", "spaceport", "farming",
+					["orbitalworks",,"pristine_nanoforge"],
 					#["IndEvo_Artillery_railgun",,,true] # IND-EVO - should also use the related condition tag (IndEvo_ArtilleryStationCondition)
-				#]
+				],
 },
 { #4 Mars - Hazard 125%
 				"entity":"planet",
@@ -122,13 +121,17 @@
 				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"iconColor":[255,68,14,250],"texture":"mars.jpg",
 					#"typeOverride":["barren-desert","Barren-Desert"]  #workaround for TASC bug
 				},
-				"conditions":["ruins_widespread","thin_atmosphere","ore_moderate","rare_ore_moderate","organics_common",
+				"conditions":["cold","thin_atmosphere","low_gravity","ruins_widespread","ore_moderate","rare_ore_moderate","organics_common",
 					"pre_collapse_facility", # AOTD
 					"IndEvo_RuinsCondition", # IND-EVO
 					"US_elevator","US_shrooms", # UNKNOWN SKIES
 					"rat_ancient_megacities","rat_ancient_military_hub","rat_kinetic_launchsystem","rat_warscape","rat_ancient_industries" # RAT
 				],
-				"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_HullDecon"}, # IND-EVO
+				"marketMemoryKeys":{ 
+					"$IndEvo_ruinsIndustryId":"IndEvo_HullDecon", # IND-EVO Hull Deconstructor ($MemKey to turn ruins into a Hull Deconstruction)
+					#"$IndEvo_ruinsIndustryId":"IndEvo_HullForge", #IND-EVO Hull Forge
+					#"$IndEvo_ruinsIndustryId":"IndEvo_ResLab", # IND-EVO Ancient Laboratory
+				}
 },
 { #5 Jupiter - Hazard 100%
 				"entity":"planet",
@@ -142,8 +145,7 @@
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-3.1,"rotation":29.27,"cloudTexture":"US_clouds_textureGiant.png","texture":"jupiter.jpg"	},
 				"conditions":["high_gravity","volatiles_plentiful","ruins_vast",
-				"pre_collapse_facility", # AOTD
-				"US_floating", # UNKNOWN SKIES
+				"US_base","US_floating", # UNKNOWN SKIES
 				"rat_ancient_fuel_hub", #RAT
 				"IndEvo_mineFieldCondition" # IND-EVO
 				]
@@ -158,9 +160,8 @@
 				"orbitRadius":14000,
 				"orbitDays":21512, #realistic 10756,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":-26.7,"rotation":26.665,"cloudTexture":"US_clouds_textureGiant.png","texture":"saturn.jpg"},
+				"specChanges":{"tilt":-26.7,"rotation":26.665,"cloudTexture":"US_clouds_textureGiant.png","texture":"saturn2.jpg"},
 				"conditions":["ruins_vast","volatiles_plentiful","extreme_weather","high_gravity",
-					"pre_collapse_facility", # AOTD
 					"US_floating","US_fluorescent", # UNKNOWN SKIES
 					"rat_ancient_fuel_hub" # RAT
 				]
@@ -217,8 +218,8 @@
 				"entity":"planet",
 				"name":"Pluto",
 				"customDescriptionId":"sol_Pluto",
-				"type":"barren",
-				#"tags":["theme_misc_skip"],
+				"type":"frozen",
+				#"tags":[],
 				"orbitAngle":240,
 				"radius":28,
 				"orbitRadius":23000,
@@ -248,40 +249,44 @@
 				"specChanges":{"tilt":-5.14,"rotation":0.44,"texture":"luna.jpg"},
 				#"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_ResLab"}, # IND-EVO
 				"conditions":["ruins_vast","no_atmosphere","low_gravity","ore_sparse","rare_ore_rich",
-					"pre_collapse_facility", # AOTD
 					"US_base","US_tunnels","US_crystals", # UNKNOWN SKIES
 					"rat_ancient_industries" # RAT
 				]
 },
 { #12 Phobos, orbiting Mars - Hazard 175%
-			  "entity":"planet",
-			  "name":"Phobos",
-			  "customDescriptionId":"sol_Phobos",
-			  "focus":4,
-			  "type":"barren-bombarded",
-			  "orbitAngle":90,
-			  "radius":16,
-			  "orbitRadius":180,
-			  "orbitDays":1.0, # realistic ~0.3 days (7.65h), doubled
-			  "orbitClockwise":false,
-			  "specChanges":{"tilt":0.0,"rotation":0.5}, #"texture":"phobos.jpg",
-			  "conditions":["no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant"]
+				"entity":"planet",
+				"name":"Phobos",
+				"customDescriptionId":"sol_Phobos",
+				"focus":4,
+				"type":"barren-bombarded",
+				"orbitAngle":90,
+				"radius":16,
+				"orbitRadius":180,
+				"orbitDays":1.0, # realistic ~0.3 days (7.65h), doubled
+				"orbitClockwise":false,
+				"specChanges":{"tilt":0.0,"rotation":0.5}, #"texture":"phobos.jpg",
+				"conditions":["no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant"]
 },
 { #13 Deimos, orbiting Mars - Hazard 175%
-			  "entity":"planet",
-			  "name":"Deimos",
-			  "customDescriptionId":"sol_Deimos",
-			  "focus":4,
-			  "type":"barren",
-			  "orbitAngle":210,
-			  "radius":12,
-			  "orbitRadius":320,
-			  "orbitDays":2.5, # realistic ~1.25 days, doubled
-			  "orbitClockwise":false,
-			  "specChanges":{"tilt":0.0,"rotation":0.3}, #"texture":"deimos.jpg",
-			  "conditions":["no_atmosphere","low_gravity","ore_sparse",
+				"entity":"planet",
+				"name":"Deimos",
+				"customDescriptionId":"sol_Deimos",
+				"focus":4,
+				"type":"barren",
+				"orbitAngle":210,
+				"radius":12,
+				"orbitRadius":320,
+				"orbitDays":2.5, # realistic ~1.25 days, doubled
+				"orbitClockwise":false,
+				"specChanges":{"tilt":0.0,"rotation":0.3}, #"texture":"deimos.jpg",
+				"conditions":["no_atmosphere","low_gravity","ore_sparse",
 				"IndEvo_RuinsCondition"  # IND-EVO
-			  ]
+				],
+				"marketMemoryKeys":{
+					"$IndEvo_ruinsIndustryId":"IndEvo_HullForge", #IND-EVO Hull Forge
+					#"$IndEvo_ruinsIndustryId":"IndEvo_ResLab", # IND-EVO Ancient Laboratory
+					#"$IndEvo_ruinsIndustryId":"IndEvo_HullDecon", # IND-EVO Hull Deconstructor
+				}
 },
 { #14 Io, orbiting Jupiter - Hazard 225%
 				"entity":"planet",
@@ -328,7 +333,6 @@
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-23.5,"rotation":1.68,"texture":"ganymede.jpg"},
 				"conditions":["ruins_extensive","cold","thin_atmosphere","low_gravity","poor_light","ore_moderate","rare_ore_moderate","volatiles_abundant",
-					"pre_collapse_facility", # AOTD
 					"rat_ancient_military_hub","rat_rampant_military_core", # RAT
 					"US_bedrock" # US
 				]
@@ -380,9 +384,8 @@
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-23.5,"rotation":0.755,"texture":"titan.jpg"},
 				"conditions":["cold","inimical_biosphere","poor_light","ore_moderate","rare_ore_moderate","volatiles_plentiful","organics_common",
-					"US_crash","US_bedrock", #UNKNOWN SKIES
+					"US_crash","US_bedrock","US_base", #UNKNOWN SKIES
 					"rat_warscape", #RAT
-					"pre_collapse_facility" #AOTD
 				]
 },
 { #20 Oberon, orbiting Uranus - Hazard 250%
@@ -396,7 +399,7 @@
 				"orbitRadius":1800,
 				"orbitDays":26,  #realistic 13,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":-97.8,"rotation":0.89,"texture":"oberonB.jpg"}, # OR oberonA.jpg / oberonC.jpg
+				"specChanges":{"tilt":-97.8,"rotation":0.89,"texture":"oberonB.jpg"}, # OR oberonA.jpg / oberonC.jpg //must be loaded in settings.json
 				"conditions":["ore_sparse","poor_light","no_atmosphere","very_cold","low_gravity"]
 },
 { #21 Titania, orbiting Uranus - Hazard 100%
@@ -429,8 +432,7 @@
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-89.7,"rotation":0.781,"texture":"miranda.jpg"},
 				"conditions":["ruins_widespread","cold","no_atmosphere","low_gravity","poor_light","ore_sparse","organics_trace",
-					"pre_collapse_facility", # AOTD
-					"US_tunnels" # UNKNOWN SKIES
+					"US_base","US_tunnels" # UNKNOWN SKIES
 				]
 },
 { #23 Triton, orbiting Neptune - Hazard 250%
@@ -463,7 +465,12 @@
 				"specChanges":{"tilt":-23.5,"rotation":1.88,"texture":"charon.jpg"},
 				"conditions":["ore_ultrarich","rare_ore_ultrarich",
 					"IndEvo_RuinsCondition" # IND-EVO
-				]
+				],
+				"marketMemoryKeys":{
+					"$IndEvo_ruinsIndustryId":"IndEvo_ResLab", # IND-EVO Ancient Laboratory
+					#"$IndEvo_ruinsIndustryId":"IndEvo_HullDecon", # IND-EVO Hull Deconstructor
+					#"$IndEvo_ruinsIndustryId":"IndEvo_HullForge", #IND-EVO Hull Forge
+				}
 },
 
 ## ASTEROID BELTS
@@ -620,7 +627,6 @@
 				"orbitAngle":60,
 				"orbitDays":0,
 				"orbitClockwise":false,
-				"tags":[],
 				"size":1000,
 },
 { #42 Asteroid field 2
@@ -629,7 +635,6 @@
 				"orbitAngle":90,
 				"orbitDays":0,
 				"orbitClockwise":false,
-				"tags":[],
 				"size":1000,
 },
 # CUSTOM ENTITIES
@@ -666,7 +671,8 @@
 				{"entity":"station","type":"station_sporeship_derelict","name":"Telepylos Station","focus":8,"orbitAngle":90,"orbitRadius":480,"orbitDays":25,"orbitClockwise":false, #73
 					"customDescriptionId":"station_telepylus"}, #orbiting Neptune, staging area for volatiles transport
 
-## Space Stations - (Will break/ctd if the only player colony owned) - +ADVANCED USERS ONLY
+## Space Stations - (Will break/ctd if the only player colony owned before player factiion established) 
+#+ADVANCED USERS ONLY
 
 			{"entity":"aotd_pluto_station", # NOTE: Abandoned/NonFunctional Post AOTD-VOK v4.0.0.ALPHA
 				"type":"aotd_pluto_station", #74 - AOTD Pluto Mining Station
@@ -702,11 +708,11 @@
 			},
 
 			{"entity":"remnant_station", #78 Remnant Station
-				"name":"The Cyan Comet",
+				"name":"Cyan Comet",
 				"focus":[9,2], # orbiting Ceres
 				"isDamaged":true
 			},
-
+# EXTRAS
 			{"entity":"asteroid_field", #79
 				"focus":1, #orbiting Mercury
 				"orbitDays":13337,"orbitRadius":300,"orbitClockwise":false,"size":512,
@@ -726,9 +732,9 @@
 				"focus":4, #orbiting Mars
 				"orbitDays":1000,"orbitRadius":200,"orbitClockwise":false,"size":512,
 			},
-			
+
 			#{"entity":"derelict_mothership","name":"3I/ATLAS","orbitRadius":19876,"orbitAngle":120,"orbitClockwise":false}, #83
-		
+
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
@@ -748,5 +754,3 @@
 				#	"pluto_station" # AOTD
 				#],
 				#"tags":["nex_canMine":true]
-
-
