@@ -2,15 +2,23 @@
 	"graphics": {
 		"planets": {
 			"sol": "graphics/planets/sol.jpg",
+			"sol2": "graphics/planets/sol2.jpg",
 			"mercury": "graphics/planets/mercury.jpg",
 			"venus": "graphics/planets/venus.jpg",
+			"venusCloudsMap": "graphics/planets/venusCloudsMap.jpg",
 			"earth": "graphics/planets/earth.jpg",
+			"earth_Map1k": "graphics/planets/earth_Map1k.jpg",
+			"earth_nuked": "graphics/planets/earth_nuked.png",
 			"earthClouds": "graphics/planets/earthClouds.png",
+			"earthCloudsSmog": "graphics/planets/earthCloudsSmog.png",
+			"earthCloudsToxic": "graphics/planets/earthCloudsToxic.png",
 			"mars": "graphics/planets/mars.jpg",
 			"ceres": "graphics/planets/ceres.jpg",
 			"jupiter": "graphics/planets/jupiter.jpg",
 			"saturn": "graphics/planets/saturn.jpg",
+			"saturn2": "graphics/planets/saturn2.jpg",
 			"uranus": "graphics/planets/uranus.jpg",
+			"uranus2": "graphics/planets/uranus2.jpg",
 			"neptune": "graphics/planets/neptune.jpg",
 			"pluto": "graphics/planets/pluto.jpg",
 			"luna": "graphics/planets/luna.jpg",
@@ -40,7 +48,4 @@
 			"saturn_belt": "graphics/planets/saturn_belt.png",
 		},
 	}
-
 }
-
-
