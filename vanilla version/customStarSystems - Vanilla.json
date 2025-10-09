@@ -66,7 +66,7 @@
 				"orbitDays":450, #realistic 225,
 				"orbitClockwise":false,
 				"conditions":["very_hot","irradiated","tectonic_activity","dense_atmosphere","ore_ultrarich","rare_ore_ultrarich","solar_array"],
-				"specChanges":{"tilt":177.4,"rotation":0.0495,"cloudRotation":0.02475,"texture":"venus.jpg"}
+				"specChanges":{"tilt":177.4,"rotation":0.0495,"cloudRotation":0.02475,"cloudTexture":"venusCloudsMap.jpg","texture":"venus.jpg"},
 },
 { #3 Earth - Hazard 50%
 				"entity":"planet",
@@ -78,8 +78,8 @@
 				"orbitRadius":4400,
 				"orbitDays":730, #realistic 365,
 				"orbitClockwise":false,
-				"specChanges":{"cloudColor":[235,240,250,225],"cloudRotation":-5,"cloudTexture":"earthClouds.png","tilt":-23.4,"rotation":12.0,
-				"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],"iconColor":[155,185,255,255],"texture":"earth.jpg","planetColor":[255,255,255,255],
+				"specChanges":{"cloudColor":[235,240,250,225],"cloudRotation":-5,"cloudTexture":"earthCloudsSmog.png","tilt":-23.4,"rotation":12.0,
+				"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],"iconColor":[155,185,255,255],"texture":"earth_nuked.png","planetColor":[255,255,255,255],
 					#"typeOverride":["Terran","Terrestrial"]
 					},
 				"conditions":["habitable","mild_climate","farmland_bountiful","ore_sparse","ruins_vast","organics_plentiful","high_gravity"], #DEFAULT REALISTIC
@@ -177,7 +177,7 @@
 				"entity":"planet",
 				"name":"Pluto",
 				"customDescriptionId":"sol_Pluto",
-				"type":"barren",
+				"type":"frozen",
 				"orbitAngle":240,
 				"radius":28,
 				"orbitRadius":23000,
@@ -370,7 +370,7 @@
 				"orbitDays":11.8, #realistic 5.9,
 				"orbitClockwise":false,
 				"conditions":["rare_ore_sparse","ore_moderate","volatiles_abundant","dark","tectonic_activity","very_cold","low_gravity"],
-				"specChanges":{"tilt":-23.5,"rotation":2.04,"cloudRotation":2.0,"texture":"tritonB.jpg"} # OR tritonA.jpg" OR tritonC.jpg
+				"specChanges":{"tilt":-23.5,"rotation":2.04,"cloudRotation":2.0,"texture":"tritonB.jpg"} # OR tritonA.jpg" OR tritonC.jpg //must be loaded in settings.json
 },
 { #24 Charon, orbiting Pluto- Hazard 100%
 				"entity":"planet",
@@ -541,7 +541,6 @@
 				"orbitAngle":-1,
 				"orbitDays":0,
 				"orbitClockwise":false,
-				"tags":[],
 				"size":1000,
 },
 { #42 Asteroid field 2
@@ -550,7 +549,6 @@
 				"orbitAngle":-1,
 				"orbitDays":0,
 				"orbitClockwise":false,
-				"tags":[],
 				"size":1000,
 },
 # CUSTOM ENTITIES
@@ -585,7 +583,9 @@
 				{"entity":"station","type":"station_sporeship_derelict","name":"Telepylos Station","focus":8,"orbitAngle":90,"orbitRadius":480,"orbitDays":25,"orbitClockwise":false, #71
 					"customDescriptionId":"station_telepylus"}, # orbiting Neptune, staging area for volatiles transport
 
-## Space Stations - Will break if the only/starting colony owned
+## Space Stations - (Will break/ctd if the only player colony owned before player factiion established) 
+#+ADVANCED USERS ONLY
+
 			{"entity":"station", #72 Abandoned Station
 				"type":"station_lowtech2",
 				"name":"Red-Rock Space Station",
@@ -611,7 +611,7 @@
 			},
 
 			{"entity":"remnant_station", #75 Remnant Station
-				"name":"The Cyan Comet",
+				"name":"Cyan Comet",
 				"focus":[9,2], # orbiting Ceres
 				"isDamaged":true
 			},
@@ -639,4 +639,3 @@
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
-
