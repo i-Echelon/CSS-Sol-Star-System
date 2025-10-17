@@ -519,9 +519,12 @@
 				"focus":3,
 				"orbitRadius":180, # Inner radius, should be same as focus' radius
 				"outerRadius":290, # Radius of focus + 110
-				"baseColor":[50,175,200,100],
-				"auroraFrequency":0.25,
-				"auroraColors":[[0,255,255,35],[191,255,0,35],[15,226,85,35],[50,150,255,35],[25,250,100,150],[180,50,255,35],[255,100,200,35],[255,0,60,35],[255,153,51,35]],
+				"baseColor":[0,0,0,0], #Invisible, visual setting below
+				"auroraFrequency":0, #Invisible, visual timer below
+				"auroraColors":[[0,0,0,0]], #Invisible, visual array below
+				#"baseColor":[50,175,200,100],
+				#"auroraFrequency":0.25,
+				#"auroraColors":[[0,255,255,35],[191,255,0,35],[15,226,85,35],[50,150,255,35],[25,250,100,150],[180,50,255,35],[255,100,200,35],[255,0,60,35],[255,153,51,35]],
 },
 { #40 Magnetic Field around Jupiter
 				"entity":"magnetic_field",
@@ -639,3 +642,4 @@
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
+
