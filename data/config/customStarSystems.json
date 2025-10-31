@@ -713,7 +713,7 @@
 			{"entity":"remnant_station", #78 Remnant Station
 				"name":"Cyan Comet",
 				"focus":[9,2], # orbiting Ceres
-				"isDamaged":true
+				"isDamaged":false
 			},
 # EXTRAS
 			{"entity":"asteroid_field", #79
@@ -757,5 +757,6 @@
 				#	"pluto_station" # AOTD
 				#],
 				#"tags":["nex_canMine":true]
+
 
 
