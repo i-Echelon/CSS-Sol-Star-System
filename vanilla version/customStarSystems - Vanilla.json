@@ -616,7 +616,7 @@
 			{"entity":"remnant_station", #75 Remnant Station
 				"name":"Cyan Comet",
 				"focus":[9,2], # orbiting Ceres
-				"isDamaged":true
+				"isDamaged":false
 			},
 # EXTRAS
 			{"entity":"asteroid_field", #76
@@ -642,4 +642,5 @@
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
+
 
