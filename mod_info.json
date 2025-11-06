@@ -4,54 +4,46 @@
 	"author": "Bugatti Echelon",
 	"version": {
 		"major": 3,
-		"minor": 4,
-		"patch": 1
+		"minor": 5,
+		"patch": 0
 	},
 	"description": "Adds Sol, via Customizable Star Systems Mod.",
 	"gameVersion": "0.98a-RC8",
 	"utility": "true",
-	"dependencies": [# bare minimum versions required
+	"dependencies": [
 		{
 			"id": "lw_lazylib",
-			"name": "LazyLib",
-			#"version": "3.0.0"
+			"name": "LazyLib"
 		},
 		{
 			"id": "customizablestarsystems",
-			"name": "Customizable Star Systems",
-			#"version": "3.0.2",
+			"name": "Customizable Star Systems"
 		},
 		{
 			"id": "nexerelin",
-			"name": "Nexerelin",
-			#"version": "0.12.0c"
+			"name": "Nexerelin"
 		},
 		{
 			"id": "aotd_vok",
-			"name": "Ashes of the Domain - Vaults of Knowledge",
-			#"version": "4.0.0.A5"
+			"name": "Ashes of the Domain - Vaults of Knowledge"
 		},
 		{
 			"id": "Cryo_but_better",
-			"name": "Ashes of the Domain - Dreams of the Past",
-			#"version": "3.0.4"
+			"name": "Ashes of the Domain - Dreams of the Past"
 		},
 		{
 			"id": "assortment_of_things",
-			"name": "Random Assortment of Things",
-			#"version": "3.2.2"
+			"name": "Random Assortment of Things"
 		},
 		{
 			"id": "IndEvo",
-			"name": "Industrial Evolution",
-			#"version": "4.1.3"
+			"name": "Industrial Evolution"
 		},
 		{
 			"id": "US",
-			"name": "Unknown Skies",
-			#"version": "3.0.3"
+			"name": "Unknown Skies"
 		}
 	],
-	#"suppressVCUnsupported": true
+	"jars":["jars/Sol.jar"],
+	"modPlugin":"bugatti.plugins.SolPlugin"
 }
-
