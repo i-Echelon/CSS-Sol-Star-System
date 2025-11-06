@@ -3,13 +3,12 @@
 	# Modded version - requires CSS, AOTD-VoK, AOTD-DOP, RAT, IND-EVO, & US
 	# All "orbitDays" for planets and moons were increased to be more inline with starsectors time/speed pass.
 	# Using realistic values (Earth 365/y, Luna 28/m) you would have to use emergency burn to even catch some of the moons who orbits at high speed, but that would be realistic i guess.
-	# Left original speeds as comments incase you want to re-enable. You can also comment/remove the custom graphics to let procgen override. Same for conditions.
-	# Recently change "conditions" of most planets and moons to use some from US/RAT/IE/AotD-VoK. Left the original realish ones as comments.
-	# Rotation speeds were also halved in speed for disorientation purposes
+	# You can also comment/remove the custom graphics to let procgen override. Same for conditions.
+	# Recently change "conditions" of most planets and moons to pull from US/RAT/IE/AotD-VoK. Refer to the vanilla version to revert.
 {
 	"Sol_Modded":{
 		"isEnabled":true,
-		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
+		"teleportUponGeneration":true, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
 		"hasSystemwideNebula":true,
 		"addDomainCryosleeper":false,
@@ -67,12 +66,13 @@
 				"name":"Venus",
 				"customDescriptionId":"sol_Venus",
 				"type":"toxic",
+				"tags":["not_random_mission_target"],
 				"orbitAngle":180,
 				"radius":140,
 				"orbitRadius":3200,
 				"orbitDays":450, #realistic 225,
 				"orbitClockwise":false,
-				"specChanges":{"tilt":177.4,"rotation":0.0495,"cloudRotation":0.02475,"cloudTexture":"venusCloudsMap.jpg","texture":"venus.jpg"},
+				"specChanges":{"tilt":177.4,"rotation":-0.0495,"cloudRotation":0.02475,"cloudTexture":"venusCloudsMap.jpg","texture":"venus.jpg"},
 				"conditions":["very_hot","irradiated","tectonic_activity","dense_atmosphere","ore_ultrarich","rare_ore_ultrarich","solar_array",
 					"pre_collapse_facility" # AOTD
 				],
@@ -92,7 +92,7 @@
 				"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],"iconColor":[155,185,255,255],"texture":"earth_nuked.png","planetColor":[255,255,255,255],
 					"typeOverride":["US_magnetic","Terrestrial"] # UNKNOWN SKIES
 				},
-				"conditions":["habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_vast",
+				"conditions":["habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_widespread",
 					"US_elevator","US_religious","US_magnetic","US_base", # UNKNOWN SKIES
 					"rat_ancient_megacities","rat_bionic_plantlife","rat_engineered_utopia", # RAT
 					"IndEvo_RuinsCondition", # IND-EVO
@@ -113,6 +113,7 @@
 				"name":"Mars",
 				"customDescriptionId":"sol_Mars",
 				"type":"barren-desert", #override to barren-desert below
+				"tags":["not_random_mission_target"],
 				"orbitAngle":360,
 				"radius":80,
 				"orbitRadius":6000,
@@ -121,11 +122,11 @@
 				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"iconColor":[255,68,14,250],"texture":"mars.jpg",
 					#"typeOverride":["barren-desert","Barren-Desert"]  #workaround for TASC bug
 				},
-				"conditions":["cold","thin_atmosphere","low_gravity","ruins_widespread","ore_moderate","rare_ore_moderate","organics_common",
-					"pre_collapse_facility", # AOTD
+				"conditions":["cold","thin_atmosphere","low_gravity","ruins_vast","ore_moderate","rare_ore_moderate",
+					"aotd_nidavelir_complex", # AOTD
 					"IndEvo_RuinsCondition", # IND-EVO
 					"US_elevator","US_shrooms", # UNKNOWN SKIES
-					"rat_ancient_megacities","rat_ancient_military_hub","rat_kinetic_launchsystem","rat_warscape","rat_ancient_industries" # RAT
+					"rat_ancient_military_hub","rat_kinetic_launchsystem" # RAT
 				],
 				"marketMemoryKeys":{ 
 					"$IndEvo_ruinsIndustryId":"IndEvo_HullDecon", # IND-EVO Hull Deconstructor ($MemKey to turn ruins into a Hull Deconstruction)
@@ -204,14 +205,16 @@
 				"name":"Ceres",
 				"customDescriptionId":"sol_Ceres",
 				"type":"barren",
+				"tags":["not_random_mission_target"],
 				"orbitAngle":270,
 				"radius":10,
 				"orbitRadius":7500,
 				"orbitDays":3364, #realistic 1682,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-4.0,"rotation":31.58,"texture":"ceres.jpg"},
-				"conditions":["ruins_scattered","no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant",
-					"US_crystals" # UNKNOWN SKIES
+				"conditions":["ruins_scattered","no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant", #W/O Pluto Megastr. Cond.
+					"pre_collapse_facility", # AOTD
+					"US_crystals", "US_shrooms" # UNKNOWN SKIES
 				],
 			},
 { #10 Pluto - Hazard 225%
@@ -219,18 +222,19 @@
 				"name":"Pluto",
 				"customDescriptionId":"sol_Pluto",
 				"type":"frozen",
-				#"tags":[],
+				"tags":["neutrino_high"],
 				"orbitAngle":240,
 				"radius":28,
 				"orbitRadius":23000,
 				"orbitDays":181120, #realistic 90560,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-122.5,"rotation":1.875,"texture":"pluto.jpg"},
-				"conditions":["dark","very_cold","ruins_scattered","low_gravity","ore_rich","rare_ore_moderate",
-					"US_shrooms", # UNKNOWN SKIES
-					"aotd_pluto_station" # AOTD
+				#"conditions":["dark","very_cold","ruins_scattered","low_gravity","ore_ultrarich","rare_ore_ultrarich", #W/O Pluto Megastr. Cond.
+				#"conditions":["very_hot","ore_ultrarich","rare_ore_ultrarich", #AOTD Pluto Megastr. Cond.
+				"conditions":["dark","low_gravity","very_cold","ore_ultrarich","rare_ore_ultrarich", #SOL Pluto Megastr. Cond.
+				"aotd_pluto_station" # AOTD
 				],
-				"industries":["pluto_station"]
+				#"industries":["pluto_station"]
 },
 
 ## MOONS
@@ -343,6 +347,7 @@
 				"customDescriptionId":"sol_Callisto",
 				"focus":5,
 				"type":"barren-bombarded",
+				"tags":["not_random_mission_target"],
 				"orbitAngle":160,
 				"radius":55,
 				"orbitRadius":1800,
@@ -360,6 +365,7 @@
 				"customDescriptionId":"sol_Enceladus",
 				"focus":6,
 				"type":"cryovolcanic",
+				"tags":["not_random_mission_target"],
 				"orbitAngle":180,
 				"radius":20,
 				"orbitRadius":1500,
@@ -408,6 +414,7 @@
 				"customDescriptionId":"sol_Titania",
 				"focus":7,
 				"type":"tundra",
+				"tags":["not_random_mission_target"],
 				"orbitAngle":120,
 				"radius":90,
 				"orbitRadius":1200,
@@ -441,6 +448,7 @@
 				"customDescriptionId":"sol_Triton",
 				"focus":8,
 				"type":"cryovolcanic",
+				"tags":["not_random_mission_target"],
 				"orbitAngle":0,
 				"radius":50,
 				"orbitRadius":900,
@@ -466,7 +474,7 @@
 				"conditions":["ore_ultrarich","rare_ore_ultrarich",
 					"IndEvo_RuinsCondition" # IND-EVO
 				],
-				"marketMemoryKeys":{
+				"marketMemoryKeys":{ #can choose 1 of the 3
 					"$IndEvo_ruinsIndustryId":"IndEvo_ResLab", # IND-EVO Ancient Laboratory
 					#"$IndEvo_ruinsIndustryId":"IndEvo_HullDecon", # IND-EVO Hull Deconstructor
 					#"$IndEvo_ruinsIndustryId":"IndEvo_HullForge", #IND-EVO Hull Forge
@@ -651,11 +659,11 @@
 				{"entity":"comm_relay","name":"Deep Space Network","customDescriptionId":"sol_DSN","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false}, #50
 				{"entity":"sensor_array","name":"Space Surveillance Network","customDescriptionId":"sol_SSN","orbitRadius":5050,"orbitAngle":30,"orbitDays":1000,"orbitClockwise":false}, #51
 				{"entity":"nav_buoy","name":"Hubble Buoy","orbitRadius":7890,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false}, #52
-				{"entity":"orbital_habitat","orbitRadius":18888,"orbitAngle":180,"orbitClockwise":false}, #53
-				{"entity":"station_research","orbitRadius":3636,"orbitAngle":225,"orbitClockwise":false}, #54
-				{"entity":"station_mining_remnant","orbitRadius":20000,"orbitClockwise":false}, #55
-				{"entity":"derelict_probe","orbitAngle":90,"orbitRadius":8888,"orbitClockwise":false}, #56
-				{"entity":"derelict_survey_ship","orbitAngle":250,"orbitRadius":8888,"orbitClockwise":false}, #57
+				{"entity":"orbital_habitat","name":"Eidolon Habitat","orbitRadius":18888,"orbitAngle":180,"orbitClockwise":false}, #53
+				{"entity":"station_research","name":"Copernicus Research Station","orbitRadius":3636,"orbitAngle":225,"orbitClockwise":false}, #54
+				{"entity":"station_mining_remnant","name":"Remnant Dredge Platform","orbitRadius":20000,"orbitClockwise":false}, #55
+				{"entity":"derelict_probe","name":"Voyager Relay","orbitAngle":90,"orbitRadius":8888,"orbitClockwise":false}, #56
+				{"entity":"derelict_survey_ship","name":"Survey Vessel Endurance","orbitAngle":250,"orbitRadius":8888,"orbitClockwise":false}, #57
 				{"entity":"derelict_cryosleeper","name":"Foundation","orbitRadius":12000,"orbitAngle":90,"orbitClockwise":false}, #58
 				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"orbitClockwise":false,"variantId":"anubis_Standard"}, #59
 				{"entity":"wreck","orbitRadius":11000,"orbitAngle":210,"orbitDays":0,"orbitClockwise":false,"variantId":"wolf_Assault"}, #60
@@ -667,25 +675,29 @@
 				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"orbitClockwise":false,"variantId":"condor_Support"}, #66
 				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false,"variantId":"dram_Light"}, #67
 				{"entity":"wreck","orbitRadius":20000,"orbitAngle":90,"orbitDays":0,"orbitClockwise":false,"variantId":"paragon_Raider"}, #68
-				{"entity":"ark","name":"Abraham's Ark","orbitRadius":9999,"orbitAngle":240,"orbitDays":1825,"orbitClockwise":false}, #69 - AOTD - Dreams of Past Ark
+				{"entity":"ark","name":"Prometheus Initiative","orbitRadius":9999,"orbitAngle":240,"orbitDays":1825,"orbitClockwise":false}, #69 - AOTD - Dreams of Past Ark
 				{"entity":"rat_cryochamber","orbitRadius":7000,"orbitAngle":180,"orbitDays":1095,"orbitClockwise":false}, #70 - RAT Punitive Cryostation
 				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095,"orbitClockwise":false}, #71
 				{"entity":"alpha_site_weapons_cache","orbitRadius":12345}, #72
-				{"entity":"station","type":"station_sporeship_derelict","name":"Telepylos Station","focus":8,"orbitAngle":90,"orbitRadius":480,"orbitDays":25,"orbitClockwise":false, #73
-					"customDescriptionId":"station_telepylus"}, #orbiting Neptune, staging area for volatiles transport
 
 ## Space Stations - (Will break/ctd if the only player colony owned before player factiion established) 
 #+ADVANCED USERS ONLY
 
-			{"entity":"aotd_pluto_station", # NOTE: Abandoned/NonFunctional Post AOTD-VOK v4.0.0.ALPHA
-				"type":"aotd_pluto_station", #74 - AOTD Pluto Mining Station
-				"name":"Plouton Mining Station (Sabotaged)",
-				"focus":10, #orbiting Pluto
-				"orbitDays":181120,"orbitAngle":270,"orbitRadius":300,"orbitClockwise":false,
-				#"factionId":"neutral",
-				"memoryKeys":{"$musicSetId":"aotd_mega"},
+			{"entity":"station", #73 Telepylos - taging area for volatiles transport
+				"type":"station_sporeship_derelict",
+				"name":"Telepylos Station", # orbiting Neptune,
+				"focus":8,"orbitAngle":90,"orbitRadius":480,"orbitDays":25,"orbitClockwise":false,
+				"customDescriptionId":"station_telepylus"
 			},
-
+			
+			{"entity":"station",
+				"type":"rat_orbital_construction_station", #74 IND-EVO Subspace Station 
+				#"name":"",
+				#"customDescriptionId":"",
+				"focus":21,  # orbiting Titania
+				"orbitRadius":270,"orbitAngle":0,"orbitDays":1000,"orbitClockwise":false
+			},			
+			
 			{"entity":"station",
 				"type":"IndEvo_SubspaceStation", #75 IND-EVO Subspace Station 
 				"name":"Red-Rock Space Station",
@@ -743,6 +755,20 @@
 } # CLOSING Table
 
 
+			#{"entity":"aotd_pluto_station", # NOTE: Abandoned/NonFunctional Post AOTD-VOK v4.0.0.ALPHA
+			#	"type":"aotd_pluto_station", #74 - AOTD Pluto Mining Station
+			#	"name":"Plouton Mining Station (Sabotaged)",
+			#	"tag":["aotd_plutostation"],
+			#	"focus":10, #orbiting Pluto
+			#	"orbitDays":181120,"orbitAngle":270,"orbitRadius":300,"orbitClockwise":false,
+			#	#"factionId":"neutral",
+			#	"memoryKeys":{
+			#		"$musicSetId":"aotd_mega",
+			#	#	#"$locationId":"sol",
+			#		"$fireAllTrigger":"AoTDMegaCheck"
+			#	},
+			#},
+
 				#"memoryKeys":{"$plutoStation":true},
 				#"factionId":"neutral",
 				#"marketSize":1,
@@ -757,6 +783,3 @@
 				#	"pluto_station" # AOTD
 				#],
 				#"tags":["nex_canMine":true]
-
-
-
