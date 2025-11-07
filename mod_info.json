@@ -5,7 +5,7 @@
 	"version": {
 		"major": 3,
 		"minor": 5,
-		"patch": 0
+		"patch": 1
 	},
 	"description": "Adds Sol, via Customizable Star Systems Mod.",
 	"gameVersion": "0.98a-RC8",
@@ -47,3 +47,4 @@
 	"jars":["jars/Sol.jar"],
 	"modPlugin":"bugatti.plugins.SolPlugin"
 }
+
