@@ -1,14 +1,8 @@
-	# Sol Star Sysyem by Bugatti Echelon #Discord #bugatti_echelon
-	# If you wish to removed modded content each condition/industry/spec has been tagged with mod's acronym for easier user readability
-	# Modded version - requires CSS, AOTD-VoK, AOTD-DOP, RAT, IND-EVO, & US
-	# All "orbitDays" for planets and moons were increased to be more inline with starsectors time/speed pass.
-	# Using realistic values (Earth 365/y, Luna 28/m) you would have to use emergency burn to even catch some of the moons who orbits at high speed, but that would be realistic i guess.
-	# You can also comment/remove the custom graphics to let procgen override. Same for conditions.
-	# Recently change "conditions" of most planets and moons to pull from US/RAT/IE/AotD-VoK. Refer to the vanilla version to revert.
+# Notes moved to bottom
 {
 	"Sol_Modded":{
 		"isEnabled":true,
-		"teleportUponGeneration":true, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
+		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
 		"numberOfSystems":1,
 		"hasSystemwideNebula":true,
 		"addDomainCryosleeper":false,
@@ -752,3 +746,12 @@
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
+
+	# Sol Star Sysyem by Bugatti Echelon #Discord #bugatti_echelon
+	# If you wish to removed modded content each condition/industry/spec has been tagged with mod's acronym for easier user readability
+	# Modded version - requires CSS, AOTD-VoK, AOTD-DOP, RAT, IND-EVO, & US
+	# All "orbitDays" for planets and moons were increased to be more inline with starsectors time/speed pass.
+	# Using realistic values (Earth 365/y, Luna 28/m) you would have to use emergency burn to even catch some of the moons who orbits at high speed, but that would be realistic i guess.
+	# You can also comment/remove the custom graphics to let procgen override. Same for conditions.
+	# Recently change "conditions" of most planets and moons to pull from US/RAT/IE/AotD-VoK. Refer to the vanilla version to revert.
+
