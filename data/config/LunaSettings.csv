@@ -1,0 +1,6 @@
+fieldID,fieldName,fieldType,defaultValue,secondaryValue,fieldDescription,minValue,maxValue,tab
+spawnerHeader,Spawners,Header,Spawners,,,,,
+featuresDisabled,Spawn Megas,Boolean,true,,Toggles the spawning of additional [Megastructures] exclusive to [Sol]. Requires [new game].,,,
+megaHeader,Megastructures,Header,Megastructures,,,,,
+spawn_plouton,Mining Station,Boolean,true,,Enables [Pluto] Mining Station. Requires [AoTD - Vaults of Knowledge] to be enabled. Registered [once per save].,,,
+spawn_gungnir,Shipyard Complex,Boolean,true,,Converts [Mars] to a Shipyard World. Requires [AoTD - Vaults of Knowledge] to be enabled. Registered [once per save].,,,
