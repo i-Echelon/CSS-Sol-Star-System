@@ -680,8 +680,7 @@
 				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095,"orbitClockwise":false}, #71
 				{"entity":"alpha_site_weapons_cache","orbitRadius":12345}, #72
 
-## Space Stations - (Will break/ctd if the only player colony owned before player factiion established) 
-#+ADVANCED USERS ONLY
+## Space Stations - (Will break/ctd if the only player colony owned before player faction)  #+ADVANCED USERS ONLY
 
 			{"entity":"station", #73 Telepylos - taging area for volatiles transport
 				"type":"station_sporeship_derelict",
@@ -753,33 +752,3 @@
 		] #Celestial Bodies END
 	} #Sol System END
 } # CLOSING Table
-
-
-			#{"entity":"aotd_pluto_station", # NOTE: Abandoned/NonFunctional Post AOTD-VOK v4.0.0.ALPHA
-			#	"type":"aotd_pluto_station", #74 - AOTD Pluto Mining Station
-			#	"name":"Plouton Mining Station (Sabotaged)",
-			#	"tag":["aotd_plutostation"],
-			#	"focus":10, #orbiting Pluto
-			#	"orbitDays":181120,"orbitAngle":270,"orbitRadius":300,"orbitClockwise":false,
-			#	#"factionId":"neutral",
-			#	"memoryKeys":{
-			#		"$musicSetId":"aotd_mega",
-			#	#	#"$locationId":"sol",
-			#		"$fireAllTrigger":"AoTDMegaCheck"
-			#	},
-			#},
-
-				#"memoryKeys":{"$plutoStation":true},
-				#"factionId":"neutral",
-				#"marketSize":1,
-				#"marketMemoryKeys":{
-					#"$AoTDIndustries":"mining_megaplex",
-					#"$aotd_megastructure":"pluto_station", 
-					#"$aotd_pluto_planet":true,
-					#"$aotd_megastructure":"pluto_station",
-					#"$aotd_misc_hidden_industry":false,
-					#"$isPlanetConditionMarketOnly":true},
-				#"industries":["population","spaceport",
-				#	"pluto_station" # AOTD
-				#],
-				#"tags":["nex_canMine":true]
