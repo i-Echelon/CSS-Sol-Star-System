@@ -5,7 +5,7 @@
 	"version": {
 		"major": 3,
 		"minor": 5,
-		"patch": 1
+		"patch": "0.BETA"
 	},
 	"description": "Adds Sol, via Customizable Star Systems Mod.",
 	"gameVersion": "0.98a-RC8",
@@ -14,6 +14,10 @@
 		{
 			"id": "lw_lazylib",
 			"name": "LazyLib"
+		},
+		{
+			"id": "lunalib",
+			"name": "LunaLib"
 		},
 		{
 			"id": "customizablestarsystems",
@@ -47,4 +51,3 @@
 	"jars":["jars/Sol.jar"],
 	"modPlugin":"bugatti.plugins.SolPlugin"
 }
-
