@@ -15,7 +15,7 @@
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge":"average",
-		"systemTags":["theme_misc","theme_hidden","theme_ruins","theme_derelict_probes","theme_derelict_survey_ship","theme_remnant_secondary","theme_remnant_suppressed",
+		"systemTags":["theme_misc","theme_hidden","theme_ruins","theme_remnant_secondary","theme_remnant_suppressed",
 			"US_skipSystem" # UNKNOWN SKIES 
 		],
 		"entities":[ #Celestial Bodies START
@@ -677,9 +677,9 @@
 
 			{"entity":"station", #71 - Ind-Evo
 				"type":"IndEvo_GachaStation",
-				"name":"Sol Shipyard",
-				"focus":17, #orbiting Callisto
-				"orbitRadius":270,"orbitAngle":180,"orbitDays":1095,"orbitClockwise":false
+				"name":"Jupiter Junkyard",
+				"focus":5, #orbiting Jupiter
+				"orbitRadius":2250,"orbitAngle":90,"orbitDays":180,"orbitClockwise":false
 			},
 				
 			{"entity":"station", #72 Telepylos - taging area for volatiles transport
@@ -727,23 +727,28 @@
 				"focus":[9,2], # orbiting Ceres
 				"isDamaged":false
 			},
+
+			{"entity":"IndEvo_PetShop", #78 Remnant Station
+				"name":"ICARUS Initiative",
+				"focus":[1,2], # orbiting Mercury
+			},
 # EXTRAS
-			{"entity":"asteroid_field", #78
+			{"entity":"asteroid_field", #79
 				"focus":1, #orbiting Mercury
 				"orbitDays":13337,"orbitRadius":300,"orbitClockwise":false,"size":512,
 			},
 			
-			{"entity":"asteroid_field", #79
+			{"entity":"asteroid_field", #80
 				"focus":9, #orbiting Ceres
 				"orbitDays":1337,"orbitRadius":300,"orbitClockwise":false,"size":512,
 			},
 			
-			{"entity":"asteroid_field", #80
+			{"entity":"asteroid_field", #81
 				"focus":3, #orbiting Earth
 				"orbitDays":1460,"orbitRadius":300,"orbitClockwise":false,"size":512,
 			},
 
-			{"entity":"asteroid_field", #81
+			{"entity":"asteroid_field", #82
 				"focus":4, #orbiting Mars
 				"orbitDays":1000,"orbitRadius":200,"orbitClockwise":false,"size":512,
 			},
