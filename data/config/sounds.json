@@ -2,7 +2,7 @@
 	"music":{
 		# Sol System Theme - change if you want
 		"music_sol_system":[
-			{"file":"SpaceMirror.ogg","source":"sounds/system/","volume":0.25,"randomStart":true},
+			{"file":"Breath of SOL.ogg","source":"sounds/system/","volume":0.5,"randomStart":true},
 		],
 	},
 }
