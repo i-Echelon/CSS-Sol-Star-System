@@ -86,20 +86,20 @@
 				"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],"iconColor":[155,185,255,255],"texture":"earth_nuked.png","planetColor":[255,255,255,255],
 					"typeOverride":["US_magnetic","Terrestrial"] # UNKNOWN SKIES
 				},
-				"conditions":["habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_widespread",
+				"conditions":["farmland_poor","pollution","irradiated","ore_ultrarich","organics_plentiful","ruins_widespread", # when using Nuked texture^
 					"US_elevator","US_religious","US_magnetic","US_base", # UNKNOWN SKIES
-					"rat_ancient_megacities","rat_bionic_plantlife","rat_engineered_utopia", # RAT
+					"rat_ancient_megacities", # RAT
 					"IndEvo_RuinsCondition", # IND-EVO
-					#"IndEvo_ArtilleryStationCondition" # IND-EVO
+					"IndEvo_ArtilleryStationCondition" # IND-EVO
 				],
-				"memoryKeys":{"$nex_no_invade":true, "$nex_no_raids": true}, #NEXERELIN
+				"memoryKeys":{"$nex_no_invade":true, "$nex_no_raids":true}, #NEXERELIN
 				#"factionId":"player", #initial colony?
 				#"marketSize":3,
 				"marketMemoryKeys":{"$IndEvo_ruinsIndustryId":"IndEvo_Memorial"}, # IND-EVO ($MemKey to turn ruins into a Memorial 100%)
 				"industries":[
 					"population", "spaceport", "farming",
 					["orbitalworks",,"pristine_nanoforge"],
-					#["IndEvo_Artillery_railgun",,,true] # IND-EVO - should also use the related condition tag (IndEvo_ArtilleryStationCondition)
+					["IndEvo_Artillery_railgun",,,true] # IND-EVO - should also use the related condition tag (IndEvo_ArtilleryStationCondition)
 				],
 },
 { #4 Mars - Hazard 125%
@@ -332,7 +332,7 @@
 				"specChanges":{"tilt":-23.5,"rotation":1.68,"texture":"ganymede.jpg"},
 				"conditions":["ruins_extensive","cold","thin_atmosphere","low_gravity","poor_light","ore_moderate","rare_ore_moderate","volatiles_abundant",
 					"rat_ancient_military_hub","rat_rampant_military_core", # RAT
-					"US_bedrock" # US
+					"US_bedrock" # UKNOWN SKIES
 				]
 			},
 { #17 Callisto, orbiting Jupiter - Hazard 100%
@@ -670,21 +670,28 @@
 				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false,"variantId":"dram_Light"}, #67
 				{"entity":"wreck","orbitRadius":20000,"orbitAngle":90,"orbitDays":0,"orbitClockwise":false,"variantId":"paragon_Raider"}, #68
 				{"entity":"ark","name":"Prometheus Initiative","orbitRadius":9999,"orbitAngle":240,"orbitDays":1825,"orbitClockwise":false}, #69 - AOTD - Dreams of Past Ark
-				{"entity":"rat_cryochamber","orbitRadius":7000,"orbitAngle":180,"orbitDays":1095,"orbitClockwise":false}, #70 - RAT Punitive Cryostation
-				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095,"orbitClockwise":false}, #71
+				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095,"orbitClockwise":false}, #70
 				{"entity":"alpha_site_weapons_cache","orbitRadius":12345}, #72
 
 ## Space Stations - (Will break/ctd if the only player colony owned before player faction)  #+ADVANCED USERS ONLY
 
-			{"entity":"station", #73 Telepylos - taging area for volatiles transport
+			{"entity":"station", #71 - Ind-Evo
+				"type":"IndEvo_GachaStation",
+				"name":"Sol Shipyard",
+				"focus":17, #orbiting Callisto
+				"orbitRadius":270,"orbitAngle":180,"orbitDays":1095,"orbitClockwise":false
+			},
+				
+			{"entity":"station", #72 Telepylos - taging area for volatiles transport
 				"type":"station_sporeship_derelict",
-				"name":"Telepylos Station", # orbiting Neptune,
-				"focus":8,"orbitAngle":90,"orbitRadius":480,"orbitDays":25,"orbitClockwise":false,
+				"name":"Telepylos Station", 
+				"focus":8, # orbiting Neptune,
+				"orbitAngle":90,"orbitRadius":480,"orbitDays":25,"orbitClockwise":false,
 				"customDescriptionId":"station_telepylus"
 			},
 			
 			{"entity":"station",
-				"type":"rat_orbital_construction_station", #74 IND-EVO Subspace Station 
+				"type":"rat_orbital_construction_station", #73 RAT Orbital Assembly Station
 				#"name":"",
 				#"customDescriptionId":"",
 				"focus":21,  # orbiting Titania
@@ -692,14 +699,14 @@
 			},			
 			
 			{"entity":"station",
-				"type":"IndEvo_SubspaceStation", #75 IND-EVO Subspace Station 
+				"type":"IndEvo_SubspaceStation", #74 IND-EVO Subspace Station 
 				"name":"Red-Rock Space Station",
 				"customDescriptionId":"sol_RedAlert",
 				"focus":4,  # orbiting Mars
 				"orbitRadius":540,"orbitAngle":0,"orbitDays":1000,"orbitClockwise":false
 			},
 
-			{"entity":"station", #76 Abandoned Siphon Station
+			{"entity":"station", #75 Abandoned Siphon Station
 				"type":"station_side05",
 				"name":"Titan's Eye",
 				"customDescriptionId":"sol_SiphonStation",
@@ -707,7 +714,7 @@
 				"orbitRadius":500,"orbitAngle":0,"orbitDays":1000,"orbitClockwise":false
 			},
 			
-			{"entity":"station", #77
+			{"entity":"station", #76
 				"type":"station_side00",
 				"name":"International Space Station",
 				"focus":3, #orbiting near Earth
@@ -715,28 +722,28 @@
 				"customDescriptionId":"sol_ISS"
 			},
 
-			{"entity":"remnant_station", #78 Remnant Station
+			{"entity":"remnant_station", #77 Remnant Station
 				"name":"Cyan Comet",
 				"focus":[9,2], # orbiting Ceres
 				"isDamaged":false
 			},
 # EXTRAS
-			{"entity":"asteroid_field", #79
+			{"entity":"asteroid_field", #78
 				"focus":1, #orbiting Mercury
 				"orbitDays":13337,"orbitRadius":300,"orbitClockwise":false,"size":512,
 			},
 			
-			{"entity":"asteroid_field", #80
+			{"entity":"asteroid_field", #79
 				"focus":9, #orbiting Ceres
 				"orbitDays":1337,"orbitRadius":300,"orbitClockwise":false,"size":512,
 			},
 			
-			{"entity":"asteroid_field", #81
+			{"entity":"asteroid_field", #80
 				"focus":3, #orbiting Earth
 				"orbitDays":1460,"orbitRadius":300,"orbitClockwise":false,"size":512,
 			},
 
-			{"entity":"asteroid_field", #82
+			{"entity":"asteroid_field", #81
 				"focus":4, #orbiting Mars
 				"orbitDays":1000,"orbitRadius":200,"orbitClockwise":false,"size":512,
 			},
@@ -755,3 +762,9 @@
 	# You can also comment/remove the custom graphics to let procgen override. Same for conditions.
 	# Recently change "conditions" of most planets and moons to pull from US/RAT/IE/AotD-VoK. Refer to the vanilla version to revert.
 
+		# EARTH NON-NUKED CONDITIONS
+				#"conditions":["habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_widespread",
+				#	"US_elevator","US_religious","US_magnetic","US_base", # UNKNOWN SKIES
+				#	"rat_ancient_megacities","rat_bionic_plantlife","rat_engineered_utopia", # RAT
+				#	"IndEvo_RuinsCondition", # IND-EVO
+				#],
