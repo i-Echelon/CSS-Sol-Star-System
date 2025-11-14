@@ -1,9 +1,4 @@
-	# Sol Star Sysyem by Bugatti Echelon #Discord #bugatti_echelon
-	# All "orbitDays" for planets and moons were increased to be more inline with starsectors time/speed pass.
-	# Using realistic values (Earth 365/y, Luna 28/m) you would have to use emergency burn to even catch some of the moons who orbits at high speed, but that would be realistic i guess.
-	# Left original speeds as comments incase you want to re-enable. You can also comment/remove the custom graphics to let procgen override. Same for conditions.
-	# Rotation speeds were also halved in speed for disorientation purposes
-{
+{# Notes moved to bottom
 	"Sol_Vanilla":{
 		"isEnabled":true,
 		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
@@ -80,9 +75,9 @@
 				"orbitClockwise":false,
 				"specChanges":{"cloudColor":[235,240,250,225],"cloudRotation":-5,"cloudTexture":"earthCloudsSmog.png","tilt":-23.4,"rotation":12.0,
 				"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],"iconColor":[155,185,255,255],"texture":"earth_nuked.png","planetColor":[255,255,255,255],
-					#"typeOverride":["Terran","Terrestrial"]
+					"typeOverride":["Terran","Terrestrial"]
 					},
-				"conditions":["habitable","mild_climate","farmland_bountiful","ore_sparse","ruins_vast","organics_plentiful","high_gravity"], #DEFAULT REALISTIC
+				"conditions":["farmland_poor","pollution","irradiated","ore_sparse","ruins_vast","organics_plentiful","high_gravity"], # Nuked conditions, default at bottom of file
 				#"marketMemoryKeys":{""},
 				#"factionId":"player", #do we colonize?
 				#"marketSize":3,
@@ -583,11 +578,18 @@
 				{"entity":"wreck","orbitRadius":20000,"orbitAngle":90,"orbitDays":0,"orbitClockwise":false,"variantId":"paragon_Raider"}, #68
 				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095}, #69
 				{"entity":"alpha_site_weapons_cache","orbitRadius":12345}, #70
-				{"entity":"station","type":"station_sporeship_derelict","name":"Telepylos Station","focus":8,"orbitAngle":90,"orbitRadius":480,"orbitDays":25,"orbitClockwise":false, #71
-					"customDescriptionId":"station_telepylus"}, # orbiting Neptune, staging area for volatiles transport
+		
 
 ## Space Stations - (Will break/ctd if the only player colony owned before player factiion established) 
 #+ADVANCED USERS ONLY
+
+			{"entity":"station", #71 staging area for volatiles transport
+				"type":"station_sporeship_derelict",
+				"name":"Telepylos Station",
+				"customDescriptionId":"station_telepylus",
+				"focus":8,  # orbiting Neptune,
+				"orbitAngle":90,"orbitRadius":480,"orbitDays":25,"orbitClockwise":false,
+			},
 
 			{"entity":"station", #72 Abandoned Station
 				"type":"station_lowtech2",
@@ -616,7 +618,7 @@
 			{"entity":"remnant_station", #75 Remnant Station
 				"name":"Cyan Comet",
 				"focus":[9,2], # orbiting Ceres
-				"isDamaged":false
+				"isDamaged":true
 			},
 # EXTRAS
 			{"entity":"asteroid_field", #76
@@ -644,3 +646,11 @@
 } # CLOSING Table
 
 
+	# Sol Star Sysyem by Bugatti Echelon #Discord #bugatti_echelon
+	# All "orbitDays" for planets and moons were increased to be more inline with starsectors time/speed pass.
+	# Using realistic values (Earth 365/y, Luna 28/m) you would have to use emergency burn to even catch some of the moons who orbits at high speed, but that would be realistic i guess.
+	# Left original speeds as comments incase you want to re-enable. You can also comment/remove the custom graphics to let procgen override. Same for conditions.
+	# Rotation speeds were also halved in speed for disorientation purposes
+	
+		# EARTH NON-NUKED CONDITIONS
+		#"conditions":["habitable","mild_climate","farmland_bountiful","ore_ultrarich","organics_plentiful","ruins_widespread"],
