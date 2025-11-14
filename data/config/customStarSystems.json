@@ -1,5 +1,4 @@
-# Notes moved to bottom
-{
+{# Notes moved to bottom
 	"Sol_Modded":{
 		"isEnabled":true,
 		"teleportUponGeneration":false, # will for sure teleport self upon generation regardless of any custom or nexerelin start.
