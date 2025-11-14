@@ -5,7 +5,7 @@
 	"version": {
 		"major": 3,
 		"minor": 5,
-		"patch": "0.CHARLIE"
+		"patch": "0.DELTA"
 	},
 	"description": "Adds Sol, via Customizable Star Systems Mod.",
 	"gameVersion": "0.98a-RC8",
@@ -51,3 +51,4 @@
 	"jars":["jars/Sol.jar"],
 	"modPlugin":"bugatti.plugins.SolPlugin"
 }
+
