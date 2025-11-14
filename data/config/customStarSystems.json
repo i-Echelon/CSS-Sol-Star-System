@@ -675,14 +675,14 @@
 
 ## Space Stations - (Will break/ctd if the only player colony owned before player faction)  #+ADVANCED USERS ONLY
 
-			{"entity":"station", #71 - Ind-Evo
+			{"entity":"station", #71 - IND-EVO Salvage Shipyard
 				"type":"IndEvo_GachaStation",
 				"name":"Jupiter Junkyard",
 				"focus":5, #orbiting Jupiter
 				"orbitRadius":2250,"orbitAngle":90,"orbitDays":180,"orbitClockwise":false
 			},
 				
-			{"entity":"station", #72 Telepylos - taging area for volatiles transport
+			{"entity":"station", #72 Telepylos - staging area for volatiles transport
 				"type":"station_sporeship_derelict",
 				"name":"Telepylos Station", 
 				"focus":8, # orbiting Neptune,
@@ -728,7 +728,7 @@
 				"isDamaged":false
 			},
 
-			{"entity":"IndEvo_PetShop", #78 Remnant Station
+			{"entity":"IndEvo_abandonedPetCenter", #78 IND-EVO Pet Shop
 				"name":"ICARUS Initiative",
 				"focus":[1,2], # orbiting Mercury
 			},
