@@ -8,11 +8,11 @@
 		"addCoronalHypershunt":false,
 		#"memoryKeys":{"$US_skipSystem":true}, # Memory key to prevent Unknown Skies scripts from modifying this system (false to allow)
 		"setLocation":[0,-44000], #originally used "setLocation":2, (2 constellations away from Core Worlds( 0 for random))
-		"systemBackground":"galaxy0.png",#"milkyway.png",
+		"systemBackground":"galaxy0.png", #"milkyway.png",
 		"systemMusic":"music_sol_system", #can be omitted or whatever you want. must be mapped to a sounds.json
 		"systemLightColor":[232,244,247,255],
 		"systemAge":"average",
-		"systemTags":["theme_misc","theme_hidden","theme_ruins","theme_derelict_probes","theme_derelict_survey_ship","theme_remnant_secondary","theme_remnant_suppressed"],
+		"systemTags":["theme_misc","theme_hidden","theme_ruins","theme_special","theme_remnant_secondary","theme_remnant_suppressed"],
 
 		"entities":[ #Celestial Bodies START
 ## STARS
@@ -49,6 +49,7 @@
 				"orbitClockwise":false,
 				"conditions":["hot","irradiated","thin_atmosphere","toxic_atmosphere","low_gravity","ore_ultrarich","rare_ore_ultrarich"],
 				"specChanges":{"tilt":-0.03,"rotation":0.2035,"iconColor":[227,151,118,255],"texture":"mercury.jpg"}
+																															 
 },
 { #2 Venus - Hazard 275%
 				"entity":"planet",
@@ -75,30 +76,25 @@
 				"orbitClockwise":false,
 				"specChanges":{"cloudColor":[235,240,250,225],"cloudRotation":-5,"cloudTexture":"earthCloudsSmog.png","tilt":-23.4,"rotation":12.0,
 				"atmosphereThickness":0.25,"atmosphereThicknessMin":40,"atmosphereColor":[60,160,215,160],"iconColor":[155,185,255,255],"texture":"earth_nuked.png","planetColor":[255,255,255,255],
-					"typeOverride":["Terran","Terrestrial"]
+					"typeOverride":["terran","Terrestrial"]
 					},
 				"conditions":["farmland_poor","pollution","irradiated","ore_sparse","ruins_vast","organics_plentiful","high_gravity"], # Nuked conditions, default at bottom of file
-				#"marketMemoryKeys":{""},
-				#"factionId":"player", #do we colonize?
-				#"marketSize":3,
-				#"industries":[
-					#"population", "spaceport", "farming",
-					#["orbitalworks",,"pristine_nanoforge"],
-				#]
 },
 { #4 Mars - Hazard 125%
 				"entity":"planet",
 				"name":"Mars",
 				"customDescriptionId":"sol_Mars",
-				"type":"barren", #override to barren-desert below
+				"type":"barren-desert", #override to barren-desert below
 				"orbitAngle":360,
 				"radius":80,
 				"orbitRadius":6000,
 				"orbitDays":1374, #realistic 687,
 				"orbitClockwise":false,
 				"specChanges":{"tilt":-25.2,"rotation":23.30,"cloudRotation":-12.65,"iconColor":[255,68,14,250],"texture":"mars.jpg",
-					"typeOverride":["barren-desert","Barren-Desert"]}, #workaround for tasc bug
+					#"typeOverride":["barren-desert","Barren-Desert"]  #workaround for TASC bug
+					}, 
 				"conditions":["cold","thin_atmosphere","low_gravity","ruins_scattered","ore_moderate","rare_ore_moderate","organics_common"]
+
 },
 { #5 Jupiter - Hazard 150%
 				"entity":"planet",
@@ -167,7 +163,7 @@
 				"orbitClockwise":false,
 				"conditions":["ruins_scattered","no_atmosphere","low_gravity","ore_sparse","rare_ore_abundant"],
 				"specChanges":{"tilt":-4.0,"rotation":31.58,"texture":"ceres.jpg"}
-			},
+},
 { #10 Pluto - Hazard 225%
 				"entity":"planet",
 				"name":"Pluto",
@@ -539,15 +535,15 @@
 				"orbitAngle":-1,
 				"orbitDays":0,
 				"orbitClockwise":false,
-				"size":1000,
+				"size":256,
 },
-{ #42 Asteroid field 2
-				"entity":"asteroid_field",
+{ #42 Debris field 2
+				"entity":"debris_field",
 				"orbitRadius":18000,
 				"orbitAngle":-1,
 				"orbitDays":0,
 				"orbitClockwise":false,
-				"size":1000,
+				"size":512,
 },
 # CUSTOM ENTITIES
 				{"entity":"jump_point","orbitRadius":2345,"orbitAngle":135,"orbitDays":730,"name":"Zenith Point","orbitClockwise":false,"tags":["core_jump_point"]}, #43
@@ -560,27 +556,26 @@
 				{"entity":"comm_relay","name":"Deep Space Network","customDescriptionId":"sol_DSN","orbitRadius":6060,"orbitAngle":270,"orbitDays":1000,"orbitClockwise":false}, #50
 				{"entity":"sensor_array","name":"Space Surveillance Network","customDescriptionId":"sol_SSN","orbitRadius":5050,"orbitAngle":30,"orbitDays":1000,"orbitClockwise":false}, #51
 				{"entity":"nav_buoy","name":"Hubble Buoy","orbitRadius":7890,"orbitAngle":315,"orbitDays":1000,"orbitClockwise":false}, #52
-				{"entity":"orbital_habitat","orbitRadius":18888}, #53
-				{"entity":"station_research","orbitRadius":3636}, #54
-				{"entity":"station_mining_remnant","orbitRadius":20000}, #55
-				{"entity":"derelict_probe","orbitAngle":90,"orbitRadius":8888}, #56
-				{"entity":"derelict_survey_ship","orbitAngle":250,"orbitRadius":8888}, #57
-				{"entity":"derelict_cryosleeper","name":"Foundation","orbitRadius":12000,"orbitAngle":90}, #58
-				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"variantId":"anubis_Standard"}, #59
-				{"entity":"wreck","orbitRadius":11000,"orbitAngle":210,"orbitDays":0,"variantId":"wolf_Assault"}, #60
-				{"entity":"wreck","orbitRadius":12000,"orbitAngle":240,"orbitDays":0,"variantId":"lasher_CS"}, #61
-				{"entity":"wreck","orbitRadius":13000,"orbitAngle":270,"orbitDays":0,"variantId":"kite_Standard"}, #62
-				{"entity":"wreck","orbitRadius":15000,"orbitAngle":300,"orbitDays":0,"variantId":"tarsus_d_Standard"}, #63
-				{"entity":"wreck","orbitRadius":16000,"orbitAngle":330,"orbitDays":0,"variantId":"buffalo2_FS"}, #64
-				{"entity":"wreck","orbitRadius":17000,"orbitAngle":360,"orbitDays":0,"variantId":"hammerhead_Balanced"}, #65
-				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"variantId":"condor_Support"}, #66
-				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"variantId":"dram_Light"}, #67
+				{"entity":"orbital_habitat","name":"Eidolon Habitat","orbitRadius":18888,"orbitAngle":180,"orbitClockwise":false}, #53
+				{"entity":"station_research","name":"Copernicus Research Station","orbitRadius":3636,"orbitAngle":225,"orbitClockwise":false}, #54
+				{"entity":"station_mining_remnant","name":"Remnant Dredge Platform","orbitRadius":20000,"orbitClockwise":false}, #55
+				{"entity":"derelict_probe","name":"Voyager Relay","orbitAngle":90,"orbitRadius":8888,"orbitClockwise":false}, #56
+				{"entity":"derelict_survey_ship","name":"Survey Vessel Endurance","orbitAngle":250,"orbitRadius":8888,"orbitClockwise":false}, #57
+				{"entity":"derelict_cryosleeper","name":"Foundation","orbitRadius":12000,"orbitAngle":90,"orbitClockwise":false}, #58
+				{"entity":"wreck","orbitRadius":10000,"orbitAngle":180,"orbitDays":0,"orbitClockwise":false,"variantId":"anubis_Standard"}, #59
+				{"entity":"wreck","orbitRadius":11000,"orbitAngle":210,"orbitDays":0,"orbitClockwise":false,"variantId":"wolf_Assault"}, #60
+				{"entity":"wreck","orbitRadius":12000,"orbitAngle":240,"orbitDays":0,"orbitClockwise":false,"variantId":"lasher_CS"}, #61
+				{"entity":"wreck","orbitRadius":13000,"orbitAngle":270,"orbitDays":0,"orbitClockwise":false,"variantId":"kite_Standard"}, #62
+				{"entity":"wreck","orbitRadius":15000,"orbitAngle":300,"orbitDays":0,"orbitClockwise":false,"variantId":"tarsus_d_Standard"}, #63
+				{"entity":"wreck","orbitRadius":16000,"orbitAngle":330,"orbitDays":0,"orbitClockwise":false,"variantId":"buffalo2_FS"}, #64
+				{"entity":"wreck","orbitRadius":17000,"orbitAngle":360,"orbitDays":0,"orbitClockwise":false,"variantId":"hammerhead_Balanced"}, #65
+				{"entity":"wreck","orbitRadius":18000,"orbitAngle":30,"orbitDays":0,"orbitClockwise":false,"variantId":"condor_Support"}, #66
+				{"entity":"wreck","orbitRadius":19000,"orbitAngle":60,"orbitDays":0,"orbitClockwise":false,"variantId":"dram_Light"}, #67
 				{"entity":"wreck","orbitRadius":20000,"orbitAngle":90,"orbitDays":0,"orbitClockwise":false,"variantId":"paragon_Raider"}, #68
-				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095}, #69
+				{"entity":"technology_cache","orbitRadius":4500,"orbitAngle":255,"orbitDays":1095,"orbitClockwise":false}, #69
 				{"entity":"alpha_site_weapons_cache","orbitRadius":12345}, #70
 		
-
-## Space Stations - (Will break/ctd if the only player colony owned before player factiion established) 
+## Space Stations
 #+ADVANCED USERS ONLY
 
 			{"entity":"station", #71 staging area for volatiles transport
