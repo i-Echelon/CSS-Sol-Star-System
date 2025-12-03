@@ -5,7 +5,7 @@
 	"version": {
 		"major": 3,
 		"minor": 5,
-		"patch": "0.DELTA"
+		"patch": "0.ECHO"
 	},
 	"description": "Adds Sol, via Customizable Star Systems Mod.",
 	"gameVersion": "0.98a-RC8",
@@ -19,3 +19,4 @@
 	],
 	#"suppressVCUnsupported": true
 }
+
