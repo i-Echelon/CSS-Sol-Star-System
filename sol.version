@@ -1,0 +1,13 @@
+{
+    "masterVersionFile":"https://download1351.mediafire.com/qc0ublxrq9ugiIESpkGpynBh2_CAxenRzHAcNV8iXnEFsEixjPH2UJFF_RM1GmRvhCKOtGumF6ZZhLOr_XJUEJR6qpJq16XzhzEE5NEMsqynZ7ree1NAAmFbMJbRlOr_pqxR8y0eZAdojgh3DVQP-58UBHCGiC308MfUiM7E3JLC/6gtpjnpgtfrhzat/sol.version",
+    "modName":"Sol Solar System",
+    "modThreadId":33848.0,
+    "directDownloadURL":"https://download938.mediafire.com/ueelluzhv9kgVAmciQciLsAhOg5XSYOIOOQ_EZkNo505eqFJbtfnU6Pgxks0k-gANEteUnQA8cpvgWVtFHck-s8q078VC65pHLGCiLQb9ept7kbUYCRrn42vmG0NY_HrItaAsoZfxKzSzULoXghldpoW35MWEc-uu-WGtPfAhdpf/300mszn0ug3z888/SOL+DEV.zip",
+    #"changelogURL":"https://raw.githubusercontent.com/i-Echelon/CSS-Sol-Star-System/refs/heads/main/changelog.txt",
+    "modVersion":
+    {
+        "major":9,
+        "minor":9,
+        "patch":"5.DEV"
+    },
+}
